@@ -1,0 +1,106 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	Development	//
+<F8>	init.vim	/^nmap <F8> :TagbarToggle<CR>$/;"	m
+<Leader>s	init.vim	/^nnoremap <Leader>s :%s\/\\<<C-r><C-w>\\>\/$/;"	m
+<Leader>s	nvcode-color-schemes.vim/nmap.vim	/^nnoremap <Leader>s :%s\/\\<<C-r><C-w>\\>\/$/;"	m
+<S-Tab>	init.vim	/^nmap <S-Tab> <C-W><C-W>$/;"	m
+<S-Tab>	nvcode-color-schemes.vim/nmap.vim	/^nmap <S-Tab> <C-W><C-W>$/;"	m
+<S-j>	init.vim	/^nmap <S-j> :m -2 <CR>$/;"	m
+<S-j>	nvcode-color-schemes.vim/nmap.vim	/^nmap <S-j> :m -2 <CR>$/;"	m
+<S-k>	init.vim	/^nmap <S-k> :m +1 <CR>$/;"	m
+<S-k>	nvcode-color-schemes.vim/nmap.vim	/^nmap <S-k> :m +1 <CR>$/;"	m
+<Tab>	init.vim	/^nmap <Tab> :bn<CR>$/;"	m
+<Tab>	nvcode-color-schemes.vim/nmap.vim	/^nmap <Tab> :bn<CR>$/;"	m
+<leader><leader>c	init.vim	/^nmap <leader><leader>c :Commentary <CR>$/;"	m
+<leader>Ch	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>Ch CheatSh() <CR>$/;"	m
+<leader>T	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>T :call OpenTermimal() <CR>$/;"	m
+<leader>b	init.vim	/^nmap <leader>b :lua require('telescope.builtin').buffers()<CR>$/;"	m
+<leader>b	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>b :Buffers<CR>$/;"	m
+<leader>cc	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>cc :call C_compile()<CR>$/;"	m
+<leader>dd	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>dd :call vimspector#Launch()<CR>$/;"	m
+<leader>de	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>de :VimspectorEval$/;"	m
+<leader>do	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>do :VimspectorShowOutput$/;"	m
+<leader>dw	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>dw :VimspectorWatch$/;"	m
+<leader>dx	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>dx :VimspectorReset<CR>$/;"	m
+<leader>f	init.vim	/^nmap <leader>f :lua require('telescope.builtin').find_files()<CR>$/;"	m
+<leader>g1	init.vim	/^nmap <leader>g1 :diffget \/\/2<CR> $/;"	m
+<leader>g1	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>g1 :diffget \/\/2<CR> $/;"	m
+<leader>g2	init.vim	/^nmap <leader>g2 :diffget \/\/3<CR> $/;"	m
+<leader>g2	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>g2 :diffget \/\/3<CR> $/;"	m
+<leader>gb	init.vim	/^nmap <leader>gb :Git checkout$/;"	m
+<leader>gb	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>gb :Git checkout$/;"	m
+<leader>gc	init.vim	/^nmap <leader>gc :Git commit<CR>$/;"	m
+<leader>gc	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>gc :Git commit<CR>$/;"	m
+<leader>gm	init.vim	/^nmap <leader>gm :call FzfMan()<CR>$/;"	m
+<leader>gm	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>gm :call FzfMan()<CR>$/;"	m
+<leader>gp	init.vim	/^nmap <leader>gp :Git push<CR>$/;"	m
+<leader>gp	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>gp :Git push<CR>$/;"	m
+<leader>gs	init.vim	/^nmap <leader>gs :G<CR>$/;"	m
+<leader>gs	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>gs :G<CR>$/;"	m
+<leader>m	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>m :call FzfMan()<CR>$/;"	m
+<leader>q	init.vim	/^nmap <leader>q :lua require('telescope.builtin').quickfix()<CR>$/;"	m
+<leader>t	init.vim	/^nmap <leader>t :! ctags <CR> :lua require('telescope.builtin').tags()<CR>$/;"	m
+<leader>t	nvcode-color-schemes.vim/nmap.vim	/^nmap <leader>t :Tags<CR>$/;"	m
+<space>	init.vim	/^nnoremap <space> za$/;"	m
+C_compile	nvcode-color-schemes.vim/Controle_C.vim	/^function! C_compile()$/;"	f
+Clear_C	nvcode-color-schemes.vim/Controle_C.vim	/^function! Clear_C()$/;"	f
+GenFt	nvcode-color-schemes.vim/Controle_C.vim	/^function! GenFt()$/;"	f
+Highlight	nvcode-color-schemes.vim/generate	/^class Highlight$/;"	c
+J	init.vim	/^vnoremap J :m '>+1<CR>gv=gv'$/;"	m
+J	nvcode-color-schemes.vim/nmap.vim	/^vnoremap J :m '>+1<CR>gv=gv'$/;"	m
+K	init.vim	/^vnoremap K :m '>-2<CR>gv=gv'$/;"	m
+K	nvcode-color-schemes.vim/nmap.vim	/^vnoremap K :m '>-2<CR>gv=gv'$/;"	m
+MainC	nvcode-color-schemes.vim/Controle_C.vim	/^function! MainC()$/;"	f
+Seman	nvcode-color-schemes.vim/Controle_C.vim	/^function! Seman()$/;"	f
+colors_name	Colors/ColorCyan.vim	/^let colors_name = "default"$/;"	v
+error	nvcode-color-schemes.vim/generate	/^def error(message)$/;"	f
+g:airline#extensions#branch#enabled	init.vim	/^let g:airline#extensions#branch#enabled = 1$/;"	v
+g:airline#extensions#tabline#enabled	init.vim	/^let g:airline#extensions#tabline#enabled = 1$/;"	v
+g:airline#extensions#tabline#formatter	init.vim	/^let g:airline#extensions#tabline#formatter = 'unique_tail'$/;"	v
+g:airline#extensions#tabline#left_alt_sep	init.vim	/^let g:airline#extensions#tabline#left_alt_sep = ''$/;"	v
+g:airline#extensions#tabline#left_sep	init.vim	/^let g:airline#extensions#tabline#left_sep = ''$/;"	v
+g:airline_powerline_fonts	init.vim	/^let g:airline_powerline_fonts = 1$/;"	v
+g:airline_symbols	init.vim	/^    let g:airline_symbols = {}$/;"	v
+g:airline_theme	init.vim	/^let g:airline_theme="cool"$/;"	v
+g:c_syntax_for_h	init.vim	/^let g:c_syntax_for_h = 1$/;"	v
+g:colors_name	Colors/waxcoin.vim	/^let g:colors_name='nvcode'$/;"	v
+g:colors_name	nvcode-color-schemes.vim/colors/aurora.vim	/^let g:colors_name='aurora'$/;"	v
+g:colors_name	nvcode-color-schemes.vim/colors/dracula.vim	/^let g:colors_name='dracula'$/;"	v
+g:colors_name	nvcode-color-schemes.vim/colors/gruvbox.vim	/^let g:colors_name='gruvbox'$/;"	v
+g:colors_name	nvcode-color-schemes.vim/colors/lunar.vim	/^let g:colors_name='lunar'$/;"	v
+g:colors_name	nvcode-color-schemes.vim/colors/metanoia.vim	/^let g:colors_name='metanoia'$/;"	v
+g:colors_name	nvcode-color-schemes.vim/colors/nord.vim	/^let g:colors_name='nord'$/;"	v
+g:colors_name	nvcode-color-schemes.vim/colors/nvcode.vim	/^let g:colors_name='nvcode'$/;"	v
+g:colors_name	nvcode-color-schemes.vim/colors/onedark.vim	/^let g:colors_name='onedark'$/;"	v
+g:colors_name	nvcode-color-schemes.vim/colors/palenight.vim	/^let g:colors_name='palenight'$/;"	v
+g:colors_name	nvcode-color-schemes.vim/colors/snazzy.vim	/^let g:colors_name='snazzy'$/;"	v
+g:colors_name	nvcode-color-schemes.vim/colors/xoria.vim	/^let g:colors_name='xoria'$/;"	v
+g:cpp_attributes_highlight	init.vim	/^let g:cpp_attributes_highlight = 1$/;"	v
+g:cpp_function_highlight	init.vim	/^let g:cpp_function_highlight = 1$/;"	v
+g:cpp_member_highlight	init.vim	/^let g:cpp_member_highlight = 1$/;"	v
+g:ft_man_open_mode	init.vim	/^let g:ft_man_open_mode = 'vert'$/;"	v
+g:indent_guides_auto_colors	init.vim	/^let g:indent_guides_auto_colors = 0$/;"	v
+g:indent_guides_enable_on_vim_startup	init.vim	/^let g:indent_guides_enable_on_vim_startup = 1$/;"	v
+g:indent_guides_guide_size	init.vim	/^let g:indent_guides_guide_size = 1$/;"	v
+g:indent_guides_start_level	init.vim	/^let g:indent_guides_start_level = 2$/;"	v
+g:netrw_banner	init.vim	/^let g:netrw_banner = 0$/;"	v
+g:netrw_liststyle	init.vim	/^let g:netrw_liststyle = 3$/;"	v
+g:netrw_winsize	init.vim	/^let g:netrw_winsize = 20$/;"	v
+g:nvcode_termcolors	init.vim	/^let g:nvcode_termcolors=256$/;"	v
+get_color	nvcode-color-schemes.vim/generate	/^def get_color(color)$/;"	f
+hex_to_rgb	nvcode-color-schemes.vim/generate	/^def hex_to_rgb(hex)$/;"	f
+hi_color	nvcode-color-schemes.vim/generate	/^  def hi_color(kind, color)$/;"	f	class:Highlight
+hi_style	nvcode-color-schemes.vim/generate	/^  def hi_style(style)$/;"	f	class:Highlight
+hsl_to_rgb	nvcode-color-schemes.vim/generate	/^def hsl_to_rgb(h, s, l)$/;"	f
+initialize	nvcode-color-schemes.vim/generate	/^  def initialize(name, conf)$/;"	f	class:Highlight
+m	nvcode-color-schemes.vim/nmap.vim	/^nmap m :call Menu_Start() <CR>$/;"	m
+mapleader	init.vim	/^let mapleader = " "$/;"	v
+mapleader	nvcode-color-schemes.vim/nmap.vim	/^let mapleader = " "$/;"	v
+quickfix	nvcode-color-schemes.vim/Controle_C.vim	/^augroup quickfix$/;"	a
+rgb_to_hex	nvcode-color-schemes.vim/generate	/^def rgb_to_hex(red, green, blue)$/;"	f
+rgb_to_x256	nvcode-color-schemes.vim/generate	/^def rgb_to_x256(*orig)$/;"	f
+to_s	nvcode-color-schemes.vim/generate	/^  def to_s$/;"	f	class:Highlight
