@@ -107,12 +107,15 @@ nmap <leader><leader>c :Commentary <CR>
 nmap <leader>gm :call FzfMan()<CR>
 " mapping Open Buffer fzf
 nmap <leader>b :lua require('telescope.builtin').buffers()<CR>
-nmap <leader>t :! ctags <CR> :lua require('telescope.builtin').tags()<CR>
+nmap <leader>t :lua require('telescope.builtin').tags()<CR>
 nmap <leader>q :lua require('telescope.builtin').quickfix()<CR>
 nmap <leader>f :lua require('telescope.builtin').find_files()<CR>
 nmap <leader>rc :lua require('rc_telescope').search_dotfiles()<CR>
 nmap <leader>42 :lua require('rc_telescope').fourty_two()<CR>
 nmap <leader>bc :lua require('rc_telescope').current_dir()<CR>
+nmap <leader>bg :lua require('telescope.builtin').git_files()<CR>
+nmap <leader><leader>g :lua require('telescope.builtin').grep_string()<CR>
+
 
 " mapping up or down current lines
 "nmap <S-j> :m -2 <CR>

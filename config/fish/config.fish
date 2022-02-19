@@ -1,3 +1,4 @@
+alias cat "pygmentize"
 alias vi="nvim"
 alias val="docker run -it --rm -v $PWD:/42 valgrind:latest /bin/bash "
 bind \ct '_fzf_search_directory'
@@ -16,3 +17,5 @@ end
 
 alias build "sh ~/.script/build.sh"
 alias nvimcls "rm ~/.local/share/nvim/swap/*"
+alias dotfiles "cd ~/.dotfiles/config"
+alias vif "vi (fzf --reverse --prompt '> ' --border --preview 'cat {}')"
