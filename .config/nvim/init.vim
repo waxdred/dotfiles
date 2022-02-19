@@ -1,4 +1,4 @@
-set nocompatible              " required
+set nxocompatible              " required
 set encoding=utf-8
 set fillchars+=stl:\ ,stlnc:\
 set foldmethod=indent
@@ -110,6 +110,7 @@ nmap <leader>b :lua require('telescope.builtin').buffers()<CR>
 nmap <leader>t :! ctags <CR> :lua require('telescope.builtin').tags()<CR>
 nmap <leader>q :lua require('telescope.builtin').quickfix()<CR>
 nmap <leader>f :lua require('telescope.builtin').find_files()<CR>
+nmap <leader>rc :lua require('rc_telescope').search_dotfiles()<CR>
 
 " mapping up or down current lines
 nmap <S-j> :m -2 <CR>

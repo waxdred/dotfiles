@@ -8,8 +8,6 @@ vnoremap K :m '>-2<CR>gv=gv'
 
 " mapping Open man
 nmap <leader>gm :call FzfMan()<CR>
-" mapping Open Buffer fzf
-nmap <leader>b :Buffers<CR>
 
 " mapping fugitif with mapping Leader by space
 " map leader to Space

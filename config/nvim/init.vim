@@ -15,8 +15,6 @@ syntax enable
 colo ColorCyan
 colorscheme waxcoin
 set backspace=indent,eol,start
-
-"open vim in vertical
 let g:ft_man_open_mode = 'vert'
 
 "Autosave
@@ -61,6 +59,7 @@ Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'puremourning/vimspector'
+Plug 'xiyaowong/nvim-transparent'
 
 call plug#end()
 
@@ -111,6 +110,9 @@ nmap <leader>b :lua require('telescope.builtin').buffers()<CR>
 nmap <leader>t :! ctags <CR> :lua require('telescope.builtin').tags()<CR>
 nmap <leader>q :lua require('telescope.builtin').quickfix()<CR>
 nmap <leader>f :lua require('telescope.builtin').find_files()<CR>
+nmap <leader>rc :lua require('rc_telescope').search_dotfiles()<CR>
+nmap <leader>42 :lua require('rc_telescope').fourty_two()<CR>
+nmap <leader>bc :lua require('rc_telescope').current_dir()<CR>
 
 " mapping up or down current lines
 "nmap <S-j> :m -2 <CR>
