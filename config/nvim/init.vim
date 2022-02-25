@@ -16,7 +16,6 @@ colo ColorCyan
 colorscheme waxcoin
 set backspace=indent,eol,start
 let g:ft_man_open_mode = 'vert'
-
 "Autosave
 autocmd TextChanged,TextChangedI <buffer> silent write
 "Comfig Lex
@@ -29,9 +28,6 @@ let g:c_syntax_for_h = 1
 "link for setting coc with
 "https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/ 
 call plug#begin()
-Plug 'puremourning/vimspector'
-Plug 'rcarriga/nvim-notify'
-Plug 'sunjon/shade.nvim'
 Plug 'sunjon/shade.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'http://github.com/tpope/vim-surround' " Surrunding ysw)
@@ -58,11 +54,12 @@ Plug 'nvim-treesitter/playground'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'puremourning/vimspector'
-Plug 'xiyaowong/nvim-transparent'
-
 call plug#end()
 
+
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
 " Airline_Vim
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
@@ -116,7 +113,8 @@ nmap <leader>bc :lua require('rc_telescope').current_dir()<CR>
 nmap <leader>bg :lua require('telescope.builtin').git_files()<CR>
 nmap <leader><leader>g :lua require('telescope.builtin').grep_string()<CR>
 
-
+" Avoid showing message extra message when using completion
+set shortmess+=c
 " mapping up or down current lines
 "nmap <S-j> :m -2 <CR>
 "nmap <S-k> :m +1 <CR>
@@ -150,11 +148,14 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   highlight = {
     enable = true,              -- false will disable the whole extension
-    disable = { "rust" },  -- list of language that will be disabled
   },
 }
 EOF
-
+let g:completion_chain_complete_list = {
+      \ 'default': [
+      \    {'complete_items': ['lsp']},
+      \    {'complete_items': ['tags']},
+      \  ]}
 "set completeopt=noinsert,menuone,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
