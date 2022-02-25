@@ -1,4 +1,4 @@
-set nxocompatible              " required
+set nocompatible              " required
 set encoding=utf-8
 set fillchars+=stl:\ ,stlnc:\
 set foldmethod=indent
@@ -33,7 +33,6 @@ let g:c_syntax_for_h = 1
 call plug#begin()
 Plug 'puremourning/vimspector'
 Plug 'sunjon/shade.nvim'
-Plug 'sunjon/shade.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'http://github.com/tpope/vim-surround' " Surrunding ysw)
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
@@ -58,11 +57,20 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 Plug 'nvim-treesitter/playground'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
+" Plug 'nvim-lua/completion-nvim'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
 Plug 'puremourning/vimspector'
 
 call plug#end()
 
+inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
 " Airline_Vim
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')

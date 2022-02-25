@@ -1,8 +1,10 @@
 {
   "dependencies": {
     "coc-explorer": ">=0.21.1",
+    "coc-git": ">=2.4.7",
     "coc-json": ">=1.4.1",
     "coc-rust-analyzer": ">=0.59.1",
+    "coc-snippets": ">=2.4.8",
     "coc-tsserver": ">=1.9.4",
     "coc-yaml": ">=1.6.1"
   }

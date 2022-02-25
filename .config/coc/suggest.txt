@@ -1,0 +1,19 @@
+lua|luasnip|around
+requi|require|around
+fd|fd3|snippets
+snip|snippet|snippets-source
+f3|f3|snippets
+mai|main|snippets
+descri|description|around
+sni|snippet|snippets-source
+|nvim|file
+"snippetd|"snippets.userSnippetsDirectory": "${1:}",|json
+|config|file
+fin|find_files|buffer
+bui|builtin|buffer
+tel|telescope|buffer
+requi|require|buffer
+fun|function|buffer
+sear|search_dotfiles|buffer
+dot|dotfile|around
+ali|alias|around
