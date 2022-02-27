@@ -2,10 +2,6 @@
 nmap <S-Tab> <C-W><C-W>
 nmap <Tab> :bn<CR>
 
-"mapping movvec block visuel mode
-vnoremap J :m '>+1<CR>gv=gv'
-vnoremap K :m '>-2<CR>gv=gv'
-
 " mapping Open man
 nmap <leader>gm :call FzfMan()<CR>
 " mapping Open Buffer fzf

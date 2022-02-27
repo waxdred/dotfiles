@@ -1,5 +1,4 @@
 {
-    "snippets.userSnippetsDirectory": "~/.config/nvim/snippets",
     "rust-analyzer.enable": true,
     "rust-analyzer.debug.vimspector.configuration.name": "rust-lldb",
     "rust-analyzer.debug.runtime": "vimspector",

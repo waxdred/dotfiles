@@ -1,0 +1,6 @@
+clang
+%h -x c++-header
+-Wall
+-Wextra
+-Werror
+%c -std=c17

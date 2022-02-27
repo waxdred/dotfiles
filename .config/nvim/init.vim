@@ -15,10 +15,12 @@ syntax enable
 colo ColorCyan
 colorscheme waxcoin
 set backspace=indent,eol,start
-
 "open vim in vertical
 let g:ft_man_open_mode = 'vert'
 
+" lua plug
+lua require('init')
+" lua require('lsp_config')
 "Autosave
 autocmd TextChanged,TextChangedI <buffer> silent write
 "Comfig Lex
@@ -28,44 +30,11 @@ let g:netrw_winsize = 20
 "setting Neovim Tree
 let g:c_syntax_for_h = 1
 
-"link for setting coc with
-"https://ianding.io/2019/07/29/configure-coc-nvim-for-c-c++-development/ 
 call plug#begin()
-Plug 'puremourning/vimspector'
-Plug 'sunjon/shade.nvim'
-Plug 'tpope/vim-fugitive'
-Plug 'http://github.com/tpope/vim-surround' " Surrunding ysw)
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
-Plug 'https://github.com/preservim/nerdtree' " NerdTree
-Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
-Plug 'https://github.com/vim-airline/vim-airline' " Status bar
-Plug 'vim-airline/vim-airline-themes'
-Plug 'gerardbm/vim-atomic'
+" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
-Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
-Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
-Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
-Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
-Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
-Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'bfrg/vim-cpp-modern'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-Plug 'nvim-treesitter/playground'
-Plug 'christianchiarulli/nvcode-color-schemes.vim'
-Plug 'neovim/nvim-lspconfig'
-" Plug 'nvim-lua/completion-nvim'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'puremourning/vimspector'
-
 call plug#end()
 
 inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
@@ -103,10 +72,6 @@ let mapleader = " "
 "mapping change viewport
 nmap <S-Tab> <C-W><C-W>
 nmap <Tab> :bn<CR>
-
-"mapping movvec block visuel mode
-vnoremap J :m '>+1<CR>gv=gv'
-vnoremap K :m '>-2<CR>gv=gv'
 
 "commantary line
 nmap <leader><leader>c :Commentary <CR>
@@ -159,7 +124,7 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 "set completeopt=noinsert,menuone,noselect
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
 
 " configure nvcode-color-schemes
 let g:nvcode_termcolors=256
@@ -170,4 +135,4 @@ if (has("termguicolors"))
     hi LineNr ctermbg=NONE guibg=NONE
 endif
 let g:vimspector_enable_mappings = 'HUMAN'
-
+let g:UltiSnipsExpandJumpForwardTrigger='<Tab>'
