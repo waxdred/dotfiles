@@ -54,4 +54,5 @@ packer.startup(function()
 	use 'dcampos/nvim-snippy'
 	use 'dcampos/cmp-snippy'
 	use 'honza/vim-snippets'
+	use 'mhinz/vim-startify'
 end)
