@@ -1,0 +1,106 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/minishell/code/srcs/parsing/transform
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +112 ft_replace_var_env.c
+badd +89 ft_replace_var_tool.c
+badd +1 ft_replace_var_tool1.c
+badd +36 ~/minishell/code/includes/struct.h
+badd +1 ~/minishell/code/srcs/exec/exec_cmd.c
+badd +0 ~/minishell/code/srcs/exec/exec.c
+badd +0 ~/minishell/code/srcs/builtin/echo.c
+argglobal
+%argdel
+$argadd ft_replace_var_env.c
+$argadd ft_replace_var_tool.c
+$argadd ft_replace_var_tool1.c
+edit ~/minishell/code/srcs/exec/exec.c
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 117 + 117) / 234)
+exe 'vert 2resize ' . ((&columns * 116 + 117) / 234)
+argglobal
+if bufexists("~/minishell/code/srcs/exec/exec.c") | buffer ~/minishell/code/srcs/exec/exec.c | else | edit ~/minishell/code/srcs/exec/exec.c | endif
+if &buftype ==# 'terminal'
+  silent file ~/minishell/code/srcs/exec/exec.c
+endif
+balt ~/minishell/code/srcs/exec/exec_cmd.c
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 60 - ((54 * winheight(0) + 27) / 55)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 60
+normal! 0
+wincmd w
+argglobal
+if bufexists("~/minishell/code/srcs/builtin/echo.c") | buffer ~/minishell/code/srcs/builtin/echo.c | else | edit ~/minishell/code/srcs/builtin/echo.c | endif
+if &buftype ==# 'terminal'
+  silent file ~/minishell/code/srcs/builtin/echo.c
+endif
+balt ~/minishell/code/includes/struct.h
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+24
+normal! zo
+let s:l = 29 - ((28 * winheight(0) + 27) / 55)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 29
+normal! 027|
+wincmd w
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 117 + 117) / 234)
+exe 'vert 2resize ' . ((&columns * 116 + 117) / 234)
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToOFI
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+nohlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

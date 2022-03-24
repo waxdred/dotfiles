@@ -1,0 +1,127 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/cub3d/cube
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 srcs/check_wall_map.c
+badd +1 srcs/color.c
+badd +1 srcs/ft_check_pars.c
+badd +1 srcs/ft_draw_line.c
+badd +1 srcs/ft_draw_map.c
+badd +1 srcs/ft_event.c
+badd +1 srcs/ft_pars.c
+badd +1 srcs/gnl.c
+badd +1 srcs/main.c
+badd +1 srcs/math.c
+badd +1 srcs/mlx.c
+badd +1 srcs/player.c
+badd +1 srcs/ray.c
+badd +1 includes/cube.h
+badd +1 includes/define.h
+badd +1 includes/includes.h
+badd +1 includes/struct.h
+argglobal
+%argdel
+$argadd srcs/check_wall_map.c
+$argadd srcs/color.c
+$argadd srcs/ft_check_pars.c
+$argadd srcs/ft_draw_line.c
+$argadd srcs/ft_draw_map.c
+$argadd srcs/ft_event.c
+$argadd srcs/ft_pars.c
+$argadd srcs/gnl.c
+$argadd srcs/main.c
+$argadd srcs/math.c
+$argadd srcs/mlx.c
+$argadd srcs/player.c
+$argadd srcs/ray.c
+$argadd includes/cube.h
+$argadd includes/define.h
+$argadd includes/includes.h
+$argadd includes/struct.h
+edit srcs/ft_check_pars.c
+let s:save_splitbelow = &splitbelow
+let s:save_splitright = &splitright
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+let &splitbelow = s:save_splitbelow
+let &splitright = s:save_splitright
+wincmd t
+let s:save_winminheight = &winminheight
+let s:save_winminwidth = &winminwidth
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
+argglobal
+if bufexists("srcs/ft_check_pars.c") | buffer srcs/ft_check_pars.c | else | edit srcs/ft_check_pars.c | endif
+if &buftype ==# 'terminal'
+  silent file srcs/ft_check_pars.c
+endif
+balt srcs/color.c
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 27) / 55)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+wincmd w
+argglobal
+if bufexists("srcs/mlx.c") | buffer srcs/mlx.c | else | edit srcs/mlx.c | endif
+if &buftype ==# 'terminal'
+  silent file srcs/mlx.c
+endif
+balt srcs/math.c
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 27) / 55)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+wincmd w
+exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
+exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
+tabnext 1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToOFI
+let &winminheight = s:save_winminheight
+let &winminwidth = s:save_winminwidth
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+set hlsearch
+nohlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :
