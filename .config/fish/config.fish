@@ -1,1 +1,0 @@
-/Users/wax/dotfiles/config/fish/config.fish
