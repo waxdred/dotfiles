@@ -12,8 +12,9 @@ let g:startify_bookmarks = [
 	\ {'1': '~/.dotfiles/.config/nvim/lua/plugin.lua'},
 	\ {'2': '~/.dotfiles/.config/nvim/lua/init.lua'},
 	\ {'3': '~/.dotfiles/.config/nvim/after/plugin/startity_config.vim'},
-	\ {'4': '~/.dotfiles/tmux/.tmux.conf'},
-	\ {'5': '~/.dotfiles/.config/fish/config.fish'},
+	\ {'4': '~/.dotfiles/.config/nvim/lua/plugin.lua'},
+	\ {'5': '~/.dotfiles/tmux/.tmux.conf'},
+	\ {'6': '~/.dotfiles/.config/fish/config.fish'},
 	\ ]
 
 let g:startify_custom_header = [

@@ -1,4 +1,6 @@
 alias build="cp ~/.dotfiles/nvim/.* ."
+alias cbuild="sh ~/.build/cppbuild/buil.sh"
+alias ccmake="sh ~/.build/cppbuild/ccmake.sh"
 alias vi="nvim"
 alias val="docker run -it --rm -v $PWD:/42 valgrind:latest /bin/bash "
 alias dotfile "cd ~/.dotfiles/.config"

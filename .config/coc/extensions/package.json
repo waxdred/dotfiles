@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "coc-clangd": ">=0.21.1",
     "coc-explorer": ">=0.21.1",
     "coc-git": ">=2.4.7",
     "coc-json": ">=1.4.1",

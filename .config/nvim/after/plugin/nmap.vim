@@ -29,6 +29,11 @@ autocmd FileType c inoremap " ""<Left>
 autocmd FileType c inoremap ( ()<Left>
 autocmd FileType c inoremap ' ''<Left>
 autocmd FileType c inoremap [ []<Left>
+autocmd FileType cpp inoremap { {<CR>}<C-o>O
+autocmd FileType cpp inoremap " ""<Left>
+autocmd FileType cpp inoremap ( ()<Left>
+autocmd FileType cpp inoremap ' ''<Left>
+autocmd FileType cpp inoremap [ []<Left>
 
 "mark 
 nmap <leader>1 :mark a <CR>
