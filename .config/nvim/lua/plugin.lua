@@ -56,4 +56,6 @@ packer.startup(function()
 	use 'honza/vim-snippets'
 	use 'mhinz/vim-startify'
 	use 'cdelledonne/vim-cmake'
+	use 'akinsho/toggleterm.nvim'
+
 end)

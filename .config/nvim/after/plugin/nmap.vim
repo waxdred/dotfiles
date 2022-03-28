@@ -23,6 +23,9 @@ augroup quickfix
     autocmd QuickFixCmdPost l* lwindow
 augroup END
 
+"open term
+nmap <leader>tt : ToggleTerm size=20<CR>
+
 " auto completion langage C
 autocmd FileType c inoremap { {<CR>}<C-o>O
 autocmd FileType c inoremap " ""<Left>
