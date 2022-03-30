@@ -4,7 +4,6 @@ alias ccmake="sh ~/.build/cppbuild/ccmake.sh"
 alias vi="nvim"
 alias val="docker run -it --rm -v $PWD:/42 valgrind:latest /bin/bash "
 alias dotfile "cd ~/.dotfiles/.config"
-bind \ct '_fzf_search_directory'
 
 if type -q exa
 	alias ls "exa -g --icons"
