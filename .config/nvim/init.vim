@@ -23,7 +23,7 @@ let g:cmake_link_compile_commands = 0
 lua require('init')
 " lua require('lsp_config')
 "Autosave
-autocmd TextChanged,TextChangedI <buffer> silent write
+" autocmd TextChanged,TextChangedI <buffer> silent write
 "Comfig Lex
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
@@ -140,3 +140,11 @@ if (has("termguicolors"))
 endif
 let g:vimspector_enable_mappings = 'HUMAN'
 let g:UltiSnipsExpandJumpForwardTrigger='<Tab>'
+
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+let g:vista_default_executive = 'ctags'
+let g:vista_executive_for = {
+  \ 'cpp': 'vim_lsp',
+  \ 'php': 'vim_lsp',
+  \ }
+let g:vista_fzf_preview = ['right:50%']
