@@ -12,14 +12,17 @@ set mouse=a
 set nu
 set autoread
 syntax enable
-colo ColorCyan
+" colo ColorCyan
 colorscheme waxcoin
 set backspace=indent,eol,start
 "open vim in vertical
 let g:ft_man_open_mode = 'vert'
 let g:cmake_link_compile_commands = 0
-
-" lua plug
+" setting ranger 
+" let g:rnvimr_shadow_winblend = 70
+let g:rnvimr_ex_enable = 1
+" let g:rnvimr_ranger_cmd = 'ranger --cmd="set draw_borders both"'
+" Customize the initial layout
 lua require('init')
 " lua require('lsp_config')
 "Autosave
@@ -35,6 +38,7 @@ call plug#begin()
 " Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'kevinhwang91/rnvimr'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 call plug#end()
 

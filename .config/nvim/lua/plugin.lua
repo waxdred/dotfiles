@@ -22,6 +22,8 @@ local use = packer.use
 packer.reset()
 
 packer.startup(function()
+	use 'chrisbra/Colorizer'
+	use 'shaunsingh/nord.nvim'
 	use { 'liuchengxu/vista.vim' }
 	use {'wbthomason/packer.nvim', opt = false}
 	use 'williamboman/nvim-lsp-installer'
