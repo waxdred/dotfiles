@@ -25,4 +25,4 @@ end
 export VISUAL=/usr/local/bin/nvim
 export EDITOR=/usr/local/bin/nvim
 
-set theme_color_scheme solarized-dark
+set theme_color_scheme solarized
