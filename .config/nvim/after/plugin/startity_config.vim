@@ -1,4 +1,4 @@
-let g:startify_session_dir = "~/.dotfiles/nvim/sessions"
+let g:startify_session_dir = "~/.config/nvim/sessions/"
 let g:startify_lists = [
         \ { 'type': 'files',     'header': ['   Files']            },
         \ { 'type': 'dir',       'header': ['   Directtory ']	 },
@@ -8,13 +8,12 @@ let g:startify_lists = [
         \ ]
 
 let g:startify_bookmarks = [
-	\ {'0': '~/.dotfiles/.config/nvim/init.vim'},
-	\ {'1': '~/.dotfiles/.config/nvim/lua/plugin.lua'},
-	\ {'2': '~/.dotfiles/.config/nvim/lua/init.lua'},
-	\ {'3': '~/.dotfiles/.config/nvim/after/plugin/startity_config.vim'},
-	\ {'4': '~/.dotfiles/.config/nvim/lua/plugin.lua'},
-	\ {'5': '~/.dotfiles/tmux/.tmux.conf'},
-	\ {'6': '~/.dotfiles/.config/fish/config.fish'},
+	\ {'i': '~/.dotfiles/.config/nvim/init.vim'},
+	\ {'p': '~/.dotfiles/.config/nvim/lua/plugin.lua'},
+	\ {'l': '~/.dotfiles/.config/nvim/lua/init.lua'},
+	\ {'s': '~/.dotfiles/.config/nvim/after/plugin/startity_config.vim'},
+	\ {'t': '~/.dotfiles/tmux/.tmux.conf'},
+	\ {'f': '~/.dotfiles/.config/fish/config.fish'},
 	\ ]
 
 let g:startify_custom_header = [

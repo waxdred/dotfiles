@@ -1,7 +1,7 @@
 alias build="cp ~/.dotfiles/nvim/.* ."
 alias cbuild="sh ~/.build/cppbuild/buil.sh"
 alias ccmake="sh ~/.build/cppbuild/ccmake.sh"
-alias vi="nvim"
+alias vi="~/nvim/bin/nvim"
 alias val="docker run -it --rm -v $PWD:/42 valgrind:latest /bin/bash "
 alias dotfile "cd ~/.dotfiles/.config"
 
@@ -12,13 +12,13 @@ if type -q exa
 	alias lt "ll --tree --level=2 -a"
 end
 
-if status is-interactive
-and not set -q TMUX
-    exec tmux
-end
+/* if status is-interactive */
+/* and not set -q TMUX */
+/*     exec tmux */
+/* end */
 
 if type -q sshpass 
 	alias ssh42 "sshpass -p "X3@xmT4ukJLo8.PG" ssh -o StrictHostKeyChecking=no root@95.179.223.236"
 	alias sshsend "sshpass -p "X3@xmT4ukJLo8.PG" scp -r 42 root@95.179.223.236:"
 end
-
+clear

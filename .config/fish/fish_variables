@@ -2,13 +2,15 @@
 # VERSION: 3.0
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
-SETUVAR Z_DATA:/Users/wax/\x2elocal/share/z/data
-SETUVAR Z_DATA_DIR:/Users/wax/\x2elocal/share/z
-SETUVAR Z_EXCLUDE:\x5e/Users/wax\x24
-SETUVAR __fish_initialized:3100
-SETUVAR _fisher_jethrokuan_2F_z_files:/Users/wax/\x2econfig/fish/functions/__z\x2efish\x1e/Users/wax/\x2econfig/fish/functions/__z_add\x2efish\x1e/Users/wax/\x2econfig/fish/functions/__z_clean\x2efish\x1e/Users/wax/\x2econfig/fish/functions/__z_complete\x2efish\x1e/Users/wax/\x2econfig/fish/conf\x2ed/z\x2efish
+SETUVAR Z_DATA:/Users/jmilhas/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/Users/jmilhas/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/Users/jmilhas\x24
+SETUVAR __fish_initialized:3400
+SETUVAR _fisher_PatrickF1_2F_fzf_2E_fish_files:/Users/jmilhas/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/_fzf_search_processes\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e/Users/jmilhas/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e/Users/jmilhas/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
+SETUVAR _fisher_franciscolourenco_2F_done_files:/Users/jmilhas/\x2econfig/fish/conf\x2ed/done\x2efish
+SETUVAR _fisher_jethrokuan_2F_z_files:/Users/jmilhas/\x2econfig/fish/functions/__z\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/__z_add\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/__z_clean\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/__z_complete\x2efish\x1e/Users/jmilhas/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/wax/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/wax/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jethrokuan/z\x1eoh\x2dmy\x2dfish/oh\x2dmy\x2dfish\x1ejorgebucaran/fisher
+SETUVAR _fisher_plugins:oh\x2dmy\x2dfish/oh\x2dmy\x2dfish\x1ejorgebucaran/fisher\x1ejethrokuan/z\x1ePatrickF1/fzf\x2efish\x1efranciscolourenco/done
 SETUVAR chain_links:chain\x2elinks\x2eroot\x1echain\x2elinks\x2ejobs\x1echain\x2elinks\x2epwd\x1echain\x2elinks\x2evcs_branch\x1echain\x2elinks\x2evcs_dirty\x1echain\x2elinks\x2evcs_stashed
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
@@ -38,3 +40,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_pager_color_selected_background:\x2dr

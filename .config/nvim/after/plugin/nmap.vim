@@ -24,7 +24,7 @@ augroup quickfix
 augroup END
 
 "open term
-nmap <leader>tt : ToggleTerm size=20<CR>
+nmap <leader>tt : ToggleTerm size=20 cmd="fish"<CR>
 
 " auto completion langage C
 autocmd FileType c inoremap { {<CR>}<C-o>O
