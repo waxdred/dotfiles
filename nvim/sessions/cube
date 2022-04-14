@@ -3,48 +3,45 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~/cub3d/cube
+cd ~/cub3d/code
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 srcs/check_wall_map.c
-badd +1 srcs/color.c
-badd +1 srcs/ft_check_pars.c
-badd +1 srcs/ft_draw_line.c
-badd +1 srcs/ft_draw_map.c
-badd +1 srcs/ft_event.c
-badd +1 srcs/ft_pars.c
-badd +1 srcs/gnl.c
-badd +1 srcs/main.c
-badd +1 srcs/math.c
-badd +1 srcs/mlx.c
-badd +1 srcs/player.c
-badd +1 srcs/ray.c
-badd +1 includes/cube.h
-badd +1 includes/define.h
+badd +6 srcs/raycasting/extremum_wall.c
+badd +1 srcs/raycasting/h_raycasting.c
+badd +1 srcs/raycasting/math.c
+badd +1 srcs/raycasting/raycasting.c
+badd +1 srcs/raycasting/size_wall.c
+badd +1 srcs/raycasting/v_raycasting.c
+badd +67 includes/cub3D.h
+badd +22 includes/define.h
 badd +1 includes/includes.h
-badd +1 includes/struct.h
+badd +184 includes/struct.h
+badd +17 srcs/main.c
+badd +26 srcs/event/event.c
+badd +11 srcs/event/key.c
+badd +53 srcs/event/mouse.c
+badd +73 srcs/event/move_player.c
+badd +31 srcs/texture/init_start_walls.c
 argglobal
 %argdel
-$argadd srcs/check_wall_map.c
-$argadd srcs/color.c
-$argadd srcs/ft_check_pars.c
-$argadd srcs/ft_draw_line.c
-$argadd srcs/ft_draw_map.c
-$argadd srcs/ft_event.c
-$argadd srcs/ft_pars.c
-$argadd srcs/gnl.c
-$argadd srcs/main.c
-$argadd srcs/math.c
-$argadd srcs/mlx.c
-$argadd srcs/player.c
-$argadd srcs/ray.c
-$argadd includes/cube.h
+$argadd srcs/raycasting/extremum_wall.c
+$argadd srcs/raycasting/h_raycasting.c
+$argadd srcs/raycasting/math.c
+$argadd srcs/raycasting/raycasting.c
+$argadd srcs/raycasting/size_wall.c
+$argadd srcs/raycasting/v_raycasting.c
+$argadd includes/cub3D.h
 $argadd includes/define.h
 $argadd includes/includes.h
 $argadd includes/struct.h
-edit srcs/ft_check_pars.c
+$argadd srcs/main.c
+$argadd srcs/event/event.c
+$argadd srcs/event/key.c
+$argadd srcs/event/mouse.c
+$argadd srcs/event/move_player.c
+edit srcs/raycasting/h_raycasting.c
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -61,14 +58,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 182 + 182) / 364)
+exe 'vert 2resize ' . ((&columns * 181 + 182) / 364)
 argglobal
-if bufexists("srcs/ft_check_pars.c") | buffer srcs/ft_check_pars.c | else | edit srcs/ft_check_pars.c | endif
-if &buftype ==# 'terminal'
-  silent file srcs/ft_check_pars.c
-endif
-balt srcs/color.c
+balt srcs/raycasting/extremum_wall.c
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -77,19 +70,25 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 27) / 55)
+42
+normal! zo
+45
+normal! zo
+51
+normal! zc
+let s:l = 54 - ((44 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 54
+normal! 01|
 wincmd w
 argglobal
-if bufexists("srcs/mlx.c") | buffer srcs/mlx.c | else | edit srcs/mlx.c | endif
+if bufexists("srcs/raycasting/h_raycasting.c") | buffer srcs/raycasting/h_raycasting.c | else | edit srcs/raycasting/h_raycasting.c | endif
 if &buftype ==# 'terminal'
-  silent file srcs/mlx.c
+  silent file srcs/raycasting/h_raycasting.c
 endif
-balt srcs/math.c
+balt srcs/raycasting/extremum_wall.c
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -98,15 +97,15 @@ setlocal fdl=99
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 27) / 55)
+let s:l = 54 - ((44 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 0
+keepjumps 54
+normal! 038|
 wincmd w
-exe 'vert 1resize ' . ((&columns * 128 + 128) / 256)
-exe 'vert 2resize ' . ((&columns * 127 + 128) / 256)
+exe 'vert 1resize ' . ((&columns * 182 + 182) / 364)
+exe 'vert 2resize ' . ((&columns * 181 + 182) / 364)
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -121,7 +120,6 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
