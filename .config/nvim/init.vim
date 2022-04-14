@@ -17,7 +17,7 @@ colorscheme waxcoin
 set backspace=indent,eol,start
 "open vim in vertical
 let g:ft_man_open_mode = 'vert'
-let g:cmake_link_compile_commands = 0
+let g:cmake_link_compile_commands = 1
 " setting ranger 
 " let g:rnvimr_shadow_winblend = 70
 let g:rnvimr_ex_enable = 1
