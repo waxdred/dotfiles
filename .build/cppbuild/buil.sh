@@ -9,5 +9,5 @@ echo "build CMakeLists"
 
 mkdir build srcs includes
 cp ~/.build/cppbuild/Makefile .
-cp ~/.build/cppbuild/CMakeLists.txt .
 cp ~/.build/cppbuild/.ccls .
+sed "s/name_project/$1/g" ~/.build/cppbuild/CMakeLists.txt > CMakeLists.txt
