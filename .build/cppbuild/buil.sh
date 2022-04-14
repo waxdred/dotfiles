@@ -7,6 +7,7 @@ echo "build Makefile"
 echo "build .ccls"
 echo "build CMakeLists"
 
+rm -rf build/*
 mkdir build srcs includes
 cp ~/.build/cppbuild/Makefile .
 cp ~/.build/cppbuild/.ccls .
