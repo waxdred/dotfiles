@@ -22,6 +22,8 @@ local use = packer.use
 packer.reset()
 
 packer.startup(function()
+	use 'f3fora/cmp-spell'
+	use 'ray-x/lsp_signature.nvim'
 	use 'chrisbra/Colorizer'
 	use 'shaunsingh/nord.nvim'
 	use { 'liuchengxu/vista.vim' }
@@ -60,5 +62,7 @@ packer.startup(function()
 	use 'mhinz/vim-startify'
 	use 'cdelledonne/vim-cmake'
 	use 'akinsho/toggleterm.nvim'
+	use 'hrsh7th/cmp-nvim-lsp-signature-help'
+	use 'onsails/lspkind-nvim'
 
 end)
