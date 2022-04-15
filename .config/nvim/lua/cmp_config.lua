@@ -72,6 +72,8 @@ cmp.setup {
         buffer = "[Buffer]",
         path = "[Path]",
         spell = "[Spell]",
+	omini = "[Omni]",
+	nvim_lsp_document_symbol = "[Symb]",
 	nvim_lsp_signature_help = "[Sign]",
 	ultisnips = "[Snip]"
       })[entry.source.name]
@@ -85,7 +87,9 @@ cmp.setup {
     { name = "path" },
     { name = 'ultisnips' },
     { name = 'spell' },
+    { name = 'omni' },
     { name = 'nvim_lsp_signature_help' },
+    { name = 'nvim_lsp_document_symbol' },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
