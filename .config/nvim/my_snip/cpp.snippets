@@ -1,0 +1,46 @@
+#class canonique
+
+snippet class "Gen: class canonique"
+	class	${1:Class name}{
+		private:	
+			${0}
+		public:
+			$1(void);
+			$1(const $1 &$1);
+			~$1(void);
+
+			$1 &operator = (const $1 &${2:fn_class});
+	};
+endsnippet
+
+snippet fn_can "description"
+${1:Class name}::$1(void){
+	/* std::cout << "Default constructor called" << std::endl; */
+	return ;
+}
+
+$1::~$1(void){
+	/* std::cout << "Destructor called" << std::endl; */
+	return ;
+}
+
+$1::$1(const $1 &${2:name}){
+	/* std::cout << "Copy constructor called" << std::endl; */
+	*this = $2;
+	return;
+}
+endsnippet
+
+snippet head "Gen: define of the header"
+#ifndef ${1:filename}
+# define $1
+
+# include <iostream>
+
+	${0}
+#endif
+endsnippet
+
+
+	
+

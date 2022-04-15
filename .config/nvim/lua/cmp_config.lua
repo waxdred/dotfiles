@@ -1,3 +1,4 @@
+local lspkind = require('lspkind')
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
   return
@@ -60,16 +61,20 @@ cmp.setup {
     ["<CR>"] = cmp.mapping.confirm { select = true },
   },
   formatting = {
-    fields = { "kind", "abbr", "menu" },
+    -- fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
       -- Kind icons
-      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      vim_item.kind = string.format("%s %s", lspkind.presets.default[vim_item.kind], vim_item.kind)
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
+        spell = "[Spell]",
+	omini = "[Omni]",
+	nvim_lsp_document_symbol = "[Symb]",
+	nvim_lsp_signature_help = "[Sign]",
 	ultisnips = "[Snip]"
       })[entry.source.name]
       return vim_item
@@ -81,6 +86,10 @@ cmp.setup {
     { name = "buffer" },
     { name = "path" },
     { name = 'ultisnips' },
+    { name = 'spell' },
+    { name = 'omni' },
+    { name = 'nvim_lsp_signature_help' },
+    { name = 'nvim_lsp_document_symbol' },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,

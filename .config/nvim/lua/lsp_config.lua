@@ -1,3 +1,6 @@
+-- require'lspconfig'.clangd.setup{}
+-- require'lspconfig'.ccls.setup{}
+
 local M = {}
 
 -- TODO: backfill this to template
@@ -85,6 +88,7 @@ M.on_attach = function(client, bufnr)
   if client.name == "ccls" then
     client.resolved_capabilities.document_formatting = false
   end
+  require "lsp_signature".on_attach()
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
 end
@@ -99,3 +103,4 @@ end
 M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
 
 return M
+

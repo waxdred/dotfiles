@@ -10,5 +10,4 @@ project(name_project VERSION 1.0)
 file(GLOB_RECURSE SRC_FILES srcs/*.cpp)
 
 add_executable(name_project ${SRC_FILES})
-# includes target add /includes
-target_include_directories(name_project PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(name_project PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes)
