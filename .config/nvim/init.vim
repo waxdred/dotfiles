@@ -42,9 +42,6 @@ Plug 'kevinhwang91/rnvimr'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 call plug#end()
 
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
 " Airline_Vim
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
@@ -143,8 +140,8 @@ if (has("termguicolors"))
     hi LineNr ctermbg=NONE guibg=NONE
 endif
 let g:vimspector_enable_mappings = 'HUMAN'
-let g:UltiSnipsExpandJumpForwardTrigger='<Tab>'
-
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snip"]
 let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
 let g:vista_default_executive = 'ctags'
 let g:vista_executive_for = {
