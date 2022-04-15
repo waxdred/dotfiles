@@ -1,13 +1,13 @@
 " Maintainer: waxcoin
 
-set background=dark
+set background=light
 hi clear
 if exists('syntax_on')
   syntax reset
 endif
-let g:colors_name='nvcode'
+let g:colors_name='waxcoin'
 
-hi Normal guifg=#abb2bf ctermfg=249 guibg=#1e1e1e ctermbg=234 gui=NONE cterm=NONE
+hi Normal guifg=#abb2bf ctermfg=249 guibg=#1e1e1e00 ctermbg=234 gui=NONE cterm=NONE
 hi Comment guifg=#608b4e ctermfg=65 guibg=NONE ctermbg=NONE gui=italic cterm=italic
 hi Constant guifg=#dcdcaa ctermfg=187 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi String guifg=#d3420b ctermfg=166 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE

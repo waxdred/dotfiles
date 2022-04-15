@@ -2,6 +2,10 @@
 nmap <S-Tab> <C-W><C-W>
 nmap <Tab> :bn<CR>
 
+
+"mapping ranger in nvim
+nmap <leader>r :RnvimrToggle<CR>
+ 
 " mapping Open man
 nmap <leader>gm :call FzfMan()<CR>
 " mapping Open Buffer fzf

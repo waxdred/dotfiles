@@ -11,14 +11,7 @@ if type -q exa
 	alias lla "exa -la -g --icons"
 	alias lt "ll --tree --level=2 -a"
 end
+export VISUAL=/usr/local/bin/nvim
+export EDITOR=/usr/local/bin/nvim
 
-/* if status is-interactive */
-/* and not set -q TMUX */
-/*     exec tmux */
-/* end */
-
-if type -q sshpass 
-	alias ssh42 "sshpass -p "X3@xmT4ukJLo8.PG" ssh -o StrictHostKeyChecking=no root@95.179.223.236"
-	alias sshsend "sshpass -p "X3@xmT4ukJLo8.PG" scp -r 42 root@95.179.223.236:"
-end
-clear
+set theme_color_scheme solarized
