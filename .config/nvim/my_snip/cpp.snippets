@@ -1,16 +1,16 @@
 #class canonique
 
 snippet class "Gen: class canonique"
-	class	${1:Class name}{
-		private:	
-			${0}
-		public:
-			$1(void);
-			$1(const $1 &$1);
-			~$1(void);
+class	${1:Class name}{
+	private:	
+		${0}
+	public:
+		$1(void);
+		$1(const $1 &$1);
+		~$1(void);
 
-			$1 &operator = (const $1 &${2:fn_class});
-	};
+		$1 &operator = (const $1 &${2:fn_class});
+};
 endsnippet
 
 snippet fn_can "description"
@@ -41,6 +41,81 @@ snippet head "Gen: define of the header"
 #endif
 endsnippet
 
+snippet void0 "Gen: fonction type void with 0 args"
+void	${1:fonction}(void){
+	${0}
+}
+endsnippet
 
-	
+snippet void1 "Gen: fonction type void with 1 args"
+void	${1:fonction}(${2:Type} ${3:Name}){
+	${0}
+}
+endsnippet
 
+snippet void2 "Gen: fonction type void with 2 args"
+void	${1:fonction}(${2:Type} ${3:Name}, ${4:Type} ${5:Name}){
+	${0}
+}
+endsnippet
+
+snippet int0 "Gen: fonction type int with 0 args"
+int	${1:fonction}(void){
+	${0}
+	return ();
+}
+endsnippet
+
+snippet int1 "Gen: fonction type int with 1 args"
+int	${1:fonction}(${2:Type} ${3:Name}){
+	${0}
+	return ();
+}
+endsnippet
+
+snippet int2 "Gen: fonction type int with 2 args"
+int	${1:fonction}(${2:Type} ${3:Name}, ${4:Type} ${5:Name}){
+	${0}
+	return ();
+}
+endsnippet
+snippet string0 "Gen: fonction type std::string with 0 args"
+std::string	${1:fonction}(void){
+	${0}
+	return ();
+}
+endsnippet
+
+snippet string1 "Gen: fonction type std::string with 1 args"
+std::string	${1:fonction}(${2:Type} ${3:Name}){
+	${0}
+	return ();
+}
+endsnippet
+
+snippet string2 "Gen: fonction type std::string with 2 args"
+std::string	${1:fonction}(${2:Type} ${3:Name}, ${4:Type} ${5:Name}){
+	${0}
+	return ();
+}
+endsnippet
+
+snippet fn0 "Gen: fonction type ${1} with 0 args"
+${1}	${2:fonction}(${3}){
+	${0}
+}
+endsnippet
+
+snippet fn1 "Gen: fonction type ${1} with 1 args"
+${1}	${2:fonction}(${3:Type} ${4:Name}){
+	${0}
+	return ();
+}
+endsnippet
+
+snippet fn2 "Gen: fonction type ${1} with 2 args"
+${1}	${2:fonction}(${3:Type} ${4:Name}, ${5:Type} ${6:Name}){
+	${0}
+	return ();
+}
+endsnippet
