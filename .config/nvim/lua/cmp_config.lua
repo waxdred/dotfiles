@@ -1,3 +1,4 @@
+
 local lspkind = require('lspkind')
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
@@ -56,6 +57,20 @@ cmp.setup {
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
     },
+    ['<Tab>'] = cmp.mapping(function(fallback)
+                        if vim.fn.pumvisible() == 1 then
+                            vim.fn.feedkeys(
+                                vim.api.nvim_replace_termcodes('<C-n>', true,
+                                                               true, true), 'n')
+                        elseif luasnip.expand_or_jumpable() then
+                            vim.fn.feedkeys(
+                                vim.api.nvim_replace_termcodes(
+                                    '<Plug>luasnip-expand-or-jump', true, true,
+                                    true), '')
+                        else
+                            fallback()
+                        end
+                    end, {'i', 's'}),
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
     ["<CR>"] = cmp.mapping.confirm { select = true },
@@ -64,7 +79,7 @@ cmp.setup {
     -- fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
       -- Kind icons
-      vim_item.kind = string.format("%s %s", lspkind.presets.default[vim_item.kind], vim_item.kind)
+      vim_item.kind = string.format("%s %s", lspkind.presets.default[kind_icons], vim_item.kind)
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
@@ -103,3 +118,4 @@ cmp.setup {
     native_menu = false,
   },
 }
+
