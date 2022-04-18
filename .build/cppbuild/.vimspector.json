@@ -4,8 +4,8 @@
       "adapter": "vscode-cpptools",
       "configuration": {
         "request": "launch",
-        "program": "${workspaceRoot}/test",
-	"MIMode": "gdb"
+        "program": "${workspaceRoot}/build/bin",
+	"MIMode": "lldb"
       }
     }
   }

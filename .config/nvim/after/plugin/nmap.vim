@@ -45,3 +45,9 @@ autocmd FileType cpp inoremap [ []<Left>
 "mark 
 nmap <leader>1 :mark a <CR>
 nmap <leader><leader>1 'a
+
+"vimspector mapping
+nmap <F2> :call vimspector#StepOver()<CR>
+nmap <F3> :call vimspector#StepInto()<CR>
+nmap <F4>:call vimspector#StepOut()<CR>
+nmap <F1> :call vimspector#Restart()<CR>

@@ -18,3 +18,4 @@ touch srcs/main.cpp
 touch srcs/$2.cpp 
 touch includes/$2.hpp
 sed "s/name_project/$1/g" ~/.build/cppbuild/CMakeLists.txt > CMakeLists.txt
+sed "s/bin/$3/g" ~/.build/cppbuild/.vimspector.json > .vimspector.json
