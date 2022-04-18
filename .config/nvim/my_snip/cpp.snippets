@@ -29,6 +29,14 @@ $1::$1(const $1 &${2:name}){
 	*this = $2;
 	return;
 }
+$1 &$1::operator = (const $1 &$2){
+	if (&$2 != this)
+	{
+		${3:Var} = $2.$3;
+	}
+	return (*this);
+}
+
 endsnippet
 
 snippet head "Gen: define of the header"
@@ -120,8 +128,19 @@ ${1:Type}	${2:fonction}(${3:Type} ${4:Name}, ${5:Type} ${6:Name}){
 }
 endsnippet
 
-snippet getter "Gen: getter"
+snippet fnGetter "Gen: getter"
 ${1:Type}	${2:ClassName}::get${3:fonction}(void)const{
 	return (${4:get_var});
+}
+endsnippet
+
+snippet Getter "Gen: Prototype Getter"
+${1:Type}	${2:ClassName}::get${3:fonction}(void)const;
+endsnippet
+
+snippet operator<< "fonction for operator <<"
+std::ostream &operator << (std::ostream &o, const ${1:ClassName} s){
+	o << "info Player: " << ${2:VarName} << std::endl;
+	return (o);
 }
 endsnippet
