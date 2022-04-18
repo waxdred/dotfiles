@@ -11,3 +11,5 @@ file(GLOB_RECURSE SRC_FILES srcs/*.cpp)
 
 add_executable(name_project ${SRC_FILES})
 target_include_directories(name_project PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes)
+target_compile_options(name_project PUBLIC -g3 -Wall -Wextra -Werror -std=c++98)
+
