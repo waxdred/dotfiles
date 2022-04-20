@@ -149,3 +149,7 @@ let g:vista_executive_for = {
   \ 'php': 'vim_lsp',
   \ }
 let g:vista_fzf_preview = ['right:50%']
+
+" Header setting 42
+let g:user42 = 'jmilhas'
+let g:mail42 = 'jmilhas@student.42.fr'
