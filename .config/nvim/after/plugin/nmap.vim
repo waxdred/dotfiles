@@ -1,3 +1,6 @@
+
+let mapleader = " "
+
 "mapping change viewport
 nmap <S-Tab> <C-W><C-W>
 nmap <Tab> :bn<CR>
@@ -5,11 +8,12 @@ nmap <Tab> :bn<CR>
 
 "mapping ranger in nvim
 nmap <leader>r :RnvimrToggle<CR>
- 
+
+"commantary line
+nmap <leader><leader>c :Commentary <CR>
+
 " mapping Open man
 nmap <leader>gm :call FzfMan()<CR>
-" mapping Open Buffer fzf
-nmap <leader>b :Buffers<CR>
 
 " mapping fugitif with mapping Leader by space
 " map leader to Space
@@ -20,6 +24,9 @@ nmap <leader>gp :Git push<CR>
 nmap <leader>gb :Git checkout
 nmap <leader>g1 :diffget //2<CR> 
 nmap <leader>g2 :diffget //3<CR> 
+
+"mapping find replace word undercursor in all buffer
+nmap <Leader>sed :bufdo %s/\<<C-r><C-w>\>//g<Left><Left> | update
 
 augroup quickfix
     autocmd!
@@ -50,4 +57,18 @@ nmap <leader><leader>1 'a
 nmap <F2> :call vimspector#StepOver()<CR>
 nmap <F3> :call vimspector#StepInto()<CR>
 nmap <F4>:call vimspector#StepOut()<CR>
-nmap <F1> :call vimspector#Restart()<CR>
+nmap <F12> :call vimspector#Restart()<CR>
+
+" mapping Open Buffer fzf telescope
+nmap <leader>b :lua require'telescope.builtin'.buffers()<CR>
+nmap <leader>t :! ctags <CR> :lua require('telescope.builtin').tags()<CR>
+nmap <leader>f :lua require('telescope.builtin').find_files()<CR>
+nmap <leader>rc :lua require('rc_telescope').search_dotfiles()<CR>
+nmap <leader>br :lua require('telescope.builtin').live_grep()<CR>
+nmap <leader>bq :lua require('telescope.builtin').quickfix()<CR>
+nmap <leader>bg :lua require('telescope.builtin').git_files()<CR>
+nmap <leader>xx :lua require('telescope.builtin').diagnostics()<CR>
+nmap <leader>gt :lua require('telescope.builtin').git_status()<CR>
+nmap <F19> :lua require('telescope.builtin').keymaps()<CR>
+nmap <leader>man :lua require('telescope.builtin').man_pages()<CR>
+nmap <leader>old :lua require('telescope.builtin').oldfiles()<CR>

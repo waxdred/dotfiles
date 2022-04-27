@@ -22,6 +22,8 @@ local use = packer.use
 packer.reset()
 
 packer.startup(function()
+	use 'kyazdani42/nvim-web-devicons' 
+	use 'folke/lsp-colors.nvim'
 	use 'kevinhwang91/rnvimr'
 	use 'L3MON4D3/LuaSnip'
 	use 'SirVer/ultisnips'
@@ -67,5 +69,5 @@ packer.startup(function()
 	use 'vim-airline/vim-airline-themes'
 	use 'williamboman/nvim-lsp-installer'
 	use {'wbthomason/packer.nvim', opt = false}
-
+	use 'folke/trouble.nvim'
 end)

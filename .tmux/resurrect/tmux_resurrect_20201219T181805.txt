@@ -1,0 +1,10 @@
+pane	0	0	:zsh	1	:*	0	:/Users/wax	1	zsh	:
+pane	1	0	:zsh	1	:*	0	:/Users/wax/.tmux/plugins/tmux-menu/scripts	0	vim	:vi tmux.sh
+pane	1	0	:zsh	1	:*	1	:/Users/wax/.tmux/plugins/tmux-menu/scripts	0	screen-4.8.0	:screen
+pane	1	0	:zsh	1	:*	2	:/Users/wax	1	zsh	:
+pane	2	0	:zsh	1	:*	0	:/Users/wax	0	zsh	:
+pane	2	0	:zsh	1	:*	1	:/Users/wax	1	zsh	:
+window	0	0	1	:*	cb9d,221x48,0,0,0
+window	1	0	1	:*	553d,221x48,0,0{110x48,0,0,6,110x48,111,0[110x24,111,0,8,110x23,111,25,9]}
+window	2	0	1	:*	4d1c,201x41,0,0{100x41,0,0,10,100x41,101,0,11}
+state	2	

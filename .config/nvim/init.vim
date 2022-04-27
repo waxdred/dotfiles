@@ -12,22 +12,14 @@ set mouse=a
 set nu
 set autoread
 syntax enable
-" colo ColorCyan
 colorscheme waxcoin
 set backspace=indent,eol,start
+
 "open vim in vertical
 let g:ft_man_open_mode = 'vert'
 let g:cmake_link_compile_commands = 1
-" setting ranger 
-" let g:rnvimr_shadow_winblend = 70
 let g:rnvimr_ex_enable = 1
-" let g:rnvimr_ranger_cmd = 'ranger --cmd="set draw_borders both"'
-" Customize the initial layout
 lua require('init')
-" lua require('lsp_config')
-"Autosave
-" autocmd TextChanged,TextChangedI <buffer> silent write
-"Comfig Lex
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 let g:netrw_winsize = 20
@@ -35,11 +27,10 @@ let g:netrw_winsize = 20
 let g:c_syntax_for_h = 1
 
 call plug#begin()
-" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'kevinhwang91/rnvimr'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " Airline_Vim
@@ -58,55 +49,12 @@ let g:airline#extensions#branch#enabled = 1
 " Custom indentPlugin Show
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
-"set ts=4 sw=4 et
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 hi IndentGuidesOdd  ctermbg=238
 hi IndentGuidesEven ctermbg=242
 hi Error NONE
 hi ErrorMsg NONE
-nnoremap <space> za
-
-" add man in vim cmd Man
-runtime! ftplugin/man.vim
-let mapleader = " "
-
-"mapping change viewport
-nmap <S-Tab> <C-W><C-W>
-nmap <Tab> :bn<CR>
-
-"commantary line
-nmap <leader><leader>c :Commentary <CR>
-
-" mapping Open man
-nmap <leader>gm :call FzfMan()<CR>
-" mapping Open Buffer fzf
-nmap <leader>b :lua require('telescope.builtin').buffers()<CR>
-nmap <leader>t :! ctags <CR> :lua require('telescope.builtin').tags()<CR>
-nmap <leader>f :lua require('telescope.builtin').find_files()<CR>
-nmap <leader>rc :lua require('rc_telescope').search_dotfiles()<CR>
-nmap <leader>br :lua require('telescope.builtin').live_grep()<CR>
-nmap <leader>bq :lua require('telescope.builtin').quickfix()<CR>
-nmap <leader>bg :lua require('telescope.builtin').git_files()<CR>
-
-
-" mapping up or down current lines
-nmap <S-j> :m -2 <CR>
-nmap <S-k> :m +1 <CR>
-
-" mapping fugitif with mapping Leader by space
-" map leader to Space
-nmap <leader>gs :G<CR>
-nmap <leader>gc :Git commit<CR>
-nmap <leader>gp :Git push<CR>
-nmap <leader>gb :Git checkout
-nmap <leader>g1 :diffget //2<CR> 
-nmap <leader>g2 :diffget //3<CR> 
-
-" mapping sed under cursor
-nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-
-nmap <F8> :TagbarToggle<CR>
 
 " Disable function highlighting (affects both C and C++ files)
 let g:cpp_function_highlight = 1

@@ -1,5 +1,4 @@
 require 'plugin'
-require 'lsp_config'
-require 'lsp_install'
+require 'lsp'
 require 'cmp_config'
 require 'ter_init'
