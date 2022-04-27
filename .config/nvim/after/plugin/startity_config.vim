@@ -11,6 +11,7 @@ let g:startify_bookmarks = [
 	\ {'i': '~/.dotfiles/.config/nvim/init.vim'},
 	\ {'p': '~/.dotfiles/.config/nvim/lua/plugin.lua'},
 	\ {'n': '~/.dotfiles/.config/nvim/my_snip/cpp.snippets'},
+	\ {'m': '~/.dotfiles/.config/nvim/after/plugin/nmap.vim'},
 	\ {'l': '~/.dotfiles/.config/nvim/lua/init.lua'},
 	\ {'s': '~/.dotfiles/.config/nvim/after/plugin/startity_config.vim'},
 	\ {'t': '~/.dotfiles/tmux/.tmux.conf'},

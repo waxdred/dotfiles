@@ -22,6 +22,8 @@ local use = packer.use
 packer.reset()
 
 packer.startup(function()
+	use 'RishabhRD/popfix'
+	use 'RishabhRD/nvim-cheat.sh'
 	use 'kyazdani42/nvim-web-devicons' 
 	use 'folke/lsp-colors.nvim'
 	use 'kevinhwang91/rnvimr'
