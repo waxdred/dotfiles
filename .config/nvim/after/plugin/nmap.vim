@@ -49,7 +49,8 @@ autocmd FileType cpp inoremap ( ()<Left>
 autocmd FileType cpp inoremap ' ''<Left>
 autocmd FileType cpp inoremap [ []<Left>
 
-au BufNewFile,BufRead *.cpp,*.hpp, *c, *h :Stdheader
+au BufNewFile,BufRead *.cpp,*.hpp :Stdheader
+au BufNewFile,BufRead *.c,*.h :Stdheader
 
 "mark 
 nmap <leader>1 :mark a <CR>
