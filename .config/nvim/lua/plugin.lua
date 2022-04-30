@@ -22,7 +22,7 @@ local use = packer.use
 packer.reset()
 
 packer.startup(function()
-	use 'mhinz/vim-signify'
+	use 'airblade/vim-gitgutter'
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-cheat.sh'
 	use 'kyazdani42/nvim-web-devicons' 
