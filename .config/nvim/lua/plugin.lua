@@ -22,6 +22,7 @@ local use = packer.use
 packer.reset()
 
 packer.startup(function()
+	use 'glepnir/lspsaga.nvim'
 	use 'airblade/vim-gitgutter'
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-cheat.sh'
