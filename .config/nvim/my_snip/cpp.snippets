@@ -1,5 +1,13 @@
 #class canonique
 
+snippet TT "Templates name T"
+template<typename T>
+endsnippet
+
+snippet TTN "Templates name"
+template<typename ${1:parameters}>
+endsnippet
+
 snippet class "Gen: class canonique"
 class	${1:Class name}{
 	private:	
@@ -29,6 +37,7 @@ $1::$1(const $1 &${2:name}){
 	*this = $2;
 	return;
 }
+
 $1 &$1::operator = (const $1 &$2){
 	if (&$2 != this)
 	{
@@ -36,8 +45,34 @@ $1 &$1::operator = (const $1 &$2){
 	}
 	return (*this);
 }
-
 endsnippet
+
+snippet fn_can_template "description"
+${1:Class name}<${4:Templates}>::$1(void){
+	/* std::cout << "Default constructor called" << std::endl; */
+	return ;
+}
+
+$1<$4>::~$1(void){
+	/* std::cout << "Destructor called" << std::endl; */
+	return ;
+}
+
+$1<$4>::$1(const $1 &${2:name}){
+	/* std::cout << "Copy constructor called" << std::endl; */
+	*this = $2;
+	return;
+}
+
+$1<$4> &$1::operator = (const $1 &$2){
+	if (&$2 != this)
+	{
+		${3:Var} = $2.$3;
+	}
+	return (*this);
+}
+endsnippet
+
 
 snippet head "Gen: define of the header"
 #ifndef ${1:filename}
