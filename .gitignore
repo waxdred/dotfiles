@@ -1,7 +1,7 @@
 
-Autodesk/
-coc/
-filezilla/
+Autodesk
+coc
+filezilla
 fish/completions/scheme.fish
 fish/conf.d/fzf.fish
 fish/functions/__fzf_cd.fish
@@ -18,6 +18,6 @@ fish/functions/__scheme_list.fish
 fish/functions/__scheme_preview.fish
 fish/functions/__scheme_set.fish
 fish/functions/scheme.fish
-nvim/Colors/
+nvim/Colors
 nvim/after/plugin/stdheader.vim
-nvim/sessions/
+nvim/sessions
