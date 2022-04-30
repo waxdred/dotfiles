@@ -27,6 +27,7 @@ nmap <leader>g2 :diffget //3<CR>
 
 "mapping find replace word undercursor in all buffer
 nmap <Leader>sed :bufdo %s/\<<C-r><C-w>\>//g<Left><Left> | update
+nmap <Leader>se :s/\<<C-r><C-w>\>//g<Left><Left>
 
 augroup quickfix
     autocmd!

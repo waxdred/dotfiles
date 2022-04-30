@@ -8,6 +8,21 @@ snippet TTN "Templates name"
 template<typename ${1:parameters}>
 endsnippet
 
+snippet classTemplates "Gen: class canonique"
+template<typename ${1:parameters}>
+class	${2:Class name}{
+	private:	
+		${0}
+	public:
+		$2(void);
+		$2(const $2 &$2);
+		~$2(void);
+
+		$2 &operator = (const $2 &${3:fn_class});
+};
+endsnippet
+
+
 snippet class "Gen: class canonique"
 class	${1:Class name}{
 	private:	
