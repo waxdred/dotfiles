@@ -8,6 +8,7 @@ alias dotfile "cd ~/.dotfiles/.config"
 alias sfish "source ~/.dotfiles/.config/fish/config.fish"
 alias stmux "source ~/.dotfiles/.tmux.conf"
 alias cheat "sh ~/.tmux/plugins/tmux-cheat-fzf/scripts/cheat.sh"
+alias vig "vi +G"
 
 if type -q exa
 	alias ls "exa -g --icons"

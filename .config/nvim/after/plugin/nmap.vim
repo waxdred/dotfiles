@@ -75,4 +75,5 @@ nmap <leader>gt :lua require('telescope.builtin').git_status()<CR>
 nmap <F19> :lua require('telescope.builtin').keymaps()<CR>
 nmap <leader>man :lua require('telescope.builtin').man_pages()<CR>
 nmap <leader>old :lua require('telescope.builtin').oldfiles()<CR>
+nmap <leader>reset :LspRestart<CR>
 nmap <leader>cheat :Cheat<CR>

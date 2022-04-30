@@ -45,6 +45,7 @@ let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#branch#enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
 
 " Custom indentPlugin Show
 let g:indent_guides_enable_on_vim_startup = 1
