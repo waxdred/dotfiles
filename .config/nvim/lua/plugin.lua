@@ -73,4 +73,6 @@ packer.startup(function()
 	use 'williamboman/nvim-lsp-installer'
 	use {'wbthomason/packer.nvim', opt = false}
 	use 'folke/trouble.nvim'
+	use { 'github/copilot.vim' }
+	use { 'glepnir/dashboard-nvim' }
 end)

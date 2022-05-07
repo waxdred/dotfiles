@@ -53,6 +53,8 @@ cmp.setup {
     end,
   },
   mapping = {
+    ['<C-n>'] = cmp.mapping.select_next_item(),
+    ['<C-b>'] = cmp.mapping.select_prev_item(),
     ["<C-e>"] = cmp.mapping {
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
@@ -110,9 +112,10 @@ cmp.setup {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  },
+  window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+	},
   experimental = {
     ghost_text = false,
     native_menu = false,
