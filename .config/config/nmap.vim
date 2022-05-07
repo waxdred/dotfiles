@@ -1,0 +1,1 @@
+/Users/wax/.dotfiles/.config/nvim/after/plugin/nmap.vim

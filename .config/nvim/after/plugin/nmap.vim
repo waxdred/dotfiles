@@ -67,7 +67,8 @@ nmap <F12> :call vimspector#Restart()<CR>
 nmap <leader>b :lua require'telescope.builtin'.buffers()<CR>
 nmap <leader>t :! ctags <CR> :lua require('telescope.builtin').tags()<CR>
 nmap <leader>f :lua require('telescope.builtin').find_files()<CR>
-nmap <leader>rc :lua require('rc_telescope').search_dotfiles()<CR>
+nmap <leader>dot :lua require('rc_telescope').search_dotfiles()<CR>
+nmap <leader>conf :lua require('rc_telescope').config()<CR>
 nmap <leader>br :lua require('telescope.builtin').live_grep()<CR>
 nmap <leader>bq :lua require('telescope.builtin').quickfix()<CR>
 nmap <leader>bg :lua require('telescope.builtin').git_files()<CR>

@@ -22,6 +22,9 @@ local use = packer.use
 packer.reset()
 
 packer.startup(function()
+	use { "RRethy/vim-illuminate" }
+	use {"jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" },}
+	use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
 	use 'airblade/vim-gitgutter'
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-cheat.sh'
@@ -52,7 +55,6 @@ packer.startup(function()
 	use 'neovim/nvim-lspconfig'
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'
-	use 'nvim-treesitter/nvim-treesitter'
 	use 'nvim-treesitter/playground'
 	use 'onsails/lspkind-nvim'
 	use 'preservim/tagbar'
@@ -74,5 +76,4 @@ packer.startup(function()
 	use {'wbthomason/packer.nvim', opt = false}
 	use 'folke/trouble.nvim'
 	use { 'github/copilot.vim' }
-	use { 'glepnir/dashboard-nvim' }
 end)

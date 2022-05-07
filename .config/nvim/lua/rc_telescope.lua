@@ -5,4 +5,12 @@ M.search_dotfiles = function()
 		cwd = "~/.dotfiles/.config/",
 	})
 end
+
+M.config = function()
+	require("telescope.builtin").find_files({
+		prompt_title = "< Config >",
+		cmd = "~/.dotfiles/.config/config/",
+	})
+end
 return M
+
