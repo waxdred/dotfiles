@@ -1,5 +1,5 @@
 require 'plugin'
 require 'lsp'
-require 'cmp'
+require 'rc_cmp'
 require 'ter_init'
 require 'telescope'

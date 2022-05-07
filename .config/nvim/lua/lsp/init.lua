@@ -21,6 +21,17 @@ local servers = {
     "gopls",
 }
 
+local signs = {
+    { name = "DiagnosticSignError", text = "" },
+    { name = "DiagnosticSignWarn", text = "" },
+    { name = "DiagnosticSignHint", text = "" },
+    { name = "DiagnosticSignInfo", text = "" },
+  }
+
+for _, sign in ipairs(signs) do
+    vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
+  end
+
 -- Floating border
 local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
 function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
@@ -64,31 +75,12 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
-    vim.api.nvim_buf_set_keymap(
-        bufnr,
-        "n",
-        "<space>wl",
-        "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>",
-        opts
-    )
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>D", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>lc", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>lf", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
-
-    if client.supports_method "textDocument/formatting" then
-        utils.buf_command(bufnr, "LspFormatting", function()
-            lsp_formatting(bufnr)
-        end)
-
-        vim.api.nvim_clear_autocmds { group = augroup, buffer = bufnr }
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            group = augroup,
-            buffer = bufnr,
-            command = "LspFormatting",
-        })
-    end
 
     require("illuminate").on_attach(client)
 end
@@ -124,14 +116,16 @@ end
 vim.diagnostic.config {
     virtual_text = {
         source = "always",
-        prefix = " ",
+        prefix = " ",
         spacing = 6,
     },
     float = {
         header = false,
         source = "always",
     },
-    signs = true,
-    underline = false,
-    update_in_insert = false,
+    signs = {
+      active = signs,
+    },
+    underline = true,
+    update_in_insert = true,
 }
