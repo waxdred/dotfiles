@@ -28,7 +28,7 @@ packer.startup(function()
 	use 'airblade/vim-gitgutter'
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-cheat.sh'
-	use 'kyazdani42/nvim-web-devicons' 
+	use 'kyazdani42/nvim-web-devicons'
 	use 'folke/lsp-colors.nvim'
 	use 'kevinhwang91/rnvimr'
 	use 'L3MON4D3/LuaSnip'
@@ -51,7 +51,7 @@ packer.startup(function()
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/nvim-cmp'
 	use 'liuchengxu/vista.vim'
-	use 'mhinz/vim-startify'
+	-- use 'mhinz/vim-startify'
 	use 'neovim/nvim-lspconfig'
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'
@@ -76,4 +76,5 @@ packer.startup(function()
 	use {'wbthomason/packer.nvim', opt = false}
 	use 'folke/trouble.nvim'
 	use { 'github/copilot.vim' }
+	use { 'mhinz/vim-startify' }
 end)
