@@ -18,6 +18,7 @@ then
 
 	rm -rf build/*
 	mkdir build srcs includes
+	mkdir build/test
 	if [ -f "Makefile" ]; then
 		echo "Makefile exits"
 	else
@@ -43,6 +44,8 @@ then
 
 	rm -rf build/*
 	mkdir build srcs includes
+	mkdir build/test
+	if [ -f "Makefile" ]; then
 	if [ -f "Makefile" ]; then
 		echo "Makefile exits"
 	else
@@ -53,4 +56,3 @@ then
 	sed "s/name_project/$1/g" ~/.build/cppbuild/CMakeLists.txt > CMakeLists.txt
 	sed "s/bin/$1/g" ~/.build/cppbuild/.vimspector.json > .vimspector.json
 fi
-

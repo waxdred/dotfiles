@@ -10,6 +10,7 @@ local null_ls = require "lsp.servers.null-ls"
 local servers = {
     "bashls",
     "ccls",
+    "cmake",
     "sumneko_lua",
     "cssls",
     "html",
