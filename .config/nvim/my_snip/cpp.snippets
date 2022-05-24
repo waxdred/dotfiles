@@ -1,5 +1,21 @@
 #class canonique
 
+snippet test "ctest main"
+# include "header.hpp"
+
+int main(void)
+{
+	std::stringstream my;
+	std::stringstream origine;
+	$0
+	std::string my_vector = my.str();
+	std::string origine_vector = origine.str();
+	if (my_vector != origine_vector)
+		return (1);
+	return 0;
+}
+endsnippet
+
 snippet todo "todo list"
 * ------------------------ TODO ------------------------------- *
 * ------------------------ ${1:name}------------------------- *

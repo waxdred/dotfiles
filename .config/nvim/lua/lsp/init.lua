@@ -5,7 +5,6 @@ if not ok then
 end
 
 local utils = require "utils"
-local null_ls = require "lsp.servers.null-ls"
 
 local servers = {
     "bashls",
@@ -43,24 +42,6 @@ end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-local lsp_formatting = function(bufnr)
-    vim.lsp.buf.format {
-        bufnr = bufnr,
-        filter = function(clients)
-            return vim.tbl_filter(function(client)
-                if client.name == "eslint" then
-                    return true
-                end
-                if client.name == "null-ls" then
-                    return not utils.table.some(clients, function(_, other_client)
-                        return other_client.name == "eslint"
-                    end)
-                end
-            end, clients)
-        end,
-    }
-end
-
 local opts = { noremap = true, silent = true, nowait = true }
 
 vim.api.nvim_set_keymap("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
@@ -81,7 +62,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>lr", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>lc", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>lf", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>lf", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
     require("illuminate").on_attach(client)
 end
@@ -104,8 +85,6 @@ lsp_installer.setup {
 for _, server in ipairs(servers) do
     require("lsp.servers." .. server).setup(on_attach, capabilities)
 end
-
-null_ls.setup(on_attach)
 
 -- Gutter sign icons
 for type, icon in pairs(utils.signs) do

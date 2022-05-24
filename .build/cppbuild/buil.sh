@@ -1,8 +1,23 @@
 #!/bin/sh
 
-if [[ $# < 2 ]]
+if [[ $# < 1 ]]
 	then
 		echo "Add 3 argument:\nArg1: Name of executable\nArg2: Name file cpp"
+fi
+
+if [ $# -eq 1 ]
+then
+	echo "build srcs"
+	echo "build includes"
+	echo "build build"
+	echo "build .ccls"
+	echo "build CMakeLists"
+
+	rm -rf build/*
+	mkdir build srcs includes
+	cp ~/.build/cppbuild/.ccls .
+	sed "s/name_project/$1/g" ~/.build/cppbuild/CMakeLists.txt > CMakeLists.txt
+	sed "s/bin/$1/g" ~/.build/cppbuild/.vimspector.json > .vimspector.json
 fi
 
 if [ $# -eq 2 ]
