@@ -9,6 +9,7 @@ local utils = require "utils"
 local servers = {
     "bashls",
     "ccls",
+    "clangd",
     "cmake",
     "sumneko_lua",
     "cssls",

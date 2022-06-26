@@ -54,8 +54,12 @@ au BufNewFile,BufRead *.cpp,*.hpp :Stdheader
 au BufNewFile,BufRead *.c,*.h :Stdheader
 
 "mark 
-nmap <leader>1 :mark a <CR>
-nmap <leader><leader>1 'a
+nmap <leader><leader>1 :mark a <CR>
+nmap <leader>1 'a
+nmap <leader><leader>2 :mark b <CR>
+nmap <leader>2 'b
+nmap <leader><leader>3 :mark c <CR>
+nmap <leader>3 'c
 
 "vimspector mapping
 nmap <F2> :call vimspector#StepOver()<CR>
