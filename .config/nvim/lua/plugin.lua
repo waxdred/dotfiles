@@ -25,6 +25,8 @@ packer.startup(function()
 	use { "RRethy/vim-illuminate" }
 	use {"jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" },}
 	use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
+	use { 'anuvyklack/hydra.nvim', requires = 'anuvyklack/keymap-layer.nvim'}
+	use { 'lukas-reineke/indent-blankline.nvim' }
 	use 'airblade/vim-gitgutter'
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-cheat.sh'
@@ -45,6 +47,7 @@ packer.startup(function()
 	use 'hrsh7th/cmp-buffer'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/cmp-nvim-lsp'
+	-- use 'hrsh7th/cmp-copilot'
 	use 'hrsh7th/cmp-nvim-lsp-document-symbol'
 	use 'hrsh7th/cmp-nvim-lsp-signature-help'
 	use 'hrsh7th/cmp-omni'
@@ -75,6 +78,5 @@ packer.startup(function()
 	use 'williamboman/nvim-lsp-installer'
 	use {'wbthomason/packer.nvim', opt = false}
 	use 'folke/trouble.nvim'
-	use { 'github/copilot.vim' }
 	use { 'mhinz/vim-startify' }
 end)

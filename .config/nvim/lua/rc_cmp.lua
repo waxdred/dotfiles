@@ -114,6 +114,7 @@ cmp.setup {
         { name = "buffer" },
         { name = "nvim_lsp_signature_help" },
 	{ name = 'ultisnips' },
+	-- { name = 'copilot' },
         -- { name = 'spell' },
         -- { name = 'omni' },
         { name = 'nvim_lsp_signature_help' },
