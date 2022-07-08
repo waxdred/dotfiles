@@ -69,3 +69,7 @@ keymap("n", "<F3>",  ":call vimspector#StepInto()<CR>", opts)
 keymap("n", "<F4>",  ":call vimspector#StepOut()<CR>", opts)
 keymap("n", "<F12>", ":call vimspector#Restart()<CR>", opts)
 
+-- Visual Block --
+-- Move text up and down
+keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
+keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
