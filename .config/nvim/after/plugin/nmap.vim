@@ -5,6 +5,9 @@ let mapleader = " "
 nmap <S-Tab> <C-W><C-W>
 nmap <Tab> :bn<CR>
 
+"add new line normal mode
+nmap <leader>o o<Esc>
+
 
 "mapping ranger in nvim
 nmap <leader>r :RnvimrToggle<CR>
@@ -54,12 +57,12 @@ au BufNewFile,BufRead *.cpp,*.hpp :Stdheader
 au BufNewFile,BufRead *.c,*.h :Stdheader
 
 "mark 
-nmap <leader><leader>1 :mark a <CR>
-nmap <leader>1 'a
-nmap <leader><leader>2 :mark b <CR>
-nmap <leader>2 'b
-nmap <leader><leader>3 :mark c <CR>
-nmap <leader>3 'c
+nmap <leader>1 :mark a <CR>
+nmap 1 'a
+nmap <leader>2 :mark b <CR>
+nmap 2 'b
+nmap <leader>3 :mark c <CR>
+nmap 3 'c
 
 "vimspector mapping
 nmap <F2> :call vimspector#StepOver()<CR>
@@ -73,11 +76,13 @@ nmap <leader>t :! ctags <CR> :lua require('telescope.builtin').tags()<CR>
 nmap <leader>f :lua require('telescope.builtin').find_files()<CR>
 nmap <leader>dot :lua require('rc_telescope').search_dotfiles()<CR>
 nmap <leader>conf :lua require('rc_telescope').config()<CR>
+
 nmap <leader>br :lua require('telescope.builtin').live_grep()<CR>
 nmap <leader>bq :lua require('telescope.builtin').quickfix()<CR>
 nmap <leader>bg :lua require('telescope.builtin').git_files()<CR>
 nmap <leader>xx :lua require('telescope.builtin').diagnostics()<CR>
 nmap <leader>gt :lua require('telescope.builtin').git_status()<CR>
+
 nmap <F19> :lua require('telescope.builtin').keymaps()<CR>
 nmap <leader>man :lua require('telescope.builtin').man_pages()<CR>
 nmap <leader>old :lua require('telescope.builtin').oldfiles()<CR>
