@@ -23,3 +23,4 @@ export EDITOR=/usr/local/bin/nvim
 export SHELL=/opt/local/bin/fish
 
 set theme_color_scheme solarized
+set -U FZF_COMPLETE 2
