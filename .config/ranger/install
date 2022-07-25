@@ -1,5 +1,0 @@
-install
-
-brew install ranger
-pip3 install ranger-fm pynvim
-
