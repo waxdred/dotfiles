@@ -1,0 +1,7 @@
+clang++
+%h -x c++-header
+-Wall
+-Wextra
+-Werror
+%cpp -std=c++98
+

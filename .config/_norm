@@ -1,0 +1,6 @@
+nvim/main.c: Error!
+Error: INVALID_HEADER       (line:   1, col:   1):	Missing or invalid 42 header
+Error: SPC_BEFORE_NL        (line:   4, col:   1):	Space before newline
+Error: TOO_FEW_TAB          (line:   4, col:   1):	Missing tabs for indent level
+Error: TOO_FEW_TAB          (line:   5, col:   1):	Missing tabs for indent level
+Error: SPC_BFR_PAR          (line:   5, col:  11):	Missing space before parenthesis (brace/bracket)
