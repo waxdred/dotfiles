@@ -32,7 +32,6 @@ keymap("n", "<leader>gb", ":Git checkout", opts)
 keymap("n", "<leader>g1", ":diffget //2<CR> ", opts)
 keymap("n", "<leader>g2", ":diffget //3<CR> ", opts)
 
-
 -- mapping find replace word undercursor in all buffer
 keymap("n", "<Leader>sed", ":bufdo %s/<<C-r><C-w>>//g<Left><Left> | update", opts)
 keymap("n", "<Leader>se",  ":s/<<C-r><C-w>>//g<Left><Left>", opts)
@@ -80,3 +79,10 @@ keymap("n", "<leader>rr", ":Ex<CR>", opts)
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+
+-- auto completion 
+keymap("i", "{", "{}<Left>", opts)
+keymap("i", "\"", "\"<Left>", opts)
+keymap("i", "(", "()<Left>", opts)
+keymap("i", "'", "''<Left>", opts)
+keymap("i", "[", "[]<Left>", opts)

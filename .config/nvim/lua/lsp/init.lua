@@ -20,6 +20,7 @@ local servers = {
     "dockerls",
     "sumneko_lua",
     "gopls",
+    "tsserver",
 }
 
 local signs = {

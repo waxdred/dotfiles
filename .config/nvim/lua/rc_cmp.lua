@@ -57,7 +57,7 @@ cmp.setup {
         end,
     },
     completion = {
-        completeopt = "menu,menuone,noinsert",
+        completeopt = "menu,menuone,noinsert, noselect",
         keyword_pattern = [[\%(-\?\d\+\%(\.\d\+\)\?\|\h\w*\%(-\w*\)*\)]],
         keyword_length = 1,
     },
@@ -118,7 +118,7 @@ cmp.setup {
         -- { name = 'spell' },
         -- { name = 'omni' },
         { name = 'nvim_lsp_signature_help' },
-        { name = 'nvim_lsp_document_symbol' },
+        { name = 'nvim_lspEmmets_document_symbol' },
     },
     preselect = cmp.PreselectMode.None,
 }

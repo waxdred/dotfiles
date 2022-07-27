@@ -21,3 +21,5 @@ fish/functions/scheme.fish
 nvim/Colors
 nvim/after/plugin/stdheader.vim
 nvim/sessions
+yarn
+iterm2
