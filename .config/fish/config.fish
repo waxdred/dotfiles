@@ -9,6 +9,8 @@ alias sfish "source ~/.dotfiles/.config/fish/config.fish"
 alias stmux "source ~/.dotfiles/.tmux.conf"
 alias cheat "sh ~/.tmux/plugins/tmux-cheat-fzf/scripts/cheat.sh"
 alias vig "vi +G"
+alias check "sh ~/check.sh"
+alias gittt "sh ~/Desktop/ignire.sh"
 
 alias ..="cd .."
 alias ...="cd ../.."

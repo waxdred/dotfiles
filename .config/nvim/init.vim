@@ -17,6 +17,10 @@ set backspace=indent,eol,start
 
 lua require('init')
 
+" au BufRead *.css, *.js, *.html, *.json :set tabstop=4
+autocmd Filetype css setlocal ts=3 sw=3 expandtab
+autocmd Filetype javascript setlocal ts=3 sw=3 expandtab
+
 
 "open vim in vertical
 let g:ft_man_open_mode = 'vert'

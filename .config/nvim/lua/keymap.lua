@@ -12,6 +12,8 @@ vim.g.maplocalleader = " "
 
 -- running macro
 keymap("n", "<leader>q", "@q", opts)
+-- Save 
+keymap("n", "<leader>w", ":w<CR> :wa<CR>", opts)
 
 -- mapping change viewport
 keymap("n", "<S-TAB>", "<C-W><C-W>", opts)
@@ -50,7 +52,7 @@ keymap("n", "<leader>3", "'c", opts)
 -- mapping Open Buffer fzf telescope
 keymap("n", "<leader>b", ":lua require'telescope.builtin'.buffers()<CR>", opts)
 keymap("n", "<leader>t", ":! ctags <CR> :lua require('telescope.builtin').tags()<CR>", opts)
-keymap("n", "<leader>f", ":lua require('telescope.builtin').find_files()<CR>", opts)
+keymap("n", "<leader>bf", ":lua require('telescope.builtin').find_files()<CR>", opts)
 keymap("n", "<leader>dot", ":lua require('rc_telescope').search_dotfiles()<CR>", opts)
 keymap("n", "<leader>conf", ":lua require('rc_telescope').config()<CR>", opts)
 
@@ -82,7 +84,7 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- auto completion 
 keymap("i", "{", "{}<Left>", opts)
-keymap("i", "\"", "\"<Left>", opts)
+keymap("i", "\"", "\"\"<Left>", opts)
 keymap("i", "(", "()<Left>", opts)
 keymap("i", "'", "''<Left>", opts)
 keymap("i", "[", "[]<Left>", opts)
