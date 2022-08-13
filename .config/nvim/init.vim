@@ -14,7 +14,7 @@ set autoread
 syntax enable
 colorscheme waxcoin
 set backspace=indent,eol,start
-
+set termguicolors
 lua require('init')
 
 " au BufRead *.css, *.js, *.html, *.json :set tabstop=4

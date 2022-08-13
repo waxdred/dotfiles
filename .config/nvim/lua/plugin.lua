@@ -1,5 +1,6 @@
 
-packer = require 'packer'
+local packer = require 'packer'
+
 packer.init{
 {
   display = {
@@ -30,12 +31,14 @@ packer.startup(function()
 	use { 'epilande/vim-react-snippets' }
 	use { 'windwp/nvim-autopairs' }
 	use { 'windwp/nvim-ts-autotag' }
+	use { 'norcalli/nvim-colorizer.lua' }
 	use { 'hoob3rt/lualine.nvim' }
 	use { 'kyazdani42/nvim-web-devicons' }
 	use { 'akinsho/bufferline.nvim' }
 	use { 'akinsho/toggleterm.nvim', tag = 'v2.*', config = function() require("toggleterm").setup()end }
 	use { 'ray-x/go.nvim' }
 	use { 'ray-x/guihua.lua' }
+	use { 'glepnir/lspsaga.nvim' }
 	use 'airblade/vim-gitgutter'
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-cheat.sh'
@@ -73,7 +76,7 @@ packer.startup(function()
 	use 'ray-x/lsp_signature.nvim'
 	use 'ryanoasis/vim-devicons'
 	use 'saadparwaiz1/cmp_luasnip'
-	-- use 'shaunsingh/nord.nvim'
+	use 'shaunsingh/nord.nvim'
 	use 'sunjon/shade.nvim'
 	use 'tc50cal/vim-terminal'
 	use 'tpope/vim-commentary'
