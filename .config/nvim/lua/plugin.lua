@@ -27,7 +27,15 @@ packer.startup(function()
 	use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
 	use { 'anuvyklack/hydra.nvim', requires = 'anuvyklack/keymap-layer.nvim'}
 	use { 'lukas-reineke/indent-blankline.nvim' }
-	use { 'https://github.com/epilande/vim-react-snippets' }
+	use { 'epilande/vim-react-snippets' }
+	use { 'windwp/nvim-autopairs' }
+	use { 'windwp/nvim-ts-autotag' }
+	use { 'hoob3rt/lualine.nvim' }
+	use { 'kyazdani42/nvim-web-devicons' }
+	use { 'akinsho/bufferline.nvim' }
+	use { 'akinsho/toggleterm.nvim', tag = 'v2.*', config = function() require("toggleterm").setup()end }
+	use { 'ray-x/go.nvim' }
+	use { 'ray-x/guihua.lua' }
 	use 'airblade/vim-gitgutter'
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-cheat.sh'
@@ -36,7 +44,6 @@ packer.startup(function()
 	use 'kevinhwang91/rnvimr'
 	use 'L3MON4D3/LuaSnip'
 	use 'SirVer/ultisnips'
-	use 'akinsho/toggleterm.nvim'
 	use 'cdelledonne/vim-cmake'
 	use 'chrisbra/Colorizer'
 	use 'christianchiarulli/nvcode-color-schemes.vim'
@@ -72,8 +79,6 @@ packer.startup(function()
 	use 'tpope/vim-commentary'
 	use 'tpope/vim-fugitive'
 	use 'tpope/vim-surround'
-	use 'vim-airline/vim-airline'
-	use 'vim-airline/vim-airline-themes'
 	use 'williamboman/nvim-lsp-installer'
 	use {'wbthomason/packer.nvim', opt = false}
 	use 'folke/trouble.nvim'

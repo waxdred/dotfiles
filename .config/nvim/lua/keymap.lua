@@ -83,8 +83,8 @@ keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- auto completion 
-keymap("i", "{", "{}<Left>", opts)
-keymap("i", "\"", "\"\"<Left>", opts)
-keymap("i", "(", "()<Left>", opts)
-keymap("i", "'", "''<Left>", opts)
-keymap("i", "[", "[]<Left>", opts)
+-- keymap("i", "{", "{}<Left>", opts)
+-- keymap("i", "\"", "\"\"<Left>", opts)
+-- keymap("i", "(", "()<Left>", opts)
+-- keymap("i", "'", "''<Left>", opts)
+-- keymap("i", "[", "[]<Left>", opts)
