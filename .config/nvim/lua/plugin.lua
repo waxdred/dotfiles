@@ -28,6 +28,8 @@ packer.startup(function()
 	use { 'anuvyklack/hydra.nvim', requires = 'anuvyklack/keymap-layer.nvim'}
 	use { 'lukas-reineke/indent-blankline.nvim' }
 	use { 'https://github.com/epilande/vim-react-snippets' }
+	use 'ray-x/go.nvim'
+	use 'ray-x/guihua.lua'
 	use 'airblade/vim-gitgutter'
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-cheat.sh'

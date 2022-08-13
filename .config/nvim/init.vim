@@ -20,6 +20,7 @@ lua require('init')
 " au BufRead *.css, *.js, *.html, *.json :set tabstop=4
 autocmd Filetype css setlocal ts=3 sw=3 expandtab
 autocmd Filetype javascript setlocal ts=3 sw=3 expandtab
+autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
 
 
 "open vim in vertical

@@ -101,6 +101,15 @@ create-test@^1.0.0:
   resolved "https://registry.yarnpkg.com/create-test/-/create-test-1.0.0.tgz#3f93520cb41bbea50dc90c299b768cbd75617f8e"
   integrity sha512-1fwlcKSRY/YirnUJhVOKqI5dzyW6NMw8cyyV/NRK60F100G5gRDMnVhbubzO5MrT/TXU57sYDX6NGMV7aXbenw==
 
+create-vite@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/create-vite/-/create-vite-3.0.0.tgz#035535acfb4fed124e4982e8f333808de760aebe"
+  integrity sha512-G/sigmlGD6bKtLHt4cezI8kDwEThdbJKpyhFIrIVtvVwuCoAjtk79kP2RNjxjsOpM5BxQD5/R/5NKcymxBEEMw==
+  dependencies:
+    kolorist "^1.5.1"
+    minimist "^1.2.6"
+    prompts "^2.4.2"
+
 cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz#f73a85b9d5d41d045551c177e2882d4ac85728a6"
@@ -234,6 +243,11 @@ kleur@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
+
+kolorist@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/kolorist/-/kolorist-1.5.1.tgz#c3d66dc4fabde4f6b7faa6efda84c00491f9e52b"
+  integrity sha512-lxpCM3HTvquGxKGzHeknB/sUjuVoUElLlfYnXZT73K8geR9jQbroGlSCFBax9/0mpGoD3kzcMLnOlGQPJJNyqQ==
 
 lru-cache@^6.0.0:
   version "6.0.0"

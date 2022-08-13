@@ -139,6 +139,31 @@ _G.packer_plugins = {
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["go.nvim"] = {
+    loaded = true,
+    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/go.nvim",
+    url = "https://github.com/ray-x/go.nvim"
+  },
+  ["guihua.lua"] = {
+    loaded = true,
+    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/guihua.lua",
+    url = "https://github.com/ray-x/guihua.lua"
+  },
+  ["hydra.nvim"] = {
+    loaded = true,
+    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/hydra.nvim",
+    url = "https://github.com/anuvyklack/hydra.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["keymap-layer.nvim"] = {
+    loaded = true,
+    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/keymap-layer.nvim",
+    url = "https://github.com/anuvyklack/keymap-layer.nvim"
+  },
   ["lsp-colors.nvim"] = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
@@ -158,6 +183,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvcode-color-schemes.vim"] = {
     loaded = true,
@@ -293,6 +323,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
+  },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
+  },
+  ["vim-react-snippets"] = {
+    loaded = true,
+    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-react-snippets",
+    url = "https://github.com/epilande/vim-react-snippets"
   },
   ["vim-snippets"] = {
     loaded = true,

@@ -23,6 +23,9 @@ keymap("n", "<TAB>", ":bn<CR>", opts)
 keymap("n", "<leader>o", "o<Esc>", opts)
 keymap("n", "O", "o<Esc>", opts)
 
+-- make
+keymap("n", "<leader>m", ":make<CR>", opts)
+
 -- commante line
 keymap("n", "<leader><leader>c", ":Commentary <CR>", opts)
 
