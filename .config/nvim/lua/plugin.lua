@@ -85,7 +85,7 @@ packer.startup(function()
 	use 'williamboman/nvim-lsp-installer'
 	use {'wbthomason/packer.nvim', opt = false}
 	use 'folke/trouble.nvim'
-	use { 'mhinz/vim-startify' }
+	-- use { 'mhinz/vim-startify' }
 	use { 'theHamsta/nvim-dap-virtual-text' }
 	use { 'mfussenegger/nvim-dap' }
 end)
