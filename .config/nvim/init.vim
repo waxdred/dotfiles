@@ -22,7 +22,6 @@ autocmd Filetype css setlocal ts=3 sw=3 expandtab
 autocmd Filetype javascript setlocal ts=3 sw=3 expandtab
 autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
 
-
 "open vim in vertical
 let g:ft_man_open_mode = 'vert'
 let g:cmake_link_compile_commands = 1

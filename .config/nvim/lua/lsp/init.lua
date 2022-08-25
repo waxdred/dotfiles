@@ -109,6 +109,6 @@ vim.diagnostic.config {
     signs = {
       active = signs,
     },
-    underline = true,
+    underline = false,
     update_in_insert = true,
 }
