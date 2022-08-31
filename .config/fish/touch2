@@ -1,4 +1,5 @@
 #!/bin/bash
 
+dir=$(dirname $1)
 
-mkdir -p $1 && touch $1
+mkdir -p ${dir} && touch $1
