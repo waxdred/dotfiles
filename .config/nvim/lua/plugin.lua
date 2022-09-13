@@ -40,6 +40,7 @@ packer.startup(function()
 	use { 'ray-x/guihua.lua' }
 	use { 'glepnir/lspsaga.nvim' }
 	use { 'yamatsum/nvim-cursorline' }
+	use { 'mbbill/undotree' }
 	use 'airblade/vim-gitgutter'
 	use 'RishabhRD/popfix'
 	use 'RishabhRD/nvim-cheat.sh'
@@ -48,20 +49,20 @@ packer.startup(function()
 	use 'L3MON4D3/LuaSnip'
 	use 'SirVer/ultisnips'
 	use 'cdelledonne/vim-cmake'
-	-- use 'chrisbra/Colorizer'
 	use 'christianchiarulli/nvcode-color-schemes.vim'
 	use 'dcampos/cmp-snippy'
 	use 'dcampos/nvim-snippy'
-	use 'f3fora/cmp-spell'
-	-- use 'gerardbm/vim-atomic'
 	use 'honza/vim-snippets'
 	use 'hrsh7th/cmp-buffer'
+
+	use 'f3fora/cmp-spell'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-nvim-lsp-document-symbol'
 	use 'hrsh7th/cmp-nvim-lsp-signature-help'
 	use 'hrsh7th/cmp-omni'
 	use 'hrsh7th/cmp-path'
+	use 'saadparwaiz1/cmp_luasnip'
 	use 'hrsh7th/nvim-cmp'
 	use 'liuchengxu/vista.vim'
 	use 'neovim/nvim-lspconfig'
@@ -70,12 +71,10 @@ packer.startup(function()
 	use 'nvim-treesitter/playground'
 	use 'onsails/lspkind-nvim'
 	use 'preservim/tagbar'
-	use 'puremourning/vimspector'
 	use 'quangnguyen30192/cmp-nvim-ultisnips'
 	use 'rafi/awesome-vim-colorschemes'
 	use 'ray-x/lsp_signature.nvim'
 	use 'ryanoasis/vim-devicons'
-	use 'saadparwaiz1/cmp_luasnip'
 	use 'shaunsingh/nord.nvim'
 	use 'sunjon/shade.nvim'
 	use 'tc50cal/vim-terminal'
@@ -85,7 +84,10 @@ packer.startup(function()
 	use 'williamboman/nvim-lsp-installer'
 	use {'wbthomason/packer.nvim', opt = false}
 	use 'folke/trouble.nvim'
-	-- use { 'mhinz/vim-startify' }
 	use { 'theHamsta/nvim-dap-virtual-text' }
 	use { 'mfussenegger/nvim-dap' }
+	-- use 'gerardbm/vim-atomic'
+	-- use 'puremourning/vimspector'
+	use { 'mhinz/vim-startify' }
+	-- use 'chrisbra/Colorizer'
 end)

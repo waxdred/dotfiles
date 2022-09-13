@@ -21,6 +21,8 @@ keymap("n", "<TAB>", ":bn<CR>", opts)
 keymap("n", "<leader>o", "o<Esc>", opts)
 keymap("n", "O", "o<Esc>", opts)
 
+-- UnderTreeShow
+keymap("n", "<F2>", ":UndotreeShow<CR>", opts)
 -- make
 keymap("n", "<leader>m", ":make<CR>", opts)
 
@@ -36,8 +38,8 @@ keymap("n", "<leader>g1", ":diffget //2<CR> ", opts)
 keymap("n", "<leader>g2", ":diffget //3<CR> ", opts)
 
 -- mapping find replace word undercursor in all buffer
-keymap("n", "<Leader>sed", ":bufdo %s/<<C-r><C-w>>//g<Left><Left> | update", opts)
-keymap("n", "<Leader>se",  ":s/<<C-r><C-w>>//g<Left><Left>", opts)
+keymap("n", "<Leader>sed", ":bufdo %s/<C-r><C-w>//g<Left><Left>", opts)
+keymap("n", "<Leader>se",  ":s/<<C-r><C-w>>//g | update <Left><Left><Left><Left><Left><Left><Left><Left>", opts)
 
 -- open term
 keymap("n", "<leader>tt", ":ToggleTerm size=20 cmd='fish'<CR>", opts)
@@ -51,10 +53,10 @@ keymap("n", "<leader>2", "'b", opts)
 keymap("n", "<leader>3", "'c", opts)
 
 -- mapping Open Buffer fzf telescope
+keymap("n", "<leader>bh", "<cmd>Telescope help_tags<cr>", opts)
 keymap("n", "<leader>b", ":lua require'telescope.builtin'.buffers()<CR>", opts)
-keymap("n", "<leader>t", ":! ctags <CR> :lua require('telescope.builtin').tags()<CR>", opts)
 keymap("n", "<leader>bf", ":lua require('telescope.builtin').find_files()<CR>", opts)
-keymap("n", "<leader>dot", ":lua require('rc_telescope').search_dotfiles()<CR>", opts)
+-- keymap("n", "<leader>dot", ":lua require('rc_telescope').search_dotfiles()<CR>", opts)
 keymap("n", "<leader>conf", ":lua require('rc_telescope').config()<CR>", opts)
 
 keymap("n", "<leader>br", ":lua require('telescope.builtin').live_grep()<CR>", opts)
@@ -70,10 +72,10 @@ keymap("n", "<leader>reset", ":LspRestart<CR>", opts)
 keymap("n", "<leader>cheat", ":Cheat<CR>", opts)
 
 -- vimspector mapping
-keymap("n", "<F2>",  ":call vimspector#StepOver()<CR>", opts)
-keymap("n", "<F3>",  ":call vimspector#StepInto()<CR>", opts)
-keymap("n", "<F4>",  ":call vimspector#StepOut()<CR>", opts)
-keymap("n", "<F12>", ":call vimspector#Restart()<CR>", opts)
+-- keymap("n", "<F2>",  ":call vimspector#StepOver()<CR>", opts)
+-- keymap("n", "<F3>",  ":call vimspector#StepInto()<CR>", opts)
+-- keymap("n", "<F4>",  ":call vimspector#StepOut()<CR>", opts)
+-- keymap("n", "<F12>", ":call vimspector#Restart()<CR>", opts)
 
 -- mapping Lex
 keymap("n", "<leader>rr", ":Ex<CR>", opts)

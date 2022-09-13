@@ -109,7 +109,6 @@ cmp.setup {
         { name = "buffer" },
         { name = "nvim_lsp_signature_help" },
 	{ name = 'ultisnips' },
-        { name = 'nvim_lsp_signature_help' },
         { name = 'nvim_lspEmmets_document_symbol' },
     },
     preselect = cmp.PreselectMode.None,
