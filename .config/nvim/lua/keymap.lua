@@ -65,22 +65,16 @@ keymap("n", "<leader>bg", ":lua require('telescope.builtin').git_files()<CR>", o
 keymap("n", "<leader>xx", ":lua require('telescope.builtin').diagnostics()<CR>", opts)
 keymap("n", "<leader>gt", ":lua require('telescope.builtin').git_status()<CR>", opts)
 
-keymap("n", "<F19>", ":lua require('telescope.builtin').keymaps()<CR>", opts)
+keymap("n", "<F4>", ":lua require('telescope.builtin').keymaps()<CR>", opts)
 keymap("n", "<leader>man", ":lua require('telescope.builtin').man_pages()<CR>", opts)
 keymap("n", "<leader>old", ":lua require('telescope.builtin').oldfiles()<CR>", opts)
 keymap("n", "<leader>reset", ":LspRestart<CR>", opts)
 keymap("n", "<leader>cheat", ":Cheat<CR>", opts)
-
--- vimspector mapping
--- keymap("n", "<F2>",  ":call vimspector#StepOver()<CR>", opts)
--- keymap("n", "<F3>",  ":call vimspector#StepInto()<CR>", opts)
--- keymap("n", "<F4>",  ":call vimspector#StepOut()<CR>", opts)
--- keymap("n", "<F12>", ":call vimspector#Restart()<CR>", opts)
 
 -- mapping Lex
 keymap("n", "<leader>rr", ":Ex<CR>", opts)
 
 -- Visual Block --
 -- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "J", ":move '>+1<CR>gv-gv", opts)

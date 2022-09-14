@@ -24,7 +24,7 @@ local use = packer.use
 packer.reset()
 packer.startup(function()
 	use { "RRethy/vim-illuminate" }
-	use {"jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" },}
+	use { "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" },}
 	use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
 	use { 'anuvyklack/hydra.nvim', requires = 'anuvyklack/keymap-layer.nvim'}
 	use { 'lukas-reineke/indent-blankline.nvim' }
@@ -50,11 +50,19 @@ packer.startup(function()
 	use 'SirVer/ultisnips'
 	use 'cdelledonne/vim-cmake'
 	use 'christianchiarulli/nvcode-color-schemes.vim'
-	use 'dcampos/cmp-snippy'
 	use 'dcampos/nvim-snippy'
 	use 'honza/vim-snippets'
-	use 'hrsh7th/cmp-buffer'
 
+	use 'nvim-lua/plenary.nvim'
+	use 'nvim-telescope/telescope.nvim'
+	use 'nvim-treesitter/playground'
+	use 'onsails/lspkind-nvim'
+	use 'preservim/tagbar'
+
+	-- cmp install
+	use 'hrsh7th/cmp-buffer'
+	use 'dcampos/cmp-snippy'
+	use 'quangnguyen30192/cmp-nvim-ultisnips'
 	use 'f3fora/cmp-spell'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/cmp-nvim-lsp'
@@ -64,14 +72,9 @@ packer.startup(function()
 	use 'hrsh7th/cmp-path'
 	use 'saadparwaiz1/cmp_luasnip'
 	use 'hrsh7th/nvim-cmp'
+
 	use 'liuchengxu/vista.vim'
 	use 'neovim/nvim-lspconfig'
-	use 'nvim-lua/plenary.nvim'
-	use 'nvim-telescope/telescope.nvim'
-	use 'nvim-treesitter/playground'
-	use 'onsails/lspkind-nvim'
-	use 'preservim/tagbar'
-	use 'quangnguyen30192/cmp-nvim-ultisnips'
 	use 'rafi/awesome-vim-colorschemes'
 	use 'ray-x/lsp_signature.nvim'
 	use 'ryanoasis/vim-devicons'
@@ -86,8 +89,8 @@ packer.startup(function()
 	use 'folke/trouble.nvim'
 	use { 'theHamsta/nvim-dap-virtual-text' }
 	use { 'mfussenegger/nvim-dap' }
+end)
 	-- use 'gerardbm/vim-atomic'
 	-- use 'puremourning/vimspector'
-	use { 'mhinz/vim-startify' }
+	-- use { 'mhinz/vim-startify' }
 	-- use 'chrisbra/Colorizer'
-end)
