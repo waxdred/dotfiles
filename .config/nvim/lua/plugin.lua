@@ -71,7 +71,7 @@ packer.startup(function()
 	use 'hrsh7th/cmp-omni'
 	use 'hrsh7th/cmp-path'
 	use 'saadparwaiz1/cmp_luasnip'
-	use 'hrsh7th/nvim-cmp'
+	-- use 'hrsh7th/nvim-cmp'
 
 	use 'liuchengxu/vista.vim'
 	use 'neovim/nvim-lspconfig'
