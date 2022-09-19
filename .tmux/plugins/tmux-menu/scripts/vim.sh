@@ -45,6 +45,8 @@ show_menu() {
         "" ""\
         "ctrl+v                        Visual-block" ""\
         ""\
+	"sed save word and use         :s/\\(\\w.*\\)/text\\1text" ""\
+        ""\
         "(c)                           Replace selection" ""\
         ""\
         "(i)                           insert to the left" ""\
