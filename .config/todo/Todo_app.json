@@ -1,0 +1,153 @@
+{
+ "project": "Todo_app",
+ "todo": {
+  "title": [
+   {
+    "title": "window todo",
+    "idx": 1
+   },
+   {
+    "title": "Modify",
+    "idx": 2
+   },
+   {
+    "title": "Pop Delete",
+    "idx": 3
+   },
+   {
+    "title": "Share",
+    "idx": 4
+   }
+  ],
+  "desc": [
+   {
+    "title": "Check if list of todo bigger then the window\nneed just print some idx",
+    "idx": 1
+   },
+   {
+    "title": "Need work on modify:\nTitle and Desc",
+    "idx": 2
+   },
+   {
+    "title": "Add name of list or todo would be deleted!!\u001b",
+    "idx": 3
+   },
+   {
+    "title": "Share Projet for the people can try\nand give you what to update",
+    "idx": 4
+   }
+  ],
+  "date": [
+   {
+    "title": "10-04-2022 10:46:46",
+    "idx": 1
+   },
+   {
+    "title": "10-04-2022 10:46:46",
+    "idx": 2
+   },
+   {
+    "title": "10-04-2022 10:46:46",
+    "idx": 3
+   },
+   {
+    "title": "10-04-2022 10:46:46",
+    "idx": 4
+   }
+  ],
+  "idx": 0,
+  "len": 4
+ },
+ "progress": {
+  "title": [
+   {
+    "title": "Readme",
+    "idx": 1
+   },
+   {
+    "title": "Description buffer",
+    "idx": 2
+   }
+  ],
+  "desc": [
+   {
+    "title": "Make Readme ",
+    "idx": 1
+   },
+   {
+    "title": "Add new line after desciption to date",
+    "idx": 2
+   }
+  ],
+  "date": [
+   {
+    "title": "10-04-2022 10:47:47",
+    "idx": 1
+   },
+   {
+    "title": "10-04-2022 10:47:47",
+    "idx": 2
+   }
+  ],
+  "idx": 0,
+  "len": 2
+ },
+ "finish": {
+  "title": [
+   {
+    "title": "Check date",
+    "idx": 1
+   },
+   {
+    "title": "Popup Style",
+    "idx": 2
+   },
+   {
+    "title": "Help",
+    "idx": 3
+   },
+   {
+    "title": "Todo",
+    "idx": 4
+   }
+  ],
+  "desc": [
+   {
+    "title": "Check why date are in double:\n   -Progress\n   -Finish",
+    "idx": 1
+   },
+   {
+    "title": "set Popup Style",
+    "idx": 2
+   },
+   {
+    "title": "Need fix help style",
+    "idx": 3
+   },
+   {
+    "title": "Welcome to my Todo App\n",
+    "idx": 4
+   }
+  ],
+  "date": [
+   {
+    "title": "10-03-2022 10:57:57",
+    "idx": 1
+   },
+   {
+    "title": "10-03-2022 10:58:58",
+    "idx": 2
+   },
+   {
+    "title": "10-04-2022 10:02:02",
+    "idx": 3
+   },
+   {
+    "title": "10-04-2022 10:46:46",
+    "idx": 4
+   }
+  ],
+  "idx": 0,
+  "len": 4
+ }
+}

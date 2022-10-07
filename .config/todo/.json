@@ -1,0 +1,24 @@
+{
+ "project": "",
+ "todo": {
+  "title": null,
+  "desc": null,
+  "date": null,
+  "idx": 0,
+  "len": 0
+ },
+ "progress": {
+  "title": null,
+  "desc": null,
+  "date": null,
+  "idx": 0,
+  "len": 0
+ },
+ "finish": {
+  "title": null,
+  "desc": null,
+  "date": null,
+  "idx": 0,
+  "len": 0
+ }
+}
