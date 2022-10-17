@@ -17,7 +17,12 @@ set backspace=indent,eol,start
 set termguicolors
 lua require('init')
 
+set ts=4 
+set sw=4 
+set expandtab
 " au BufRead *.css, *.js, *.html, *.json :set tabstop=4
+autocmd Filetype cpp setlocal ts=4 sw=4 expandtab
+autocmd Filetype hpp setlocal ts=4 sw=4 expandtab
 autocmd Filetype css setlocal ts=3 sw=3 expandtab
 autocmd Filetype javascript setlocal ts=3 sw=3 expandtab
 autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
