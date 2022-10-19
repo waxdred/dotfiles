@@ -14,8 +14,8 @@ keymap("n", "<leader>q", "@q", opts)
 keymap("n", "<leader>w", ":w<CR> :wa<CR>", opts)
 
 -- mapping change viewport
-keymap("n", "<S-TAB>", "<C-W><C-W>", opts)
-keymap("n", "<TAB>", ":bn<CR>", opts)
+keymap("n", "<TAB>", "<C-W><C-W>", opts)
+keymap("n", "<S-TAB>", ":bn<CR>", opts)
 
 -- add new line
 keymap("n", "<leader>o", "o<Esc>", opts)

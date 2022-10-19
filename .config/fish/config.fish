@@ -14,6 +14,11 @@ alias gittt "sh ~/Desktop/ignire.sh"
 alias touch2 "~/.dotfiles/.config/fish/touch2 $1"
 alias tmuxs "_MenuTmux"
 
+
+/* my script git */
+alias gs="~/.config/scripts/git-branch-manager.sh"
+
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
