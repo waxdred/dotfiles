@@ -16,6 +16,9 @@ local settings = {
                 "after_each",
             },
         },
+        workspace ={
+            library = vim.api.nvim_get_runtime_file("", true)
+        },
         disable = {
             "lowercase-global",
             "undefined-global",

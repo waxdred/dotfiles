@@ -11,7 +11,7 @@ set rnu
 set mouse=a
 set nu
 set autoread
-syntax enable
+syntax off
 colorscheme waxcoin
 set backspace=indent,eol,start
 set termguicolors

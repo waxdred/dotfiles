@@ -1,3 +1,4 @@
+
 local M = {}
 M.search_dotfiles = function()
 	require("telescope.builtin").find_files({
@@ -12,5 +13,6 @@ M.config = function()
 		cmd = "~/.dotfiles/.config/config/",
 	})
 end
+
 return M
 

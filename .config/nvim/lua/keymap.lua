@@ -57,6 +57,7 @@ keymap("n", "<leader>bh", "<cmd>Telescope help_tags<cr>", opts)
 keymap("n", "<leader>b", ":lua require'telescope.builtin'.buffers()<CR>", opts)
 keymap("n", "<leader>bf", ":lua require('telescope.builtin').find_files()<CR>", opts)
 -- keymap("n", "<leader>dot", ":lua require('rc_telescope').search_dotfiles()<CR>", opts)
+keymap("n", "<leader>bd", ":lua require('close_buffer_telescope').close_buffer()<CR>", opts)
 keymap("n", "<leader>conf", ":lua require('rc_telescope').config()<CR>", opts)
 
 keymap("n", "<leader>br", ":lua require('telescope.builtin').live_grep()<CR>", opts)

@@ -24,6 +24,7 @@ local use = packer.use
 packer.reset()
 packer.startup(function()
 	use { "RRethy/vim-illuminate" }
+	use { "ThePrimeagen/vim-be-good" }
 	use { "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" },}
 	use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
 	use { 'anuvyklack/hydra.nvim', requires = 'anuvyklack/keymap-layer.nvim'}
