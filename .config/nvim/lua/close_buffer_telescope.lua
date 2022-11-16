@@ -22,7 +22,7 @@ function getBuffer()
     local i = 1
     local buff = {}
     local index = {}
-    while i < 100 do
+    while i < 1000 do
         if (vim.api.nvim_buf_is_valid(i) and vim.api.nvim_buf_is_loaded(i) and vim.api.nvim_buf_get_name(i) ~= "") then
             table.insert(buff, trimPath(vim.api.nvim_buf_get_name(i)));
             table.insert(index, i);

@@ -1,0 +1,81 @@
+{
+ "project": "ft_transcendance",
+ "todo": {
+  "title": [
+   {
+    "title": "Socket front",
+    "idx": 1
+   },
+   {
+    "title": "Chat",
+    "idx": 2
+   }
+  ],
+  "desc": [
+   {
+    "title": "Start add socket in Front For make test\u001b",
+    "idx": 1
+   },
+   {
+    "title": "handle Socket chat prive msg",
+    "idx": 2
+   }
+  ],
+  "date": [
+   {
+    "title": "11-16-2022 11:38:38",
+    "idx": 1
+   },
+   {
+    "title": "11-16-2022 11:38:38",
+    "idx": 2
+   }
+  ],
+  "idx": 0,
+  "len": 2
+ },
+ "progress": {
+  "title": [
+   {
+    "title": "Socket",
+    "idx": 1
+   }
+  ],
+  "desc": [
+   {
+    "title": "Try understanding socket",
+    "idx": 1
+   }
+  ],
+  "date": [
+   {
+    "title": "11-16-2022 11:38:38",
+    "idx": 1
+   }
+  ],
+  "idx": 0,
+  "len": 1
+ },
+ "finish": {
+  "title": [
+   {
+    "title": "Socket msg",
+    "idx": 1
+   }
+  ],
+  "desc": [
+   {
+    "title": "Send msg to specific socket\nhandle list of socket ",
+    "idx": 1
+   }
+  ],
+  "date": [
+   {
+    "title": "11-16-2022 11:37:37",
+    "idx": 1
+   }
+  ],
+  "idx": 0,
+  "len": 1
+ }
+}
