@@ -1,4 +1,3 @@
-
 local packer = require 'packer'
 
 packer.init{
@@ -53,13 +52,13 @@ packer.startup(function()
 	use 'christianchiarulli/nvcode-color-schemes.vim'
 	use 'dcampos/nvim-snippy'
 	use 'honza/vim-snippets'
-
+    --
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'
 	use 'nvim-treesitter/playground'
 	use 'onsails/lspkind-nvim'
 	use 'preservim/tagbar'
-
+    
 	-- cmp install
 	use 'hrsh7th/cmp-buffer'
 	use 'dcampos/cmp-snippy'
@@ -73,7 +72,7 @@ packer.startup(function()
 	use 'hrsh7th/cmp-path'
 	use 'saadparwaiz1/cmp_luasnip'
 	use 'hrsh7th/nvim-cmp'
-
+    
 	use 'liuchengxu/vista.vim'
 	use 'neovim/nvim-lspconfig'
 	use 'rafi/awesome-vim-colorschemes'
