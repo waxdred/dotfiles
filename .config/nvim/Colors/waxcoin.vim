@@ -7,36 +7,38 @@ if exists('syntax_on')
 endif
 let g:colors_name='waxcoin'
 
-hi @normal guifg=#abb2bf ctermfg=249 guibg=#1e1e1e00 ctermbg=234 gui=NONE cterm=NONE
-hi @comment guifg=#608b4e ctermfg=65 guibg=NONE ctermbg=NONE gui=italic cterm=italic
-hi @constant guifg=#dcdcaa ctermfg=187 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @normal guifg=#D8DEE9 ctermfg=249 guibg=#1e1e1e00 ctermbg=234 gui=NONE cterm=NONE
+hi @comment guifg=#93BE66 ctermfg=65 guibg=NONE ctermbg=NONE gui=italic cterm=italic
+hi @constant guifg=#EBCB8B ctermfg=187 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @string guifg=#d3420b ctermfg=166 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @character guifg=#d3420b ctermfg=166 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @number guifg=#f47453 ctermfg=209 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi @boolean guifg=#569cd6 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @boolean guifg=#B48EAD ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @float guifg=#b5cea8 ctermfg=151 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @identifier guifg=#569cd6 ctermfg=74 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi @function guifg=#DE4ABF ctermfg=187 guibg=NONE ctermbg=NONE gui=bold cterm=NONE
-hi @spell guifg=#f47453 ctermfg=187 guibg=NONE ctermbg=NONE gui=bold cterm=NONE
-hi @variable guifg=#F56A8F ctermfg=187 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @function guifg=#35C1DC ctermfg=187 guibg=NONE ctermbg=NONE gui=bold cterm=NONE
+hi @spell guifg=#93BE66 ctermfg=187 guibg=NONE ctermbg=NONE gui=bold cterm=NONE
+hi @variable guifg=#BF6221 ctermfg=187 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @statement guifg=#c586c0 ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @conditional guifg=#c586c0 ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @repeat guifg=#c586c0 ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @label guifg=#9cdcfe ctermfg=153 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @operator guifg=#c586c0 ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi @keyword guifg=#8BB7BA
+hi @keyword guifg=#2EA9C3
+hi @function.call guifg=#2EA9C3
 hi @constructor guifg=#61DAFB
 hi @tag guifg=#f44747
+hi @punctuation guifg=#3B4252
 hi @parameter guifg=#9cdcfe
 hi @tag.attribute guifg=#1e1e1e
 hi @property guifg=#6E253F ctermfg=187 guibg=NONE ctermbg=NONE gui=bold cterm=NONE
-hi @type guifg=#73B98A ctermfg=187 guibg=NONE ctermbg=NONE gui=bold cterm=NONE
-hi @exception guifg=#c586c0 ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @type guifg=#4DC0D0 ctermfg=187 guibg=NONE ctermbg=NONE gui=bold cterm=NONE
+hi @exception guifg=#BF626A ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @preProc guifg=#dcdcaa ctermfg=187 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @include guifg=#268BD2 ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi @define guifg=#c586c0 ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi @define guifg=#71B9E6 ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi @title guifg=#4ec9b0 ctermfg=79 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi Macro guifg=#c586c0 ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi Macro guifg=#BF626A ctermfg=175 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi PreCondit guifg=#9cdcfe ctermfg=153 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi Type guifg=#9cdcfe ctermfg=153 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
 hi StorageClass guifg=#9cdcfe ctermfg=153 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
