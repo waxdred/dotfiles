@@ -4,6 +4,8 @@ M.setup = function(on_attach, capabilities)
 
     lspconfig.bashls.setup {
         on_attach = on_attach,
+        name = 'bash-language-server',
+        cmd = { 'bash-language-server', 'start' },
         flags = {
             debounce_text_changes = 150,
         },
