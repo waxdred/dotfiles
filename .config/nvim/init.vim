@@ -38,11 +38,6 @@ let g:netrw_winsize = 20
 "setting Neovim Tree
 " let g:c_syntax_for_h = 1
 
-call plug#begin()
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-call plug#end()
-
 " Airline_Vim
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
@@ -68,16 +63,6 @@ let g:cpp_attributes_highlight = 1
 " Highlight struct/class member variables (affects both C and C++ files)
 let g:cpp_member_highlight = 1
 
-" configure treesitter
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "rust" },  -- list of language that will be disabled
-  },
-}
-EOF
 
 "set completeopt=noinsert,menuone,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']

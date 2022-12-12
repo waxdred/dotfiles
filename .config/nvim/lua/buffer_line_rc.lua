@@ -12,37 +12,36 @@ bufferline.setup{
 	},
 	highlights = {
         	tab = {
-        	    guifg = '#002b36',
-        	    guibg = '#002b36'
+        	    fg = '#002b36',
+        	    bg = '#002b36'
         	},
         	close_button = {
-        	    guifg = '#ffffff',
-        	    guibg = '#002b36'
+        	    fg = '#ffffff',
+        	    bg = '#002b36'
         	},
         	close_button_visible = {
-        	    guifg = '#EE3B31',
-        	    guibg = '#002b36'
+        	    fg = '#EE3B31',
+        	    bg = '#002b36'
         	},
         	close_button_selected = {
-        	    guifg = '#EE3B31',
-        	    guibg = '#002b36'
+        	    fg = '#EE3B31',
+        	    bg = '#002b36'
         	},
         	buffer_visible = {
-        	    guifg = '#13A6DA',
-        	    guibg = '#002b36'
+        	    fg = '#13A6DA',
+        	    bg = '#002b36'
         	},
         	buffer_selected = {
-		    guifg = '#FF6C37',
-        	    guibg = '#002b36',
-        	    gui = "bold,italic"
+		        fg = '#FF6C37',
+        	    bg = '#002b36',
+        	    italic = true
         	},
 		separator = {
-			guifg = '#073642',
-			guibg = '#002b36',
+			fg = '#073642',
+			bg = '#002b36',
 		},
 		separator_selected = {
-			guifg = '#073642',
+			fg = '#073642',
 	},
         };
-
 }

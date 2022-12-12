@@ -5,16 +5,15 @@ if not ok then
 end
 
 local utils = require "utils"
-
+    --"ccls",
 local servers = {
     "bashls",
-    "ccls",
     "clangd",
     "cmake",
     "sumneko_lua",
     "cssls",
     "html",
-    "emmet_ls",
+    -- "emmet_ls",
     "jsonls",
     "yamlls",
     "dockerls",
@@ -71,7 +70,7 @@ local on_attach = function(client, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 lsp_installer.setup {
     ensure_installed = servers,

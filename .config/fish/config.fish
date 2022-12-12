@@ -3,7 +3,7 @@ alias cbuild="sh ~/.build/cppbuild/buil.sh"
 alias ccmake="sh ~/.build/cppbuild/ccmake.sh"
 alias cctest="sh ~/.build/cppbuild/cctest.sh"
 alias 42="cd ~/42/$1"
-alias dotfile "cd ~/.dotfiles/.config"
+alias dotfile "cd ~/dotfiles/.config"
 alias sfish "source ~/.dotfiles/.config/fish/config.fish"
 alias stmux "source ~/.dotfiles/.tmux.conf"
 alias cheat "sh ~/.tmux/plugins/tmux-cheat-fzf/scripts/cheat.sh"
@@ -32,9 +32,9 @@ if type -q exa
 	alias lt "ll --tree --level=3 -a --ignore-glob='\.*'"
 end
 
-export VISUAL=/usr/local/bin/nvim
-export EDITOR=/usr/local/bin/nvim
-export SHELL=/opt/local/bin/fish
+export VISUAL=~/nvim/bin/nvim
+export EDITOR=~/nvim/bin/nvim
+export SHELL=/Users/jmilhas/.brew/bin/fish
 
 set theme_color_scheme solarized
 set -U FZF_COMPLETE 2
