@@ -1,24 +1,225 @@
 {
- "project": "",
+ "project": "ft_transcendance",
  "todo": {
-  "title": null,
-  "desc": null,
-  "date": null,
+  "title": [
+   {
+    "title": "socket on get chan list",
+    "idx": 1
+   },
+   {
+    "title": "Send Message in chan",
+    "idx": 2
+   },
+   {
+    "title": "Join channel",
+    "idx": 3
+   },
+   {
+    "title": "List channel",
+    "idx": 4
+   },
+   {
+    "title": "Invite in channel Private",
+    "idx": 5
+   }
+  ],
+  "desc": [
+   {
+    "title": "creer socket listen \nsocket \"server_channels_in\" ",
+    "idx": 1
+   },
+   {
+    "title": "socket \"server_chanmsg_send\"\nchanName: string, @MessageBody('msg') msg: string\n\n",
+    "idx": 2
+   },
+   {
+    "title": "socket \"server_chanmsg_join\"\n@MessageBody('chanName') chanName: string, @MessageBody('password') password?: string)",
+    "idx": 3
+   },
+   {
+    "title": "socket emit \"server_channels\"\nsocket on \"client_channels\"",
+    "idx": 4
+   },
+   {
+    "title": "socket \"server_chanmsg_invite\"\n@MessageBody('chanName') chanName: string, @MessageBody('loginInvite') loginInvite: string\n",
+    "idx": 5
+   }
+  ],
+  "date": [
+   {
+    "title": "12-12-2022 12:53:53",
+    "idx": 1
+   },
+   {
+    "title": "12-12-2022 12:54:54",
+    "idx": 2
+   },
+   {
+    "title": "12-12-2022 12:58:58",
+    "idx": 3
+   },
+   {
+    "title": "12-12-2022 12:59:59",
+    "idx": 4
+   },
+   {
+    "title": "12-12-2022 12:00:00",
+    "idx": 5
+   }
+  ],
   "idx": 0,
-  "len": 0
+  "len": 5
  },
  "progress": {
-  "title": null,
-  "desc": null,
-  "date": null,
-  "idx": 0,
-  "len": 0
+  "title": [
+   {
+    "title": "Chan add",
+    "idx": 1
+   },
+   {
+    "title": "Add public | Protected",
+    "idx": 2
+   },
+   {
+    "title": "Chan creation",
+    "idx": 3
+   }
+  ],
+  "desc": [
+   {
+    "title": "Popup add Public | Private | Protected",
+    "idx": 1
+   },
+   {
+    "title": "Add public easy\nProtected check if protected if true ask password channel",
+    "idx": 2
+   },
+   {
+    "title": "socket emit \"server_chan_create\"\n@MessageBody('Authorization') jwt: string, @MessageBody('chan') chan: GOT.Channel\u001b",
+    "idx": 3
+   }
+  ],
+  "date": [
+   {
+    "title": "12-12-2022 12:49:49",
+    "idx": 1
+   },
+   {
+    "title": "12-12-2022 12:50:50",
+    "idx": 2
+   },
+   {
+    "title": "12-12-2022 12:07:07",
+    "idx": 3
+   }
+  ],
+  "idx": 2,
+  "len": 3
  },
  "finish": {
-  "title": null,
-  "desc": null,
-  "date": null,
-  "idx": 0,
-  "len": 0
+  "title": [
+   {
+    "title": "Socket msg",
+    "idx": 1
+   },
+   {
+    "title": "Socket front",
+    "idx": 2
+   },
+   {
+    "title": "Chat",
+    "idx": 3
+   },
+   {
+    "title": "Socket",
+    "idx": 4
+   },
+   {
+    "title": "block user",
+    "idx": 5
+   },
+   {
+    "title": "Profil view",
+    "idx": 6
+   },
+   {
+    "title": "Chan",
+    "idx": 7
+   },
+   {
+    "title": "Chan socket",
+    "idx": 8
+   }
+  ],
+  "desc": [
+   {
+    "title": "Send msg to specific socket\nhandle list of socket ",
+    "idx": 1
+   },
+   {
+    "title": "Start add socket in Front For make test\u001b",
+    "idx": 2
+   },
+   {
+    "title": "handle Socket chat prive msg",
+    "idx": 3
+   },
+   {
+    "title": "Try understanding socket",
+    "idx": 4
+   },
+   {
+    "title": "Block user chat",
+    "idx": 5
+   },
+   {
+    "title": "popup show profil view",
+    "idx": 6
+   },
+   {
+    "title": "add chan popup",
+    "idx": 7
+   },
+   {
+    "title": "emit for get chan list of the user",
+    "idx": 8
+   }
+  ],
+  "date": [
+   {
+    "title": "11-16-2022 11:37:37",
+    "idx": 1
+   },
+   {
+    "title": "12-12-2022 12:44:44",
+    "idx": 2
+   },
+   {
+    "title": "12-12-2022 12:44:44",
+    "idx": 3
+   },
+   {
+    "title": "12-12-2022 12:44:44",
+    "idx": 4
+   },
+   {
+    "title": "12-12-2022 12:44:44",
+    "idx": 5
+   },
+   {
+    "title": "12-12-2022 12:45:45",
+    "idx": 6
+   },
+   {
+    "title": "12-12-2022 12:45:45",
+    "idx": 7
+   },
+   {
+    "title": "12-12-2022 12:51:51",
+    "idx": 8
+   }
+  ],
+  "idx": 5,
+  "len": 8
  }
 }

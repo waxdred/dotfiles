@@ -3,31 +3,31 @@
  "todo": {
   "title": [
    {
-    "title": "Socket front",
+    "title": "Join channel",
     "idx": 1
    },
    {
-    "title": "Chat",
+    "title": "Invite in channel Private",
     "idx": 2
    }
   ],
   "desc": [
    {
-    "title": "Start add socket in Front For make test\u001b",
+    "title": "socket \"server_chanmsg_join\"\n@MessageBody('chanName') chanName: string, @MessageBody('password') password?: string)",
     "idx": 1
    },
    {
-    "title": "handle Socket chat prive msg",
+    "title": "socket \"server_chanmsg_invite\"\n@MessageBody('chanName') chanName: string, @MessageBody('loginInvite') loginInvite: string\n",
     "idx": 2
    }
   ],
   "date": [
    {
-    "title": "11-16-2022 11:38:38",
+    "title": "12-12-2022 12:32:32",
     "idx": 1
    },
    {
-    "title": "11-16-2022 11:38:38",
+    "title": "12-12-2022 12:32:32",
     "idx": 2
    }
   ],
@@ -37,45 +37,189 @@
  "progress": {
   "title": [
    {
-    "title": "Socket",
+    "title": "Add public | Protected",
     "idx": 1
+   },
+   {
+    "title": "Join channel Protected",
+    "idx": 2
+   },
+   {
+    "title": "Send Message in chan",
+    "idx": 3
    }
   ],
   "desc": [
    {
-    "title": "Try understanding socket",
+    "title": "Add public easy\nProtected check if protected if true ask password channel",
     "idx": 1
+   },
+   {
+    "title": "Add cadna in list for show channel is protected",
+    "idx": 2
+   },
+   {
+    "title": "socket \"server_chanmsg_send\"\nchanName: string, @MessageBody('msg') msg: string\n\n",
+    "idx": 3
    }
   ],
   "date": [
    {
-    "title": "11-16-2022 11:38:38",
+    "title": "12-12-2022 12:32:32",
     "idx": 1
+   },
+   {
+    "title": "12-12-2022 12:32:32",
+    "idx": 2
+   },
+   {
+    "title": "12-12-2022 12:32:32",
+    "idx": 3
    }
   ],
   "idx": 0,
-  "len": 1
+  "len": 3
  },
  "finish": {
   "title": [
    {
     "title": "Socket msg",
     "idx": 1
+   },
+   {
+    "title": "Socket front",
+    "idx": 2
+   },
+   {
+    "title": "Chat",
+    "idx": 3
+   },
+   {
+    "title": "Socket",
+    "idx": 4
+   },
+   {
+    "title": "block user",
+    "idx": 5
+   },
+   {
+    "title": "Chan",
+    "idx": 6
+   },
+   {
+    "title": "Chan socket",
+    "idx": 7
+   },
+   {
+    "title": "Creation CHan",
+    "idx": 8
+   },
+   {
+    "title": "List channel",
+    "idx": 9
+   },
+   {
+    "title": "Chan add",
+    "idx": 10
+   },
+   {
+    "title": "socket on get chan list",
+    "idx": 11
    }
   ],
   "desc": [
    {
     "title": "Send msg to specific socket\nhandle list of socket ",
     "idx": 1
+   },
+   {
+    "title": "Start add socket in Front For make test\u001b",
+    "idx": 2
+   },
+   {
+    "title": "handle Socket chat prive msg",
+    "idx": 3
+   },
+   {
+    "title": "Try understanding socket",
+    "idx": 4
+   },
+   {
+    "title": "Block user chat",
+    "idx": 5
+   },
+   {
+    "title": "add chan popup",
+    "idx": 6
+   },
+   {
+    "title": "emit for get chan list of the user",
+    "idx": 7
+   },
+   {
+    "title": "emit \"server_chan_create\"\n@MessageBody('chan') chan: GOT.Channel\n    export interface Channel {\n        name: string,\n        status: ChannelStatus,\n        password?: string\n    }\nemit \"client_channels_in",
+    "idx": 8
+   },
+   {
+    "title": "socket emit \"server_channels\"\nsocket on \"client_channels\"",
+    "idx": 9
+   },
+   {
+    "title": "Popup add Public | Private | Protected",
+    "idx": 10
+   },
+   {
+    "title": "creer socket listen \nsocket \"server_channels_in\" ",
+    "idx": 11
    }
   ],
   "date": [
    {
-    "title": "11-16-2022 11:37:37",
+    "title": "12-12-2022 12:08:08",
     "idx": 1
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 2
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 3
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 4
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 5
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 6
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 7
+   },
+   {
+    "title": "12-12-2022 12:32:32",
+    "idx": 8
+   },
+   {
+    "title": "12-12-2022 12:32:32",
+    "idx": 9
+   },
+   {
+    "title": "12-12-2022 12:32:32",
+    "idx": 10
+   },
+   {
+    "title": "12-12-2022 12:32:32",
+    "idx": 11
    }
   ],
-  "idx": 0,
-  "len": 1
+  "idx": 1,
+  "len": 11
  }
 }
