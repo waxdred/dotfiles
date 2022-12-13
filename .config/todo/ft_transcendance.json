@@ -1,0 +1,297 @@
+{
+ "project": "ft_transcendance",
+ "todo": {
+  "title": [
+   {
+    "title": "Invite in channel Private",
+    "idx": 1
+   },
+   {
+    "title": "Bann | unBann",
+    "idx": 2
+   },
+   {
+    "title": "Admin setting",
+    "idx": 3
+   },
+   {
+    "title": "Setting admin | delete user",
+    "idx": 4
+   },
+   {
+    "title": "Admin Update",
+    "idx": 5
+   },
+   {
+    "title": "own leave",
+    "idx": 6
+   },
+   {
+    "title": "Route",
+    "idx": 7
+   }
+  ],
+  "desc": [
+   {
+    "title": "socket \"server_chanmsg_invite\"\n@MessageBody('chanName') chanName: string, @MessageBody('loginInvite') loginInvite: string\n",
+    "idx": 1
+   },
+   {
+    "title": "channel add socket ban unban\nbann someone server ban and you don't print ",
+    "idx": 2
+   },
+   {
+    "title": "Add unBan list \ninvite people\nleave chan \nchange status Private Protected Public\nchange password",
+    "idx": 3
+   },
+   {
+    "title": "admin | owner can delete user but admin cam't deleted user",
+    "idx": 4
+   },
+   {
+    "title": "can add user to admin",
+    "idx": 5
+   },
+   {
+    "title": "kill chann",
+    "idx": 6
+   },
+   {
+    "title": "set channame | change pwd | status\nset bannSomebody\nset UnbannSomebody\nset leave Somebody\n\n",
+    "idx": 7
+   }
+  ],
+  "date": [
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 1
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 2
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 3
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 4
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 5
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 6
+   },
+   {
+    "title": "12-13-2022 12:40:40",
+    "idx": 7
+   }
+  ],
+  "idx": 1,
+  "len": 7
+ },
+ "progress": {
+  "title": [
+   {
+    "title": "Join channel Protected",
+    "idx": 1
+   }
+  ],
+  "desc": [
+   {
+    "title": "Add cadna in list for show channel is protected",
+    "idx": 1
+   }
+  ],
+  "date": [
+   {
+    "title": "12-13-2022 12:20:20",
+    "idx": 1
+   }
+  ],
+  "idx": 0,
+  "len": 1
+ },
+ "finish": {
+  "title": [
+   {
+    "title": "Socket msg",
+    "idx": 1
+   },
+   {
+    "title": "Socket front",
+    "idx": 2
+   },
+   {
+    "title": "Chat",
+    "idx": 3
+   },
+   {
+    "title": "Socket",
+    "idx": 4
+   },
+   {
+    "title": "block user",
+    "idx": 5
+   },
+   {
+    "title": "Chan",
+    "idx": 6
+   },
+   {
+    "title": "Chan socket",
+    "idx": 7
+   },
+   {
+    "title": "Creation CHan",
+    "idx": 8
+   },
+   {
+    "title": "List channel",
+    "idx": 9
+   },
+   {
+    "title": "Chan add",
+    "idx": 10
+   },
+   {
+    "title": "socket on get chan list",
+    "idx": 11
+   },
+   {
+    "title": "Add public | Protected",
+    "idx": 12
+   },
+   {
+    "title": "Send Message in chan",
+    "idx": 13
+   },
+   {
+    "title": "Join channel",
+    "idx": 14
+   }
+  ],
+  "desc": [
+   {
+    "title": "Send msg to specific socket\nhandle list of socket ",
+    "idx": 1
+   },
+   {
+    "title": "Start add socket in Front For make test\u001b",
+    "idx": 2
+   },
+   {
+    "title": "handle Socket chat prive msg",
+    "idx": 3
+   },
+   {
+    "title": "Try understanding socket",
+    "idx": 4
+   },
+   {
+    "title": "Block user chat",
+    "idx": 5
+   },
+   {
+    "title": "add chan popup",
+    "idx": 6
+   },
+   {
+    "title": "emit for get chan list of the user",
+    "idx": 7
+   },
+   {
+    "title": "emit \"server_chan_create\"\n@MessageBody('chan') chan: GOT.Channel\n    export interface Channel {\n        name: string,\n        status: ChannelStatus,\n        password?: string\n    }\nemit \"client_channels_in",
+    "idx": 8
+   },
+   {
+    "title": "socket emit \"server_channels\"\nsocket on \"client_channels\"",
+    "idx": 9
+   },
+   {
+    "title": "Popup add Public | Private | Protected",
+    "idx": 10
+   },
+   {
+    "title": "creer socket listen \nsocket \"server_channels_in\" ",
+    "idx": 11
+   },
+   {
+    "title": "Add public easy\nProtected check if protected if true ask password channel",
+    "idx": 12
+   },
+   {
+    "title": "socket \"server_chanmsg_send\"\nchanName: string, @MessageBody('msg') msg: string\n\n",
+    "idx": 13
+   },
+   {
+    "title": "socket \"server_chanmsg_join\"\n@MessageBody('chanName') chanName: string, @MessageBody('password') password?: string)",
+    "idx": 14
+   }
+  ],
+  "date": [
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 1
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 2
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 3
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 4
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 5
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 6
+   },
+   {
+    "title": "12-12-2022 12:08:08",
+    "idx": 7
+   },
+   {
+    "title": "12-12-2022 12:32:32",
+    "idx": 8
+   },
+   {
+    "title": "12-12-2022 12:32:32",
+    "idx": 9
+   },
+   {
+    "title": "12-12-2022 12:32:32",
+    "idx": 10
+   },
+   {
+    "title": "12-12-2022 12:32:32",
+    "idx": 11
+   },
+   {
+    "title": "12-13-2022 12:19:19",
+    "idx": 12
+   },
+   {
+    "title": "12-13-2022 12:20:20",
+    "idx": 13
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 14
+   }
+  ],
+  "idx": 1,
+  "len": 14
+ }
+}
