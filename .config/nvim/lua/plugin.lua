@@ -1,31 +1,15 @@
-local packer = require 'packer'
+    
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
-packer.init{
-{
-  display = {
-    non_interactive = false, -- If true, disable display windows for all operations
-    open_fn  = nil, -- An optional function to open a window for packer's display
-    open_cmd = '65vnew \\[packer\\]', -- An optional command to open a window for packer's display
-    working_sym = '⟳', -- The symbol for a plugin being installed/updated
-    error_sym = '✗', -- The symbol for a plugin with an error in installation/updating
-    done_sym = '✓', -- The symbol for a plugin which has completed installation/updating
-    removed_sym = '-', -- The symbol for an unused plugin which was removed
-    moved_sym = '→', -- The symbol for a plugin which was moved (e.g. from opt to start)
-    header_sym = '━', -- The symbol for the header line in packer's display
-    show_all_info = true, -- Should packer show all update details automatically?
-    prompt_border = 'double', -- Border style of prompt popups.
-    }
-  }
-}
+-- Only required if you have packer configured as `opt`
+vim.cmd [[packadd packer.nvim]]
 
-local use = packer.use
-
-packer.reset()
-packer.startup(function()
+return require('packer').startup(function(use)
+    use("simrat39/rust-tools.nvim")
 	use { "RRethy/vim-illuminate" }
 	use { "ThePrimeagen/vim-be-good" }
 	use { "jose-elias-alvarez/null-ls.nvim", requires = { "nvim-lua/plenary.nvim" },}
-	use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
+	use ( 'nvim-treesitter/nvim-treesitter', {run = ":TSUpdate"})
 	use { 'anuvyklack/hydra.nvim', requires = 'anuvyklack/keymap-layer.nvim'}
 	use { 'lukas-reineke/indent-blankline.nvim' }
 	use { 'epilande/vim-react-snippets' }
@@ -58,7 +42,6 @@ packer.startup(function()
 	use 'nvim-treesitter/playground'
 	use 'onsails/lspkind-nvim'
 	use 'preservim/tagbar'
-    
 	-- cmp install
 	use 'hrsh7th/cmp-buffer'
 	use 'dcampos/cmp-snippy'
@@ -72,7 +55,6 @@ packer.startup(function()
 	use 'hrsh7th/cmp-path'
 	use 'saadparwaiz1/cmp_luasnip'
 	use 'hrsh7th/nvim-cmp'
-    
 	use 'liuchengxu/vista.vim'
 	use 'neovim/nvim-lspconfig'
 	use 'rafi/awesome-vim-colorschemes'
@@ -90,7 +72,3 @@ packer.startup(function()
 	use { 'theHamsta/nvim-dap-virtual-text' }
 	use { 'mfussenegger/nvim-dap' }
 end)
-	-- use 'gerardbm/vim-atomic'
-	-- use 'puremourning/vimspector'
-	-- use { 'mhinz/vim-startify' }
-	-- use 'chrisbra/Colorizer'

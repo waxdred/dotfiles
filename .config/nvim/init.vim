@@ -1,6 +1,7 @@
 set nocompatible              " required
 set encoding=utf-8
 set fillchars+=stl:\ ,stlnc:\
+set colorcolumn=100
 set foldmethod=indent
 set foldlevel=99
 set encoding=utf-8
@@ -90,13 +91,3 @@ let g:vista_fzf_preview = ['right:50%']
 " Header setting 42
 let g:user42 = 'jmilhas'
 let g:mail42 = 'jmilhas@student.42.fr'
-
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "rust" },  -- list of language that will be disabled
-  },
-}
-EOF

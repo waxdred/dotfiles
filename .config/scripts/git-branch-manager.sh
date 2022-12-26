@@ -12,17 +12,29 @@ Title(){
         --border normal\
         --margin "1"\
         --border-foreground "$GIT_COLOR"\
-        " Git branch Manager "
+        " Dotfile Manager "
+}
+
+
+get_choose(){
+    gum choose --no-limit "Nvim" "Fish" "Tmux" "Plugin" "Lsp" 
+}
+
+selectDir(){
+        if [[ $data -eq "Nvim" ]]; then
+            cd ~/.dotfiles/.config/nvim/            
+            echo $PWD
+        elif [[ $data -eq "Fish" ]]; then
+            cd ~/.dotfiles/.config/fish/           
+        elif [[ $data -eq "Tmux" ]]; then
+            cd ~/.dotfiles/.tmux/        
+        elif [[ $data -eq "Plugin" ]]; then
+            cd ~/.dotfiles/.config/nvim/plugin/            
+        elif [[ $data -eq "Lsp" ]]; then
+            cd ~/.dotfiles/.config/nvim/plugin/Lsp
+        fi
 }
 
 Title
-
-get_branches(){
-    gum choose --no-limit $(git branch --format="%(refname:short)")
-}
-
-echo "Choose $(git_color_text "branches") to operate on:"
-branches=$(get_branches)
-
-git switch $branches
-git pull
+data=$(get_choose)
+selectDir 

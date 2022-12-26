@@ -1,84 +1,18 @@
 {
  "project": "ft_transcendance",
  "todo": {
-  "title": [
-   {
-    "title": "Join channel",
-    "idx": 1
-   },
-   {
-    "title": "Invite in channel Private",
-    "idx": 2
-   }
-  ],
-  "desc": [
-   {
-    "title": "socket \"server_chanmsg_join\"\n@MessageBody('chanName') chanName: string, @MessageBody('password') password?: string)",
-    "idx": 1
-   },
-   {
-    "title": "socket \"server_chanmsg_invite\"\n@MessageBody('chanName') chanName: string, @MessageBody('loginInvite') loginInvite: string\n",
-    "idx": 2
-   }
-  ],
-  "date": [
-   {
-    "title": "12-12-2022 12:32:32",
-    "idx": 1
-   },
-   {
-    "title": "12-12-2022 12:32:32",
-    "idx": 2
-   }
-  ],
+  "title": null,
+  "desc": null,
+  "date": null,
   "idx": 0,
-  "len": 2
+  "len": -1
  },
  "progress": {
-  "title": [
-   {
-    "title": "Add public | Protected",
-    "idx": 1
-   },
-   {
-    "title": "Join channel Protected",
-    "idx": 2
-   },
-   {
-    "title": "Send Message in chan",
-    "idx": 3
-   }
-  ],
-  "desc": [
-   {
-    "title": "Add public easy\nProtected check if protected if true ask password channel",
-    "idx": 1
-   },
-   {
-    "title": "Add cadna in list for show channel is protected",
-    "idx": 2
-   },
-   {
-    "title": "socket \"server_chanmsg_send\"\nchanName: string, @MessageBody('msg') msg: string\n\n",
-    "idx": 3
-   }
-  ],
-  "date": [
-   {
-    "title": "12-12-2022 12:32:32",
-    "idx": 1
-   },
-   {
-    "title": "12-12-2022 12:32:32",
-    "idx": 2
-   },
-   {
-    "title": "12-12-2022 12:32:32",
-    "idx": 3
-   }
-  ],
+  "title": null,
+  "desc": null,
+  "date": null,
   "idx": 0,
-  "len": 3
+  "len": -1
  },
  "finish": {
   "title": [
@@ -125,6 +59,54 @@
    {
     "title": "socket on get chan list",
     "idx": 11
+   },
+   {
+    "title": "Add public | Protected",
+    "idx": 12
+   },
+   {
+    "title": "Send Message in chan",
+    "idx": 13
+   },
+   {
+    "title": "Join channel",
+    "idx": 14
+   },
+   {
+    "title": "Invite in channel Private",
+    "idx": 15
+   },
+   {
+    "title": "Notif ",
+    "idx": 16
+   },
+   {
+    "title": "Bann | unBann",
+    "idx": 17
+   },
+   {
+    "title": "Admin setting",
+    "idx": 18
+   },
+   {
+    "title": "Setting admin | delete user",
+    "idx": 19
+   },
+   {
+    "title": "Admin Update",
+    "idx": 20
+   },
+   {
+    "title": "own leave",
+    "idx": 21
+   },
+   {
+    "title": "Route",
+    "idx": 22
+   },
+   {
+    "title": "Join channel Protected",
+    "idx": 23
    }
   ],
   "desc": [
@@ -171,6 +153,54 @@
    {
     "title": "creer socket listen \nsocket \"server_channels_in\" ",
     "idx": 11
+   },
+   {
+    "title": "Add public easy\nProtected check if protected if true ask password channel",
+    "idx": 12
+   },
+   {
+    "title": "socket \"server_chanmsg_send\"\nchanName: string, @MessageBody('msg') msg: string\n\n",
+    "idx": 13
+   },
+   {
+    "title": "socket \"server_chanmsg_join\"\n@MessageBody('chanName') chanName: string, @MessageBody('password') password?: string)",
+    "idx": 14
+   },
+   {
+    "title": "socket \"server_chanmsg_invite\"\n@MessageBody('chanName') chanName: string, @MessageBody('loginInvite') loginInvite: string\n",
+    "idx": 15
+   },
+   {
+    "title": "Check if with are on the channel don't popup Notif\nRegex in notif file",
+    "idx": 16
+   },
+   {
+    "title": "channel add socket ban unban\nbann someone server ban and you don't print ",
+    "idx": 17
+   },
+   {
+    "title": "Add unBan list \ninvite people\nleave chan \nchange status Private Protected Public\nchange password",
+    "idx": 18
+   },
+   {
+    "title": "admin | owner can delete user but admin cam't deleted user",
+    "idx": 19
+   },
+   {
+    "title": "can add user to admin",
+    "idx": 20
+   },
+   {
+    "title": "kill chann",
+    "idx": 21
+   },
+   {
+    "title": "set channame | change pwd | status\nset bannSomebody\nset UnbannSomebody\nset leave Somebody\n\n",
+    "idx": 22
+   },
+   {
+    "title": "Add cadna in list for show channel is protected",
+    "idx": 23
    }
   ],
   "date": [
@@ -217,9 +247,57 @@
    {
     "title": "12-12-2022 12:32:32",
     "idx": 11
+   },
+   {
+    "title": "12-13-2022 12:19:19",
+    "idx": 12
+   },
+   {
+    "title": "12-13-2022 12:20:20",
+    "idx": 13
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 14
+   },
+   {
+    "title": "12-13-2022 12:48:48",
+    "idx": 15
+   },
+   {
+    "title": "12-22-2022 12:22:22",
+    "idx": 16
+   },
+   {
+    "title": "12-22-2022 12:22:22",
+    "idx": 17
+   },
+   {
+    "title": "12-22-2022 12:22:22",
+    "idx": 18
+   },
+   {
+    "title": "12-22-2022 12:22:22",
+    "idx": 19
+   },
+   {
+    "title": "12-22-2022 12:22:22",
+    "idx": 20
+   },
+   {
+    "title": "12-22-2022 12:22:22",
+    "idx": 21
+   },
+   {
+    "title": "12-22-2022 12:22:22",
+    "idx": 22
+   },
+   {
+    "title": "12-22-2022 12:22:22",
+    "idx": 23
    }
   ],
   "idx": 1,
-  "len": 11
+  "len": 23
  }
 }
