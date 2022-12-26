@@ -1,6 +1,2 @@
-package archlinux
-package peco
-package vcs
-theme agnoster
-theme chain
-theme default
+package z
+theme bobthefish

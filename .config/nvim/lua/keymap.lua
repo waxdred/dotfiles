@@ -76,10 +76,6 @@ keymap("n", "<leader>cheat", ":Cheat<CR>", opts)
 -- mapping Lex
 keymap("n", "<leader>rr", ":Ex<CR>", opts)
 
--- Catcher in quickfix
-keymap("n", "<leader>todo", ":lua require('catcher').todo()<CR>", opts)
-keymap("n", "<leader>ff", ":lua require('catcher').func()<CR>", opts)
-
 -- Visual Block --
 -- Move text up and down
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)

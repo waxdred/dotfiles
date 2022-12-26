@@ -2,13 +2,9 @@
 local M = {}
 M.setup = function(on_attach, capabilities)
     local lspconfig = require "lspconfig"
-
     lspconfig.tsserver.setup {
         on_attach = on_attach,
-        flags = {
-            debounce_text_changes = 150,
-        },
-        capabilities = capabilities,
+        cmd = {"typescript-language-server", "--stdio"}
     }
 end
 

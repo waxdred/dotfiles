@@ -39,7 +39,6 @@ let g:netrw_winsize = 20
 "setting Neovim Tree
 " let g:c_syntax_for_h = 1
 
-
 " Airline_Vim
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')

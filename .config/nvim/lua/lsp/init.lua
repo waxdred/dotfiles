@@ -5,16 +5,15 @@ if not ok then
 end
 
 local utils = require "utils"
-
+    --"ccls",
 local servers = {
     "bashls",
-    "ccls",
     "clangd",
     "cmake",
     "sumneko_lua",
     "cssls",
     "html",
-    "emmet_ls",
+    -- "emmet_ls",
     "jsonls",
     "yamlls",
     "dockerls",

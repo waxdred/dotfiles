@@ -1,6 +1,7 @@
 {
  "project": "ft_transcendance",
  "todo": {
+<<<<<<< HEAD
   "title": null,
   "desc": null,
   "date": null,
@@ -13,6 +14,122 @@
   "date": null,
   "idx": 0,
   "len": -1
+=======
+  "title": [
+   {
+    "title": "Invite in channel Private",
+    "idx": 1
+   },
+   {
+    "title": "Bann | unBann",
+    "idx": 2
+   },
+   {
+    "title": "Admin setting",
+    "idx": 3
+   },
+   {
+    "title": "Setting admin | delete user",
+    "idx": 4
+   },
+   {
+    "title": "Admin Update",
+    "idx": 5
+   },
+   {
+    "title": "own leave",
+    "idx": 6
+   },
+   {
+    "title": "Route",
+    "idx": 7
+   }
+  ],
+  "desc": [
+   {
+    "title": "socket \"server_chanmsg_invite\"\n@MessageBody('chanName') chanName: string, @MessageBody('loginInvite') loginInvite: string\n",
+    "idx": 1
+   },
+   {
+    "title": "channel add socket ban unban\nbann someone server ban and you don't print ",
+    "idx": 2
+   },
+   {
+    "title": "Add unBan list \ninvite people\nleave chan \nchange status Private Protected Public\nchange password",
+    "idx": 3
+   },
+   {
+    "title": "admin | owner can delete user but admin cam't deleted user",
+    "idx": 4
+   },
+   {
+    "title": "can add user to admin",
+    "idx": 5
+   },
+   {
+    "title": "kill chann",
+    "idx": 6
+   },
+   {
+    "title": "set channame | change pwd | status\nset bannSomebody\nset UnbannSomebody\nset leave Somebody\n\n",
+    "idx": 7
+   }
+  ],
+  "date": [
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 1
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 2
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 3
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 4
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 5
+   },
+   {
+    "title": "12-13-2022 12:29:29",
+    "idx": 6
+   },
+   {
+    "title": "12-13-2022 12:40:40",
+    "idx": 7
+   }
+  ],
+  "idx": 1,
+  "len": 7
+ },
+ "progress": {
+  "title": [
+   {
+    "title": "Join channel Protected",
+    "idx": 1
+   }
+  ],
+  "desc": [
+   {
+    "title": "Add cadna in list for show channel is protected",
+    "idx": 1
+   }
+  ],
+  "date": [
+   {
+    "title": "12-13-2022 12:20:20",
+    "idx": 1
+   }
+  ],
+  "idx": 0,
+  "len": 1
+>>>>>>> 26b3891637cd40ceebd2b425945e3d9bad717234
  },
  "finish": {
   "title": [
@@ -71,6 +188,7 @@
    {
     "title": "Join channel",
     "idx": 14
+<<<<<<< HEAD
    },
    {
     "title": "Invite in channel Private",
@@ -107,6 +225,8 @@
    {
     "title": "Join channel Protected",
     "idx": 23
+=======
+>>>>>>> 26b3891637cd40ceebd2b425945e3d9bad717234
    }
   ],
   "desc": [
@@ -165,6 +285,7 @@
    {
     "title": "socket \"server_chanmsg_join\"\n@MessageBody('chanName') chanName: string, @MessageBody('password') password?: string)",
     "idx": 14
+<<<<<<< HEAD
    },
    {
     "title": "socket \"server_chanmsg_invite\"\n@MessageBody('chanName') chanName: string, @MessageBody('loginInvite') loginInvite: string\n",
@@ -201,6 +322,8 @@
    {
     "title": "Add cadna in list for show channel is protected",
     "idx": 23
+=======
+>>>>>>> 26b3891637cd40ceebd2b425945e3d9bad717234
    }
   ],
   "date": [
@@ -259,6 +382,7 @@
    {
     "title": "12-13-2022 12:29:29",
     "idx": 14
+<<<<<<< HEAD
    },
    {
     "title": "12-13-2022 12:48:48",
@@ -299,5 +423,11 @@
   ],
   "idx": 1,
   "len": 23
+=======
+   }
+  ],
+  "idx": 1,
+  "len": 14
+>>>>>>> 26b3891637cd40ceebd2b425945e3d9bad717234
  }
 }

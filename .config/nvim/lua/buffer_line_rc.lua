@@ -44,5 +44,4 @@ bufferline.setup{
 			fg = '#073642',
 	},
         };
-
 }

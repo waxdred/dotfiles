@@ -1,0 +1,51 @@
+{
+ "project": "ft_transcendence",
+ "todo": {
+  "title": null,
+  "desc": null,
+  "date": null,
+  "idx": 0,
+  "len": -1
+ },
+ "progress": {
+  "title": [
+   {
+    "title": "Socket",
+    "idx": 1
+   },
+   {
+    "title": "Chat",
+    "idx": 2
+   }
+  ],
+  "desc": [
+   {
+    "title": "Fix multi socket  in front",
+    "idx": 1
+   },
+   {
+    "title": "add chat var in chat",
+    "idx": 2
+   }
+  ],
+  "date": [
+   {
+    "title": "11-18-2022 11:42:42",
+    "idx": 1
+   },
+   {
+    "title": "11-18-2022 11:42:42",
+    "idx": 2
+   }
+  ],
+  "idx": 0,
+  "len": 2
+ },
+ "finish": {
+  "title": null,
+  "desc": null,
+  "date": null,
+  "idx": 0,
+  "len": -1
+ }
+}
