@@ -3,7 +3,6 @@ alias cbuild="sh ~/.build/cppbuild/buil.sh"
 alias ccmake="sh ~/.build/cppbuild/ccmake.sh"
 alias cctest="sh ~/.build/cppbuild/cctest.sh"
 alias 42="cd ~/42/$1"
-alias dotfile "cd ~/dotfiles/.config"
 alias sfish "source ~/.dotfiles/.config/fish/config.fish"
 alias stmux "source ~/.dotfiles/.tmux.conf"
 alias cheat "sh ~/.tmux/plugins/tmux-cheat-fzf/scripts/cheat.sh"
@@ -16,7 +15,7 @@ alias tmuxs "_MenuTmux"
 
 
 /* my script git */
-alias gs="~/.config/scripts/git-branch-manager.sh"
+alias dotfile="~/.config/scripts/git-branch-manager.sh"
 
 
 alias ..="cd .."

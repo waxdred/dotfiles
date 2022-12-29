@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PATH="/usr/local/bin:$PATH:/usr/sbin"
+
+show_menu() {
+    $(tmux display-menu -T "#[align=centre fg=cyan]Tmux_Menu" -x R -y P \
+        "#[fg=colour202]Copy / Paste" ""\
+        "" ""\
+        "Copy-mode"           y "run -b 'tmux copy-mode'" \
+        "Paste Buffer"        p "run -b 'tmux choose-buffer'" \
+        ""\
+        "#[fg=colour202]Split Window" ""\
+        "" ""\
+        "Split Vertical"     v "run -b 'tmux splitw -h'"\
+        "Split Horizontal"   h "run -b 'tmux splitw -v'"\
+        "Kill Pane"          k "run -b 'tmux kill-pane'"\
+        "#[fg=cyan]For move in Pane alt+arrow" ""\
+        "" ""\
+        "#[fg=colour202]New Session" ""\
+        "" ""\
+        "New Session"        c "run -b 'tmux new-window'"\
+        "Kill Session"       w "run -b 'tmux kill-window'"\
+        "#[fg=cyan]For move in Window shit+arrow           " ""\
+        ""\
+        "Rename Session"       r "run -b 'read && tmux rename-window $var'"\
+        "#[fg=cyan]Prefix + $ for rename Session" ""\
+        "" ""\
+        "Return"          x "run -b 'source \"$CURRENT_DIR/menu.sh\" && show_menu'" \
+        "Close menu"       q "" \
+    )
+}
