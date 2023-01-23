@@ -12,6 +12,7 @@ alias check "sh ~/check.sh"
 alias gittt "sh ~/Desktop/ignire.sh"
 alias touch2 "~/.dotfiles/.config/fish/touch2 $1"
 alias tmuxs "_MenuTmux"
+alias todo "./~/code/TodoApp/bin/todo"
 
 
 /* my script git */
@@ -31,9 +32,11 @@ if type -q exa
 	alias lt "ll --tree --level=3 -a --ignore-glob='\.*'"
 end
 
-export VISUAL=~/nvim/bin/nvim
-export EDITOR=~/nvim/bin/nvim
-export SHELL=/Users/jmilhas/.brew/bin/fish
+export VISUAL=/usr/local/bin/nvim
+export EDITOR=/usr/local/bin/nvim
+export SHELL=/opt/local/bin/fish
+export OPENAI_API_KEY="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"
+
 
 set theme_color_scheme solarized
 set -U FZF_COMPLETE 2

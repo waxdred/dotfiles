@@ -12,6 +12,8 @@ return require('packer').startup(function(use)
 	use { 'anuvyklack/hydra.nvim', requires = 'anuvyklack/keymap-layer.nvim'}
 	use { 'lukas-reineke/indent-blankline.nvim' }
 	use { 'epilande/vim-react-snippets' }
+	use { 'MunifTanjim/nui.nvim'}
+    use {'voldikss/vim-floaterm'}
 	use { 'windwp/nvim-autopairs' }
 	use { 'windwp/nvim-ts-autotag' }
 	use { 'norcalli/nvim-colorizer.lua' }

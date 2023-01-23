@@ -199,6 +199,11 @@ _G.packer_plugins = {
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
   },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
   ["null-ls.nvim"] = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
@@ -359,6 +364,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
+  },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
   },
   ["vim-fugitive"] = {
     loaded = true,

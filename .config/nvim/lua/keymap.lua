@@ -60,6 +60,7 @@ keymap("n", "<leader>bf", ":lua require('telescope.builtin').find_files()<CR>", 
 keymap("n", "<leader>bd", ":lua require('close_buffer_telescope').close_buffer()<CR>", opts)
 keymap("n", "<leader>conf", ":lua require('rc_telescope').config()<CR>", opts)
 
+
 keymap("n", "<leader>br", ":lua require('telescope.builtin').live_grep()<CR>", opts)
 keymap("n", "<leader>bq", ":lua require('telescope.builtin').quickfix()<CR>", opts)
 keymap("n", "<leader>bg", ":lua require('telescope.builtin').git_files()<CR>", opts)
