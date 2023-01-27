@@ -12,7 +12,8 @@ alias check "sh ~/check.sh"
 alias gittt "sh ~/Desktop/ignire.sh"
 alias touch2 "~/.dotfiles/.config/fish/touch2 $1"
 alias tmuxs "_MenuTmux"
-alias todo "./~/code/TodoApp/bin/todo"
+alias todo "~/code/TodoApp/bin/todo"
+alias chat "~/code/chat_gtp/Term_ChatGPT"
 
 
 /* my script git */

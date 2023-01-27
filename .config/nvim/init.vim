@@ -17,6 +17,7 @@ colorscheme waxcoin
 set backspace=indent,eol,start
 set termguicolors
 lua require('init')
+hi Floaterm guibg=none
 
 set ts=4 
 set sw=4 
