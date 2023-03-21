@@ -1,23 +1,15 @@
-alias build="cp ~/.dotfiles/nvim/.* ."
-alias cbuild="sh ~/.build/cppbuild/buil.sh"
-alias ccmake="sh ~/.build/cppbuild/ccmake.sh"
-alias cctest="sh ~/.build/cppbuild/cctest.sh"
-alias 42="cd ~/42/$1"
+alias 42="cd ~/code/42/$1"
 alias sfish "source ~/.dotfiles/.config/fish/config.fish"
 alias stmux "source ~/.dotfiles/.tmux.conf"
-alias cheat "sh ~/.tmux/plugins/tmux-cheat-fzf/scripts/cheat.sh"
 alias vig "vi +G"
 alias vi "nvim"
-alias check "sh ~/check.sh"
-alias gittt "sh ~/Desktop/ignire.sh"
 alias touch2 "~/.dotfiles/.config/fish/touch2 $1"
-alias tmuxs "_MenuTmux"
-alias todo "~/code/TodoApp/bin/todo"
-alias chat "~/code/chat_gtp/Term_ChatGPT"
+alias chat "~/code/Term_ChatGPT/bin/chatGPT"
 
+alias sshOxirs "ssh root@93.90.202.215"
+alias sshLead "ssh root@212.227.8.199"
 
-/* my script git */
-alias dotfile="~/.config/scripts/git-branch-manager.sh"
+alias dotfile=dotfile
 
 
 alias ..="cd .."
@@ -38,6 +30,26 @@ export EDITOR=/usr/local/bin/nvim
 export SHELL=/opt/local/bin/fish
 export OPENAI_API_KEY="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"
 
+function dotfile
+    gum style\
+        --border normal\
+        --margin "1"\
+        --border-foreground "$GIT_COLOR"\
+        " Dotfile Manager "
+    set choose (gum choose --no-limit "Nvim" "Fish" "Config" "Plugin" "Lsp")
+    switch $choose
+        case "Nvim"
+            cd ~/.dotfiles/.config/nvim
+        case "Fish"
+            cd ~/.dotfiles/.config/fish
+        case "Config"
+            cd ~/.dotfiles/.config/
+        case "Plugin"
+            cd ~/.dotfiles/.config/nvim/lua/
+        case "Lsp"
+            cd ~/.dotfiles/.config/nvim/lua/lsp/
+    end
+end
 
 set theme_color_scheme solarized
 set -U FZF_COMPLETE 2

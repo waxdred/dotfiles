@@ -23,7 +23,6 @@ get_choose(){
 selectDir(){
         if [[ $data -eq "Nvim" ]]; then
             cd ~/.dotfiles/.config/nvim/            
-            echo $PWD
         elif [[ $data -eq "Fish" ]]; then
             cd ~/.dotfiles/.config/fish/           
         elif [[ $data -eq "Tmux" ]]; then

@@ -8,6 +8,10 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+--jump word
+keymap("n", "<C-n>", ":JumpToNextOccurenteWord<CR>", opts)
+-- run chatGpt
+keymap("n", "<leader>ch", ":ChatGPT<CR>", opts)
 -- running macro
 keymap("n", "<leader>q", "@q", opts)
 -- Save
