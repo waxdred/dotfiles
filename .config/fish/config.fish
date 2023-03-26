@@ -6,8 +6,7 @@ alias vi "nvim"
 alias touch2 "~/.dotfiles/.config/fish/touch2 $1"
 alias chat "~/code/Term_ChatGPT/bin/chatGPT"
 
-alias sshOxirs "ssh root@93.90.202.215"
-alias sshLead "ssh root@212.227.8.199"
+alias sshOxirs "ssh oxiris"
 
 alias dotfile=dotfile
 
