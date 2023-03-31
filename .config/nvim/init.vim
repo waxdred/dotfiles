@@ -28,6 +28,9 @@ autocmd Filetype hpp setlocal ts=4 sw=4 expandtab
 autocmd Filetype css setlocal ts=3 sw=3 expandtab
 autocmd Filetype javascript setlocal ts=3 sw=3 expandtab
 autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
+autocmd bufwritepre * :silent! lua vim.lsp.buf.format()
+" need why is don't work
+
 
 "open vim in vertical
 let g:ft_man_open_mode = 'vert'

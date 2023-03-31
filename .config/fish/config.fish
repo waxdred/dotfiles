@@ -5,6 +5,7 @@ alias vig "vi +G"
 alias vi "nvim"
 alias touch2 "~/.dotfiles/.config/fish/touch2 $1"
 alias chat "~/code/Term_ChatGPT/bin/chatGPT"
+alias code "cd ~/code"
 
 alias sshOxirs "ssh oxiris"
 
@@ -44,7 +45,7 @@ function dotfile
         case "Config"
             cd ~/.dotfiles/.config/
         case "Plugin"
-            cd ~/.dotfiles/.config/nvim/lua/
+            vi ~/.dotfiles/.config/nvim/lua/plugin.lua
         case "Lsp"
             cd ~/.dotfiles/.config/nvim/lua/lsp/
     end
