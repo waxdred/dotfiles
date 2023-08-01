@@ -1,0 +1,14 @@
+{
+  "id": 10,
+  "title": "2023-03-1216:29:42",
+  "setting": {
+    "temperature": 0.7,
+    "topp": 0.9,
+    "frequency_penalty": 0.5,
+    "presence_penalty": 0.8,
+    "max_token": 100
+  },
+  "msg": " salut a toichatGpt: error, status code: 429, message: You exceeded your current quota, please check your plan and billing details. wqa error, status code: 429, message: You exceeded your current quota, please check your plan and billing details.",
+  "content": "\n                                         \u001b[38;2;125;102;247mwax:\u001b[0m                              \n                                         salut a toi                       \n╭────────────────────────────────────╮\n│ \u001b[38;2;125;86;243mChat_GPT:\u001b[0m                          │\n│ error, status code: 429, message:  │\n│ You exceeded your current quota,   │\n│ please check your plan and billing │\n│ details.                           │\n╰────────────────────────────────────╯\n                                         \u001b[38;2;125;102;247mwax:\u001b[0m                              \n                                         salut a toi                       \n╭────────────────────────────────────╮\n│ \u001b[38;2;125;86;243mChat_GPT:\u001b[0m                          │\n│ error, status code: 429, message:  │\n│ You exceeded your current quota,   │\n│ please check your plan and billing │\n│ details.                           │\n╰────────────────────────────────────╯\n                                         \u001b[38;2;125;102;247mwax:\u001b[0m                              \n                                         wqa                               \n╭────────────────────────────────────╮\n│ \u001b[38;2;125;86;243mChat_GPT:\u001b[0m                          │\n│ error, status code: 429, message:  │\n│ You exceeded your current quota,   │\n│ please check your plan and billing │\n│ details.                           │\n╰────────────────────────────────────╯",
+  "create_at": "2023-03-12 16:29:42"
+}
