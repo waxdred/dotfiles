@@ -1,0 +1,14 @@
+{
+  "id": 13,
+  "title": "2023-01-2907:43:23",
+  "setting": {
+    "temperature": 0,
+    "topp": 0.9,
+    "frequency_penalty": 0.5,
+    "presence_penalty": 0.5,
+    "max_token": 100
+  },
+  "msg": " pole emploi france j'ai deja un compte et je fait fini de travailler comment actualise ma situtationchatGpt: \nVous pouvez actualiser votre situation sur le site de Pôle emploi en vous connectant à votre compte, puis en cliquant sur « Actualisation de la situation ». Cela vous permettra de mettre à jour votre statut et vos données personnelles et professionnelles, et ainsi rester informé des opportunités qui s’offrent à v",
+  "content": "\n                                         \u001b[38;2;125;102;247mwax:\u001b[0m                              \n                                         pole emploi france j'ai           \n                                         deja un compte et je fai          \n                                         t fini de travailler com          \n                                         ment actualise ma situta          \n                                         tion                              \n╭────────────────────────────────────╮\n│ \u001b[38;2;125;86;243mChat_GPT:\u001b[0m                          │\n│                                    │\n│ Vous pouvez actualiser votre       │\n│ situation sur le site de Pôle      │\n│ emploi en vous connectant à votre  │\n│ compte, puis en cliquant sur «     │\n│ Actualisation de la situation ».   │\n│ Cela vous permettra de mettre à    │\n│ jour votre statut et vos données   │\n│ personnelles et professionnelles,  │\n│ et ainsi rester informé des        │\n│ opportunités qui s’offrent à v     │\n╰────────────────────────────────────╯",
+  "create_at": "2023-01-29 07:43:23"
+}

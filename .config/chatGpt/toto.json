@@ -1,0 +1,14 @@
+{
+  "id": 8,
+  "title": "toto",
+  "setting": {
+    "temperature": 0,
+    "topp": 0.9,
+    "frequency_penalty": 0,
+    "presence_penalty": 0,
+    "max_token": 100
+  },
+  "msg": " tell about text-davinci-002-renderchatGpt: -preview\n\nText-davinci-002-render-preview is a text-rendering tool for creating rich text documents. It supports several different document formats, including HTML, Rich Text Format (RTF), and Microsoft Word. The tool allows users to format their text documents with fonts, styles, and colors. It also supports rich media including images, videos, and audio. The preview feature allows users to see what their document will look like before it is actually printed or",
+  "content": "\n                                         \u001b[38;2;125;102;247mwax:\u001b[0m                              \n                                         tell about text-davinci-          \n                                         002-render                        \n╭────────────────────────────────────╮\n│ \u001b[38;2;125;86;243mChat_GPT:\u001b[0m                          │\n│ -preview                           │\n│                                    │\n│ Text-davinci-002-render-preview is │\n│ a                                  │\n│ text-rendering tool for creating   │\n│ rich text documents. It supports   │\n│ several different document         │\n│ formats, including HTML, Rich Text │\n│ Format (RTF), and Microsoft Word.  │\n│ The tool allows users to format    │\n│ their text documents with fonts,   │\n│ styles, and colors. It also        │\n│ supports rich media including      │\n│ images, videos, and audio. The     │\n│ preview feature allows users to    │\n│ see what their document will look  │\n│ like before it is actually printed │\n│ or                                 │\n╰────────────────────────────────────╯",
+  "create_at": "2023-01-27 22:10:51"
+}

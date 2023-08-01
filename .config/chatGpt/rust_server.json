@@ -1,0 +1,14 @@
+{
+  "id": 5,
+  "title": "rust_server",
+  "setting": {
+    "temperature": 0.7,
+    "topp": 0.9,
+    "frequency_penalty": 0.5,
+    "presence_penalty": 0.8,
+    "max_token": 630
+  },
+  "msg": " i need function Rust create server can you show me exemplechatGpt: \nCreating a server in Rust requires you to use the Tokio library. You can find an example of creating a server on the official Tokio website here: \nhttps://tokio.rs/docs/getting-started/hello-world/.",
+  "content": "\n                                   \u001b[38;2;125;102;247mwax:\u001b[0m                        \n                                   i need function Rust        \n                                   create server can yo        \n                                   u show me exemple           \n╭──────────────────────────────╮\n│ \u001b[38;2;125;86;243mChat_GPT:\u001b[0m                    │\n│                              │\n│ Creating a server in Rust    │\n│ requires you to use the      │\n│ Tokio library. You can find  │\n│ an example of creating a     │\n│ server on the official Tokio │\n│ website here:                │\n│ https://tokio.rs/docs/gettin │\n│ g-                           │\n│ started/hello-world/.        │\n╰──────────────────────────────╯",
+  "create_at": "2023-01-31 22:31:25"
+}

@@ -1,0 +1,39 @@
+{
+ "project": "Bot_Bybit",
+ "todo": {
+  "title": [
+   {
+    "title": "Discord",
+    "idx": 1
+   }
+  ],
+  "desc": [
+   {
+    "title": "Check is are in channel before add api\noption:\nadd\nremove \nlist",
+    "idx": 1
+   }
+  ],
+  "date": [
+   {
+    "title": "12-31-2022 12:46:46",
+    "idx": 1
+   }
+  ],
+  "idx": 0,
+  "len": 1
+ },
+ "progress": {
+  "title": null,
+  "desc": null,
+  "date": null,
+  "idx": 0,
+  "len": -1
+ },
+ "finish": {
+  "title": null,
+  "desc": null,
+  "date": null,
+  "idx": 0,
+  "len": -1
+ }
+}

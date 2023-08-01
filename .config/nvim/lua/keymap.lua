@@ -3,11 +3,31 @@ local opts = { noremap = true, silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
+
+
+-- Debugging mapping
+vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
+vim.keymap.set("n", "<10>", ":lua require'dap'.step_over()<CR>")
+vim.keymap.set("n", "<11>", ":lua require'dap'.step_into()<CR>")
+vim.keymap.set("n", "<F12>", ":lua require'dap'.step_out()<CR>")
+vim.keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()")
+vim.keymap.set("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+vim.keymap.set("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
+vim.keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
+
+
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+--Auto format lsp
+vim.cmd([[
+  augroup lsp
+    autocmd!
+    autocmd bufwritepre * :silent! lua vim.lsp.buf.format()
+augroup end
+]])
 --jump word
 keymap("n", "<C-n>", ":JumpToNextOccurenteWord<CR>", opts)
 -- run chatGpt
@@ -58,7 +78,7 @@ keymap("n", "<leader>3", "'c", opts)
 
 -- mapping Open Buffer fzf telescope
 keymap("n", "<leader>bh", "<cmd>Telescope help_tags<cr>", opts)
-keymap("n", "<leader>b", ":lua require'telescope.builtin'.buffers()<CR>", opts)
+keymap("n", "<leader>bb", ":lua require'telescope.builtin'.buffers()<CR>", opts)
 keymap("n", "<leader>bf", ":lua require('telescope.builtin').find_files()<CR>", opts)
 -- keymap("n", "<leader>dot", ":lua require('rc_telescope').search_dotfiles()<CR>", opts)
 keymap("n", "<leader>bd", ":lua require('close_buffer_telescope').close_buffer()<CR>", opts)

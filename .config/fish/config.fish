@@ -29,6 +29,8 @@ export VISUAL=/usr/local/bin/nvim
 export EDITOR=/usr/local/bin/nvim
 export SHELL=/opt/local/bin/fish
 export OPENAI_API_KEY="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"
+export NVM_DIR=~/.nvm
+set PATH $PATH ~/code/Go/GoHotReload/
 
 function dotfile
     gum style\
@@ -36,7 +38,7 @@ function dotfile
         --margin "1"\
         --border-foreground "$GIT_COLOR"\
         " Dotfile Manager "
-    set choose (gum choose --no-limit "Nvim" "Fish" "Config" "Plugin" "Lsp")
+    set choose (gum choose --no-limit "Nvim" "Fish" "Config" "Plugin" "Lsp" "HotConfig")
     switch $choose
         case "Nvim"
             cd ~/.dotfiles/.config/nvim
@@ -48,8 +50,21 @@ function dotfile
             vi ~/.dotfiles/.config/nvim/lua/plugin.lua
         case "Lsp"
             cd ~/.dotfiles/.config/nvim/lua/lsp/
+        case "HotConfig"
+            vi ~/code/Go/GoHotReload/config/config.yml
     end
+end
+
+function export_env_vars
+for line in (cat .env)
+    if test (count (string split "=" $line)) -eq 2
+        set -l key_value (string split "=" $line)
+        set -gx $key_value[1] $key_value[2]
+    end
+end
 end
 
 set theme_color_scheme solarized
 set -U FZF_COMPLETE 2
+
+
