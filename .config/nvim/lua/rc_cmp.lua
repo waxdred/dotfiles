@@ -41,6 +41,7 @@ cmp.setup {
         format = lspkind.cmp_format({
             mode = "symbol_text",
             max_width = 50,
+            wirth_text = false,
             ellipsis_char = '...',
             symbol_map = {
                 Copilot = "",

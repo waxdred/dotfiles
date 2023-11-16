@@ -10,8 +10,9 @@ function InputArgs(format)
 end
 
 vim.cmd('command -bar -bang -nargs=* Gfix lua InputArgs("FIX: ")')
-vim.cmd('command -bar -bang -nargs=* GUpdate lua InputArgs("UPDATE: ")')
+vim.cmd('command -bar -bang -nargs=* Gadd lua InputArgs("ADD: ")')
+vim.cmd('command -bar -bang -nargs=* Gupdate lua InputArgs("UPDATE: ")')
 vim.cmd('command -bar -bang -nargs=* Gfeature lua InputArgs("FEATURE: ")')
-vim.cmd('command -bar -bang -nargs=* GStyle lua InputArgs("APPEARANCE: ")')
-vim.cmd('command -bar -bang -nargs=* GTest lua InputArgs("UNIT-TEST: ")')
-vim.cmd('command -bar -bang -nargs=* GRefacto lua InputArgs("REFACTO: ")')
+vim.cmd('command -bar -bang -nargs=* Gstyle lua InputArgs("APPEARANCE: ")')
+vim.cmd('command -bar -bang -nargs=* Gtest lua InputArgs("UNIT-TEST: ")')
+vim.cmd('command -bar -bang -nargs=* Grefacto lua InputArgs("REFACTO: ")')
