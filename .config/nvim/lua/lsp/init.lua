@@ -23,6 +23,7 @@ local servers = {
     "gopls",
     "tsserver",
     "pyright",
+    "solidity",
 }
 
 -- Configure LSP through rust-tools.nvim plugin.

@@ -79,21 +79,6 @@ _G.packer_plugins = {
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  Term_ChatGPT = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/Term_ChatGPT",
-    url = "https://github.com/waxdred/Term_ChatGPT"
-  },
-  ["awesome-vim-colorschemes"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/awesome-vim-colorschemes",
-    url = "https://github.com/rafi/awesome-vim-colorschemes"
-  },
-  ["bufferline.nvim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
-    url = "https://github.com/akinsho/bufferline.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -162,11 +147,6 @@ _G.packer_plugins = {
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/copilot.lua",
     url = "https://github.com/zbirenbaum/copilot.lua"
   },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
-  },
   ["go.nvim"] = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/go.nvim",
@@ -177,35 +157,10 @@ _G.packer_plugins = {
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/guihua.lua",
     url = "https://github.com/ray-x/guihua.lua"
   },
-  ["hydra.nvim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/hydra.nvim",
-    url = "https://github.com/anuvyklack/hydra.nvim"
-  },
-  ["indent-blankline.nvim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
-  ["keymap-layer.nvim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/keymap-layer.nvim",
-    url = "https://github.com/anuvyklack/keymap-layer.nvim"
-  },
-  ["lsp-colors.nvim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
-    url = "https://github.com/folke/lsp-colors.nvim"
-  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
     url = "https://github.com/ray-x/lsp_signature.nvim"
-  },
-  ["lspkind-nvim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
-    url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -223,50 +178,15 @@ _G.packer_plugins = {
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/hoob3rt/lualine.nvim"
   },
-  ["nord.nvim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nord.nvim",
-    url = "https://github.com/shaunsingh/nord.nvim"
-  },
-  ["nui.nvim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nui.nvim",
-    url = "https://github.com/MunifTanjim/nui.nvim"
-  },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
-  ["nvcode-color-schemes.vim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim",
-    url = "https://github.com/christianchiarulli/nvcode-color-schemes.vim"
-  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
-  ["nvim-cheat.sh"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nvim-cheat.sh",
-    url = "https://github.com/RishabhRD/nvim-cheat.sh"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
-  },
-  ["nvim-colorizer.lua"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
-    url = "https://github.com/norcalli/nvim-colorizer.lua"
-  },
-  ["nvim-cursorline"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nvim-cursorline",
-    url = "https://github.com/yamatsum/nvim-cursorline"
   },
   ["nvim-dap"] = {
     loaded = true,
@@ -298,11 +218,6 @@ _G.packer_plugins = {
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
-  ["nvim-snippy"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nvim-snippy",
-    url = "https://github.com/dcampos/nvim-snippy"
-  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -333,30 +248,10 @@ _G.packer_plugins = {
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  popfix = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/popfix",
-    url = "https://github.com/RishabhRD/popfix"
-  },
-  rnvimr = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/rnvimr",
-    url = "https://github.com/kevinhwang91/rnvimr"
-  },
   ["rust-tools.nvim"] = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
     url = "https://github.com/simrat39/rust-tools.nvim"
-  },
-  ["shade.nvim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/shade.nvim",
-    url = "https://github.com/sunjon/shade.nvim"
-  },
-  tagbar = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/tagbar",
-    url = "https://github.com/preservim/tagbar"
   },
   ["tailwindcss-colorizer-cmp.nvim"] = {
     config = { "\27LJ\2\nc\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23color_square_width\3\2\nsetup\30tailwindcss-colorizer-cmp\frequire\0" },
@@ -375,30 +270,10 @@ _G.packer_plugins = {
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
-  ["trouble.nvim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/trouble.nvim",
-    url = "https://github.com/folke/trouble.nvim"
-  },
   ultisnips = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/ultisnips",
     url = "https://github.com/SirVer/ultisnips"
-  },
-  undotree = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/undotree",
-    url = "https://github.com/mbbill/undotree"
-  },
-  ["vim-be-good"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-be-good",
-    url = "https://github.com/ThePrimeagen/vim-be-good"
-  },
-  ["vim-cmake"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-cmake",
-    url = "https://github.com/cdelledonne/vim-cmake"
   },
   ["vim-commentary"] = {
     loaded = true,
@@ -420,44 +295,18 @@ _G.packer_plugins = {
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
-  ["vim-gitgutter"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
-    url = "https://github.com/airblade/vim-gitgutter"
-  },
-  ["vim-illuminate"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-illuminate",
-    url = "https://github.com/RRethy/vim-illuminate"
-  },
-  ["vim-react-snippets"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-react-snippets",
-    url = "https://github.com/epilande/vim-react-snippets"
-  },
   ["vim-snippets"] = {
     loaded = true,
     path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-snippets",
     url = "https://github.com/honza/vim-snippets"
-  },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-surround",
-    url = "https://github.com/tpope/vim-surround"
-  },
-  ["vim-terminal"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vim-terminal",
-    url = "https://github.com/tc50cal/vim-terminal"
-  },
-  ["vista.vim"] = {
-    loaded = true,
-    path = "/Users/wax/.local/share/nvim/site/pack/packer/start/vista.vim",
-    url = "https://github.com/liuchengxu/vista.vim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: tailwindcss-colorizer-cmp.nvim
+time([[Config for tailwindcss-colorizer-cmp.nvim]], true)
+try_loadstring("\27LJ\2\nc\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23color_square_width\3\2\nsetup\30tailwindcss-colorizer-cmp\frequire\0", "config", "tailwindcss-colorizer-cmp.nvim")
+time([[Config for tailwindcss-colorizer-cmp.nvim]], false)
 -- Config for: lspsaga.nvim
 time([[Config for lspsaga.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\flspsaga\frequire\0", "config", "lspsaga.nvim")
@@ -466,10 +315,6 @@ time([[Config for lspsaga.nvim]], false)
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
--- Config for: tailwindcss-colorizer-cmp.nvim
-time([[Config for tailwindcss-colorizer-cmp.nvim]], true)
-try_loadstring("\27LJ\2\nc\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\23color_square_width\3\2\nsetup\30tailwindcss-colorizer-cmp\frequire\0", "config", "tailwindcss-colorizer-cmp.nvim")
-time([[Config for tailwindcss-colorizer-cmp.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd copilot.lua ]]
