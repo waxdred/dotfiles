@@ -17,6 +17,11 @@ return require('packer').startup(function(use)
             require("copilot_cmp").setup()
         end
     }
+    use({
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        after = "nvim-treesitter",
+        requires = "nvim-treesitter/nvim-treesitter",
+    })
 
     use { 'onsails/lspkind.nvim' }
     use { 'windwp/nvim-autopairs' }
