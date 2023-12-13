@@ -1,6 +1,12 @@
 return {
   {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    config = true,
+  },
+  {
     "folke/noice.nvim",
+
     opts = function(_, opts)
       table.insert(opts.routes, {
         filter = {
@@ -29,6 +35,11 @@ return {
         view = "notify_send",
         opts = { stop = false },
       })
+      require("noice").setup({
+        cmdline = {
+          view = "cmdline",
+        },
+      })
 
       opts.commands = {
         all = {
@@ -38,7 +49,6 @@ return {
           filter = {},
         },
       }
-
       vim.api.nvim_create_autocmd("FileType", {
         pattern = "markdown",
         callback = function(event)
@@ -47,7 +57,6 @@ return {
           end)
         end,
       })
-
       opts.presets.lsp_doc_border = true
     end,
   },
@@ -63,13 +72,14 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     event = "VeryLazy",
     version = "*",
-    opts = {
+    require("bufferline").setup({
       options = {
         mode = "tabs",
         separator_style = "slant",
-        show_buffer_close_icons = true,
+        always_show_bufferline = true,
         show_close_icon = true,
-        buffer_close_icon = "󰅛",
+        color_icons = true,
+        buffer_close_icon = "󰅙",
       },
       highlights = {
         tab = {
@@ -105,7 +115,7 @@ return {
           fg = "#073642",
         },
       },
-    },
+    }),
   },
 
   -- statusline
@@ -130,5 +140,23 @@ return {
       },
     },
     keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
+  },
+  {
+    "echasnovski/mini.animate",
+    otps = function(_, opts)
+      opts.scroll = {
+        enable = false,
+      }
+    end,
+  },
+  {
+    "nvimdev/lspsaga.nvim",
+    config = function()
+      require("lspsaga").setup({})
+    end,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons", -- optional
+    },
   },
 }

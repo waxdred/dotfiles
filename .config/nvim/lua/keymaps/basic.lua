@@ -24,8 +24,7 @@ keymap.set("n", "<leader>tt", ":ToggleTerm size=20 cmd='fish'<CR>", opts)
 keymap.set("n", "<Leader>sed", ":bufdo %s/<C-r><C-w>//g<Left><Left>", opts)
 keymap.set("n", "<Leader>se", ":s/<<C-r><C-w>>//g | update <Left><Left><Left><Left><Left><Left><Left><Left>", opts)
 
--- commante line
-
+-- commande line
 keymap.set("n", "<leader><leader>c", ":Commentary <CR>", opts)
 --jump word
 keymap.set("n", "<C-n>", ":JumpToNextOccurenteWord<CR>", opts)

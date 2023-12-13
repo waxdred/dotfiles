@@ -1,6 +1,7 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 require("keymaps.basic")
+require("keymaps.lspSaga")
 require("keymaps.fugitif")
 require("plugins.rc_telescope")
 require("plugins.ui")
