@@ -81,7 +81,8 @@ export SHELL=/opt/local/bin/fish
 export OPENAI_API_KEY="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"
 export NVM_DIR=~/.nvm
 
-# Go
+
+
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
