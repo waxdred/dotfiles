@@ -42,8 +42,10 @@ return{
     	"dockerls",
     	"gopls",
     	"tsserver",
+      "lua_ls",
     	"pyright",
-    	"solidity",      },
+    	"solidity",      
+    },
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
     })

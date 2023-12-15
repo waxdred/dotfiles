@@ -19,6 +19,8 @@ return {
         "php",
         "rust",
         "scss",
+        "markdown",
+        "markdown_inline",
         "sql",
         "svelte",
       },
