@@ -11,4 +11,18 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.g.mapleader = " "
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup("waxcoin.plugins")
+require("lazy").setup({
+  {import = "waxcoin.plugins"},
+  {import = "waxcoin.plugins.lsp"},
+},{
+  install = {
+    colorscheme = {"catppuccin-macchiato"},
+  },
+  checker = {
+    enable = true,
+    notify = false,
+  },
+  changet_detection = {
+    notify = false,
+  },
+})
