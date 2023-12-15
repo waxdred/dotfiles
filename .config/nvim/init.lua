@@ -1,10 +1,14 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
-require("keymaps.basic")
-require("keymaps.lspSaga")
-require("keymaps.fugitif")
-require("plugins.rc_telescope")
-require("plugins.ui")
-require("plugins.treesitter")
-require("plugins.lsp")
-require("plugins.git")
+
+
+-- Lazy
+require("waxcoin.lazy")
+
+-- Config
+require("waxcoin.core")
+
+-- Keymaps
+require("waxcoin.keymaps.basic")
+require("waxcoin.keymaps.fugitive")
+
+-- Settings base nvim
+require("waxcoin.core.options")

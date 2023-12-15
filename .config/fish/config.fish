@@ -61,6 +61,8 @@ alias sshOxirs "ssh oxiris"
 
 alias dotfile=dotfile
 
+alias clearCache "rm -rf ~/.local/state/nvim/swap/*"
+
 
 alias ..="cd .."
 alias ...="cd ../.."
