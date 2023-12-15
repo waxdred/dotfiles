@@ -47,23 +47,14 @@ return {
       single_file_support = true,
     })
     --
-    -- config ccls
-    lspconfig["ccls"].setup({
-      on_attach = on_attach,
-      flags = {
-        debounce_text_changes = 150,
-      },
-      capabilities = capabilities,
-    })
-    --
     -- config clangd
-    lspconfig["clangd"].setup({
-      on_attach = on_attach,
-      flags = {
-        debounce_text_changes = 150,
-      },
-      capabilities = capabilities,
-    })
+   lspconfig["clangd"].setup({
+     on_attach = on_attach,
+     flags = {
+       debounce_text_changes = 150,
+     },
+     capabilities = capabilities,
+   })
     --
     -- config cssls
     lspconfig["cssls"].setup({
