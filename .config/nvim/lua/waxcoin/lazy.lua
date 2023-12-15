@@ -12,11 +12,11 @@ end
 vim.g.mapleader = " "
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-  {import = "waxcoin.plugins"},
-  {import = "waxcoin.plugins.lsp"},
-},{
+  { import = "waxcoin.plugins" },
+  { import = "waxcoin.plugins.lsp" },
+}, {
   install = {
-    colorscheme = {"catppuccin-macchiato"},
+    colorscheme = { "catppuccin-macchiato" },
   },
   checker = {
     enable = true,
