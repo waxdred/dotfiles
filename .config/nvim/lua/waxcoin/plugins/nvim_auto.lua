@@ -1,12 +1,35 @@
-return{
+return {
   {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-    opts = {} -- this is equalent to setup({}) function
+    "echasnovski/mini.pairs",
+    event = "VeryLazy",
+    opts = {},
+    keys = {
+      {
+        "<leader>up",
+        function()
+          local Util = require("lazy.core.util")
+          vim.g.minipairs_disable = not vim.g.minipairs_disable
+          if vim.g.minipairs_disable then
+            Util.warn("Disabled auto pairs", { title = "Option" })
+          else
+            Util.info("Enabled auto pairs", { title = "Option" })
+          end
+        end,
+        desc = "Toggle auto pairs",
+      },
+    },
   },
-  { 
-    'windwp/nvim-ts-autotag',
-    event = "InsertEnter",
-    opts = {} -- this is equalent to setup({}) function
-  },
+  {
+    "windwp/nvim-ts-autotag",
+    opts = {
+      filetypes = {
+        'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'tsx', 'jsx',
+        'rescript',
+        'xml',
+        'php',
+        'markdown',
+        'astro', 'glimmer', 'handlebars', 'hbs'
+      }
+    },
+  }
 }

@@ -38,6 +38,12 @@ return {
       capabilities = capabilities,
     })
     --
+    -- config tsserver
+    lspconfig["tsserver"].setup({
+        on_attach = on_attach,
+        cmd = {"typescript-language-server", "--stdio"}
+    })
+    --
     -- config ansible
     lspconfig["ansiblels"].setup({
       on_attach = on_attach,
