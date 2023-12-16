@@ -33,11 +33,11 @@ export OPENAI_API_KEY="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"
 export NVM_DIR=~/.nvm
 set PATH $PATH ~/code/Go/GoHotReload/
 
-function create_new_window
-    read query
-
-    tmux new-window -n $query
-end
+# function create_new_window
+#     read query
+#
+#     tmux new-window -n $query
+# end
 
 function tmux-sessionizer
     sh ~/.dotfiles/.config/bin/tmux-sessionizer
@@ -57,10 +57,6 @@ alias touch2 "~/.dotfiles/.config/fish/touch2 $1"
 alias chat "~/code/Term_ChatGPT/bin/chatGPT"
 alias code "cd ~/code"
 
-alias sshOxirs "ssh oxiris"
-
-alias dotfile=dotfile
-
 alias clearCache "rm -rf ~/.local/state/nvim/swap/*"
 
 
@@ -68,14 +64,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-
-
-if type -q exa
-    alias ls "exa -g --icons"
-    alias ll "exa -l -g --icons"
-    alias lla "exa -la -g --icons"
-    alias lt "ll --tree --level=3 -a --ignore-glob='\.*'"
-end
 
 export VISUAL=/usr/local/bin/nvim
 export EDITOR=/usr/local/bin/nvim
@@ -161,3 +149,7 @@ set theme_color_scheme solarized
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+
+
+tmux
