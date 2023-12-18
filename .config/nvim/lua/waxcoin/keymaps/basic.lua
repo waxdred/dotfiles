@@ -9,11 +9,14 @@ keymap.set("n", "<leader>rr", ":Ex<CR>", opts)
 keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap.set("x", "J", ":move '>+1<CR>gv-gv", opts)
 
+keymap.set("n", "<leader><leader>h", ":help<CR>", opts)
+
 -- mark
 keymap.set("n", "<leader><leader>1", ":mark a <CR>", opts)
 keymap.set("n", "<leader><leader>2", ":mark b <CR>", opts)
 keymap.set("n", "<leader><leader>3", ":mark c <CR>", opts)
-keymap.set("n", "<leader>1", "'a", opts) keymap.set("n", "<leader>3", "'c", opts)
+keymap.set("n", "<leader>1", "'a", opts)
+keymap.set("n", "<leader>3", "'c", opts)
 keymap.set("n", "<leader>2", "'b", opts)
 
 -- open term
