@@ -2,6 +2,17 @@ return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
+		{
+			"zbirenbaum/copilot-cmp",
+			dependencies = "copilot.lua",
+			opts = {},
+			config = function(_, opts)
+				local copilot_cmp = require("copilot_cmp")
+				copilot_cmp.setup(opts)
+				-- attach cmp source whenever copilot attaches
+				-- fixes lazy-loading issues with the copilot cmp source
+			end,
+		},
 		"hrsh7th/cmp-buffer", -- source for text in buffer
 		"hrsh7th/cmp-path", -- source for file system paths
 		"L3MON4D3/LuaSnip", -- snippet engine
@@ -10,6 +21,7 @@ return {
 		"onsails/lspkind.nvim", -- vs-code like pictograms
 		"hrsh7th/cmp-nvim-lsp-document-symbol",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
+		{ "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
 	},
 
 	config = function()
@@ -18,6 +30,42 @@ return {
 		local luasnip = require("luasnip")
 
 		local lspkind = require("lspkind")
+
+		local check_backspace = function()
+			local col = vim.fn.col(".") - 1
+			return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
+		end
+
+		lspkind.init({
+			symbol_map = {
+				Copilot = "",
+				Text = "󰉿",
+				Method = "󰆧",
+				Function = "󰊕",
+				Constructor = "",
+				Field = "󰜢",
+				Variable = "󰀫",
+				Class = "󰠱",
+				Interface = "",
+				Module = "",
+				Property = "󰜢",
+				Unit = "󰑭",
+				Value = "󰎠",
+				Enum = "",
+				Keyword = "󰌋",
+				Snippet = "",
+				Color = "󰏘",
+				File = "󰈙",
+				Reference = "󰈇",
+				Folder = "󰉋",
+				EnumMember = "",
+				Constant = "󰏿",
+				Struct = "󰙅",
+				Event = "",
+				Operator = "󰆕",
+				TypeParameter = "",
+			},
+		})
 
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
@@ -54,13 +102,20 @@ return {
 					"s",
 				}),
 			}),
+			opts = function(_, opts)
+				-- original LazyVim kind icon formatter
+				local format_kinds = opts.formatting.format
+				opts.formatting.format = function(entry, item)
+					format_kinds(entry, item) -- add icons
+					return require("tailwindcss-colorizer-cmp").formatter(entry, item)
+				end
+			end,
 			-- sources for autocompletion
 			sources = cmp.config.sources({
-				-- { name = "copilot" },
+				{ name = "copilot" },
 				{ name = "nvim_lsp" },
 				{ name = "nvim_lua" },
 				{ name = "vsnip" },
-				{ name = "path" },
 				{ name = "buffer" },
 				{ name = "nvim_lsp_signature_help" },
 				{ name = "luasnip" },
