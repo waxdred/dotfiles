@@ -2,6 +2,7 @@ alias 42="cd ~/code/42/$1"
 alias sfish "source ~/.dotfiles/.config/fish/config.fish"
 alias stmux "source ~/.dotfiles/.tmux.conf"
 alias vig "vi +G"
+alias g "lazygit"
 alias vi nvim
 alias touch2 "~/.dotfiles/.config/fish/touch2 $1"
 alias chat "~/code/Term_ChatGPT/bin/chatGPT"
