@@ -28,6 +28,10 @@ elif [[ ${argument_array[0]} == "Ansible" ]]; then
     echo -n "󱂚"
 elif [[ ${argument_array[0]} == "Fish" ]]; then
     echo -n ""
+elif [[ ${argument_array[0]} == "Ssh" ]]; then
+    echo -n "󰒒"
+elif [[ ${argument_array[0]} == "Hack" ]]; then
+    echo -n "󱓇"
 else
     echo -n "${argument_array[0]}"
 fi
