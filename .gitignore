@@ -38,5 +38,5 @@ Battle.net
 ./.config/Autodesk
 ./.config/Battle.net/*
 
-./.config/configstore/
-./.config/nvim/lua/waxcoin/plugins/nvim_obsidian.lua
+configstore
+nvim_obsidian.lua
