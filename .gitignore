@@ -39,3 +39,4 @@ Battle.net
 ./.config/Battle.net/*
 
 ./.config/configstore/
+./.config/nvim/lua/waxcoin/plugins/nvim_obsidian.lua
