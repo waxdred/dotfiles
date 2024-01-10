@@ -31,3 +31,10 @@ github-copilot
 .tmux/plugins/
 k3d
 .config/zed/
+
+./.config/yarn
+./.config/github-copilot
+./.config/zed
+./.config/todo
+./.config/Autodesk
+./.config/Battle.net
