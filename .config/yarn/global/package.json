@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "create-next-app": "^12.2.1",
-    "create-react-app": "^5.0.1",
-    "create-test": "^1.0.0",
-    "create-vite": "^3.0.0",
-    "serve": "^14.2.0"
-  }
-}
