@@ -30,11 +30,12 @@ wireshark
 github-copilot
 .tmux/plugins/
 k3d
-.config/zed/
-
+Battle.net
 ./.config/yarn
 ./.config/github-copilot
 ./.config/zed
 ./.config/todo
 ./.config/Autodesk
 ./.config/Battle.net/*
+
+./.config/configstore
