@@ -39,6 +39,7 @@ return {
 		lspkind.init({
 			symbol_map = {
 				Copilot = "",
+				Codeium = "󰘦",
 				Text = "󰉿",
 				Method = "󰆧",
 				Function = "󰊕",
@@ -113,6 +114,7 @@ return {
 			-- sources for autocompletion
 			sources = cmp.config.sources({
 				{ name = "copilot" },
+				{ name = "codeium" },
 				{ name = "nvim_lsp" },
 				{ name = "nvim_lua" },
 				{ name = "vsnip" },
@@ -122,6 +124,9 @@ return {
 				{ name = "nvim_lspEmmets_document_symbol" },
 				{ name = "tailwindcss-colorizer-cmp" },
 			}),
+			experimental = {
+				ghost_text = true,
+			},
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
 				format = lspkind.cmp_format({
