@@ -50,7 +50,3 @@ vim.cmd([[au BufNewFile,BufRead Podfile setf ruby]])
 if vim.fn.has("nvim-0.8") == 1 then
 	vim.opt.cmdheight = 0
 end
-
--- copilot not tamap
-vim.g.copilot_no_tab_map = true
-vim.b.copilot_enable = false
