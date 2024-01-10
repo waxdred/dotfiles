@@ -11,7 +11,7 @@ alias code "cd ~/code"
 alias sshOxirs "ssh oxiris"
 alias sshconf "cat ~/.ssh/config"
 
-alias dotfile=dotfile
+alias dot=dotfile
 
 
 alias ..="cd .."
