@@ -113,10 +113,10 @@ return {
 			end,
 			-- sources for autocompletion
 			sources = cmp.config.sources({
-				{ name = "copilot" },
-				{ name = "codeium" },
 				{ name = "path" },
 				{ name = "nvim_lsp" },
+				{ name = "copilot" },
+				{ name = "codeium" },
 				{ name = "nvim_lua" },
 				{ name = "vsnip" },
 				{ name = "buffer" },
