@@ -2,6 +2,7 @@ return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
+		"hrsh7th/cmp-buffer", -- source for text in buffer
 		{
 			"zbirenbaum/copilot-cmp",
 			dependencies = "copilot.lua",
@@ -13,7 +14,6 @@ return {
 				-- fixes lazy-loading issues with the copilot cmp source
 			end,
 		},
-		"hrsh7th/cmp-buffer", -- source for text in buffer
 		"hrsh7th/cmp-path", -- source for file system paths
 		"L3MON4D3/LuaSnip", -- snippet engine
 		"saadparwaiz1/cmp_luasnip", -- for autocompletion
@@ -113,25 +113,18 @@ return {
 			end,
 			-- sources for autocompletion
 			sources = cmp.config.sources({
-				{ name = "path" },
-				{ name = "nvim_lsp" },
 				{ name = "copilot" },
 				{ name = "codeium" },
+				{ name = "nvim_lsp" },
 				{ name = "nvim_lua" },
-				{ name = "vsnip" },
-				{ name = "buffer" },
-				{ name = "nvim_lsp_signature_help" },
-				{ name = "luasnip" },
-				{ name = "nvim_lspEmmets_document_symbol" },
 				{ name = "tailwindcss-colorizer-cmp" },
+				{ name = "path" },
+				{ name = "buffer" },
 			}),
-			experimental = {
-				ghost_text = true,
-			},
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
 				format = lspkind.cmp_format({
-					maxwidth = 50,
+					maxwidth = 100,
 					ellipsis_char = "...",
 				}),
 			},
