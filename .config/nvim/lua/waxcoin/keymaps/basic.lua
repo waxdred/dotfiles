@@ -46,3 +46,11 @@ keymap.set("n", "O", "o<Esc>", opts)
 -- Open NeoTree
 keymap.set("n", "<leader>ee", ":Neotree<CR>", opts)
 keymap.set("n", "<leader>ef", ":Neotree close<CR>", opts)
+
+-- Keymap navigation buffer
+-- Aller à la fenêtre de gauche
+keymap.set("n", "<C-H>", "<C-w>h", opts)
+keymap.set("n", "<C-w>h", ":sp<CR>", opts)
+
+-- Aller à la fenêtre de droite
+keymap.set("n", "<C-L>", "<C-w>l", opts)
