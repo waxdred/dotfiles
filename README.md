@@ -35,8 +35,9 @@ Clone the Repository:
 ```fish
 git clone https://github.com/waxdred/dotfiles.git
 cd dotfiles
-Tmux Configuration:
 ```
+
+Tmux Configuration:
 
 Copy the Tmux configuration file to your home directory:
 
