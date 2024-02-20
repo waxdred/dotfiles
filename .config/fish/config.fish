@@ -11,6 +11,8 @@ alias code "cd ~/code"
 alias sshOxirs "ssh oxiris"
 alias sshconf "cat ~/.ssh/config"
 
+alias config "vi ~/.ssh/config"
+
 alias dot=dotfile
 
 
@@ -74,8 +76,8 @@ export NVM_DIR=~/.nvm
 
 
 
-set -g GOPATH $HOME/go
-set -gx PATH $GOPATH/bin $PATH
+# set -g GOPATH $HOME/go
+# set -gx PATH $GOPATH/bin $PATH
 
 set PATH $PATH ~/code/Go/GoHotReload/
 
@@ -147,10 +149,5 @@ end
 set -U FZF_COMPLETE 2
 set theme_color_scheme solarized
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
-
-
-
 tmux
+zoxide init fish | source

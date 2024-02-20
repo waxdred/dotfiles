@@ -34,6 +34,8 @@ elif [[ ${argument_array[0]} == "Hack" ]]; then
     echo -n "󱓇"
 elif [[ ${argument_array[0]} == "Vi" ]]; then
     echo -n ""
+elif [[ ${argument_array[0]} == "C" ]]; then
+    echo -n ""
 else
     echo -n "${argument_array[0]}"
 fi
