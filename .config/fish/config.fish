@@ -11,6 +11,7 @@ alias sshOxirs "ssh oxiris"
 alias sshconf "cat ~/.ssh/config"
 alias config "vi ~/.ssh/config"
 alias gc="~/.GitSpeak/bin/GitSpeak"
+alias cat="bat --theme=gruvbox-dark -p --paging=never"
 
 
 alias ..="cd .."
