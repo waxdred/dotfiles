@@ -15,6 +15,8 @@ alias config "vi ~/.ssh/config"
 
 alias dot=dotfile
 
+alias gc="~/.GitSpeak/bin/GitSpeak"
+
 
 alias ..="cd .."
 alias ...="cd ../.."
@@ -32,9 +34,9 @@ end
 export VISUAL=/usr/local/bin/nvim
 export EDITOR=/usr/local/bin/nvim
 export SHELL=/opt/local/bin/fish
-export OPENAI_API_KEY="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"
 export NVM_DIR=~/.nvm
 set PATH $PATH ~/code/Go/GoHotReload/
+set PATH $PATH /Users/wax/.GitSpeak/bin
 
 # function create_new_window
 #     read query
@@ -71,7 +73,6 @@ alias .....="cd ../../../.."
 export VISUAL=/usr/local/bin/nvim
 export EDITOR=/usr/local/bin/nvim
 export SHELL=/opt/local/bin/fish
-export OPENAI_API_KEY="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"
 export NVM_DIR=~/.nvm
 
 
