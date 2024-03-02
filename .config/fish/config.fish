@@ -48,4 +48,5 @@ set -U FZF_COMPLETE 2
 set theme_color_scheme solarized
 
 tmux
+source ~/.config/fish/key.sh
 zoxide init fish | source
