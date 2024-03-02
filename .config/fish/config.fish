@@ -80,6 +80,7 @@ export NVM_DIR=~/.nvm
 # set -gx PATH $GOPATH/bin $PATH
 
 set PATH $PATH ~/code/Go/GoHotReload/
+set PATH $PATH /Users/wax/.cargo/bin
 
 function dotfile
     gum style \
