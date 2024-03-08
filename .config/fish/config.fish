@@ -10,7 +10,7 @@ alias code "cd ~/code"
 alias sshOxirs "ssh oxiris"
 alias sshconf "cat ~/.ssh/config"
 alias config "vi ~/.ssh/config"
-alias gc="~/.GitSpeak/bin/GitSpeak"
+alias gc='~/.GitSpeak/bin/GitSpeak -Ollama -model="mistral" -answer=8 -max_length=30'
 alias cat="bat --theme=gruvbox-dark -p --paging=never"
 
 
