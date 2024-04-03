@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+CONFIG_FILE=~/.ssh/config
+
+
+awk -v host="$1" '
+    $1 == "Host" && $2 == host {found = 1}
+    found && $1 == "Hostname" {print "Hostname: " $2}
+    found && $1 == "User" {print "User: " $2}
+    found && $1 == "Port" {print "Port: " $2}
+    ' "$CONFIG_FILE"
+

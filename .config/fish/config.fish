@@ -10,7 +10,7 @@ alias code "cd ~/code"
 alias sshOxirs "ssh oxiris"
 alias sshconf "cat ~/.ssh/config"
 alias config "vi ~/.ssh/config"
-alias gc='~/.GitSpeak/bin/GitSpeak -Ollama -model="mistral" -answer=8 -max_length=30'
+alias gc='~/.GitSpeak/bin/GitSpeak -Ollama -model="mistral" -answer=8 -max_length=30 -stage' 
 alias cat="bat --theme=gruvbox-dark -p --paging=never"
 
 
@@ -39,7 +39,12 @@ function tmux-sessionizer
     sh ~/.dotfiles/.config/bin/tmux-sessionizer
 end
 
+function ssh-connect
+    sh ~/.dotfiles/.config/bin/ssh-connect
+end
+
 bind \cf tmux-sessionizer
+bind \cs ssh-connect
 bind \cy tmux-windows
 bind \cn create_new_window
 bind \ch tmux-menu

@@ -1,0 +1,23 @@
+#!/bin/bash
+# Emplacement de votre fichier ~/.ssh/config
+CONFIG_FILE=~/.ssh/config
+
+# Extraire les noms d'hôte du fichier de configuration SSH
+hosts=$(awk '$1=="Host" {print $2}' "$CONFIG_FILE")
+
+# Sélectionner un hôte avec fzf avec prévisualisation
+selected_host=$(echo "$hosts" | fzf --preview-window=down:4:wrap --preview="$HOME/.config/bin/preview {}")
+
+if [ -n "$selected_host" ]; then
+    # Récupérer les détails de connexion de l'hôte sélectionné
+    hostname=$(awk -v host="$selected_host" '$1=="Host" && $2==host {found=1} found && $1=="Hostname" {print $2; exit}' "$CONFIG_FILE")
+    user=$(awk -v host="$selected_host" '$1=="Host" && $2==host {found=1} found && $1=="User" {print $2; exit}' "$CONFIG_FILE")
+    port=$(awk -v host="$selected_host" '$1=="Host" && $2==host {found=1} found && $1=="Port" {print $2; exit}' "$CONFIG_FILE")
+
+    # Connexion SSH
+    if [ -z "$port" ]; then
+        ssh "$user@$hostname"
+    else
+        ssh -p "$port" "$user@$hostname"
+    fi
+fi
