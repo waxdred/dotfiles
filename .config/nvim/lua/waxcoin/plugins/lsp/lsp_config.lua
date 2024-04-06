@@ -6,6 +6,7 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
+		vim.filetype.add({ extension = { templ = "templ" } })
 		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
 
@@ -54,10 +55,27 @@ return {
 		------------------------------------------------------------------------------------------------------------------------------
 		------------------------------------------------config lsp--------------------------------------------------------------------
 		------------------------------------------------------------------------------------------------------------------------------
+		lspconfig["templ"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			cmd = { "templ", "lsp" },
+			filetypes = { "templ" },
+			-- root_pattern('go.work', 'go.mod', '.git'),
+			root_dir = function(fname)
+				return lspconfig.util.root_pattern("go.work", "go.mod", ".git")(fname) or vim.fn.getcwd()
+			end,
+		})
+		-- configure htmx server
+		lspconfig["htmx"].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			filetypes = { "html", "templ" },
+		})
 		-- configure html server
 		lspconfig["html"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			filetypes = { "html", "templ" },
 		})
 
 		-- configure typescript server with plugin
@@ -70,6 +88,7 @@ return {
 		lspconfig["gopls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+			filetypes = { "templ", "go" },
 		})
 
 		-- configure bash server with plugin
@@ -106,8 +125,10 @@ return {
 
 		-- configure tailwindcss server
 		lspconfig["tailwindcss"].setup({
-			capabilities = capabilities,
 			on_attach = on_attach,
+			capabilities = capabilities,
+			filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+			init_options = { userLanguages = { templ = "html" } },
 		})
 
 		-- configure svelte server
