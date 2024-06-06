@@ -10,8 +10,11 @@ alias code "cd ~/code"
 alias sshOxirs "ssh oxiris"
 alias sshconf "cat ~/.ssh/config"
 alias config "vi ~/.ssh/config"
-alias gc='~/.GitSpeak/bin/GitSpeak -Ollama -model="mistral" -answer=8 -max_length=30 -stage' 
+alias gc='~/.GitSpeak/bin/GitSpeak -answer=8 -max_length=70 -stage' 
+#alias gc='~/.GitSpeak/bin/GitSpeak -Ollama -model="mistral" -answer=8 -max_length=30 -stage' 
 alias cat="bat --theme=gruvbox-dark -p --paging=never"
+alias connect_nas="open smb://10.27.26.107/wax"
+alias ku="kubectl"
 
 
 alias ..="cd .."
@@ -27,9 +30,46 @@ if type -q exa
     alias lt "ll --tree --level=3 -a --ignore-glob='\.*'"
 end
 
+
+# Functions Encryption
+function encrypt_file
+    set filename $argv[1]
+    sops --encrypt --age (cat $SOPS_AGE_KEY_FILE | grep -oE "public key: (.*)" | sed 's/public key: //') --encrypted-regex '^(data|stringData)$' --in-place $filename
+end
+
+function encrypt_env
+    set filename $argv[1]
+    sops --encrypt --age (cat $SOPS_AGE_KEY_FILE | grep -oE "public key: (.*)" | sed 's/public key: //') -i $filename
+end
+
+################################
+# Functions Decryption
+function decrypt_file_to_apply_kybernetes
+    set filename $argv[1]
+    sops --decrypt --age (cat $SOPS_AGE_KEY_FILE | grep -oE "public key: (.*)" | sed 's/public key: //') --encrypted-regex '^(data|stringData)$' --in-place $filename | kubectl apply -f -
+end
+
+function decrypt_file
+    set filename $argv[1]
+    sops --decrypt --age (cat $SOPS_AGE_KEY_FILE | grep -oE "public key: (.*)" | sed 's/public key: //') --encrypted-regex '^(data|stringData)$' --in-place $filename
+end
+
+function decrypt_env
+    set filename $argv[1]
+    sops --decrypt --age (cat $SOPS_AGE_KEY_FILE | grep -oE "public key: (.*)" | sed 's/public key: //') -i $filename
+end
+
+################################
+
+function decrypt_file_hide
+    set filename $argv[1]
+    sops --decrypt --age (cat $SOPS_AGE_KEY_FILE | grep -oE "public key: (.*)" | sed 's/public key: //') --encrypted-regex '^(data|stringData)$' --in-place $filename >> .decryp-$filename
+end
+
 export VISUAL=/usr/local/bin/nvim
 export EDITOR=/usr/local/bin/nvim
 export SHELL=/opt/local/bin/fish
+export SOPS_AGE_KEY_FILE="$HOME/.sops/key.txt"
 export NVM_DIR=~/.nvm
 set PATH $PATH ~/code/Go/GoHotReload/
 set PATH $PATH /Users/wax/.GitSpeak/bin

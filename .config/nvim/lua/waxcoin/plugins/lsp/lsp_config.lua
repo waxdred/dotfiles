@@ -6,6 +6,7 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
+		vim.api.nvim_create_autocmd({ "BufWritePre" }, { pattern = { "*.templ" }, callback = vim.lsp.buf.format })
 		vim.filetype.add({ extension = { templ = "templ" } })
 		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
@@ -178,6 +179,15 @@ return {
 		lspconfig["jsonls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
+		})
+
+		-- configure rust server
+		lspconfig["rust_analyzer"].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			cmd = { "rust-analyzer" },
+			filetypes = { "rust", "rs" },
+			root_dir = lspconfig.util.root_pattern("Cargo.toml", "rust-project.json"),
 		})
 
 		-- configure lua server (with special settings)

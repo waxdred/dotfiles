@@ -16,8 +16,8 @@ keymap.set("n", "<leader><leader>1", ":mark a <CR>", opts)
 keymap.set("n", "<leader><leader>2", ":mark b <CR>", opts)
 keymap.set("n", "<leader><leader>3", ":mark c <CR>", opts)
 keymap.set("n", "<leader>1", "'a", opts)
-keymap.set("n", "<leader>3", "'c", opts)
 keymap.set("n", "<leader>2", "'b", opts)
+keymap.set("n", "<leader>3", "'c", opts)
 
 -- open term
 keymap.set("n", "<leader>tt", ":ToggleTerm size=20 cmd='fish'<CR>", opts)

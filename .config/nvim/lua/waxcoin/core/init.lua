@@ -6,7 +6,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
-vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
+-- vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]])
 
 vim.opt.number = true
 

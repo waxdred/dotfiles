@@ -42,6 +42,7 @@ return {
 				"templ",
 				"yamlls",
 				"dockerls",
+				"rust-analyzer",
 				"gopls",
 				"tsserver",
 				"lua_ls",
