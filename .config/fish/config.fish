@@ -96,3 +96,4 @@ set theme_color_scheme solarized
 tmux
 source ~/.config/fish/key.sh
 zoxide init fish | source
+set fish_function_path $fish_function_path ~/.config/fish/functions
