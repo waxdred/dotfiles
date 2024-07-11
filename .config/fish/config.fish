@@ -10,7 +10,7 @@ alias code "cd ~/code"
 alias sshOxirs "ssh oxiris"
 alias sshconf "cat ~/.ssh/config"
 alias config "vi ~/.ssh/config"
-alias gc='~/.GitSpeak/bin/GitSpeak -answer=8 -max_length=70 -stage' 
+alias gc='~/.GitSpeak/bin/GitSpeak -answer=8 -max_length=70' 
 #alias gc='~/.GitSpeak/bin/GitSpeak -Ollama -model="mistral" -answer=8 -max_length=30 -stage' 
 alias cat="bat --theme=gruvbox-dark -p --paging=never"
 alias connect_nas="open smb://10.27.26.107/wax"
@@ -95,5 +95,6 @@ set theme_color_scheme solarized
 
 tmux
 source ~/.config/fish/key.sh
+source ~/.config/fish/functions/k3s.fish
 zoxide init fish | source
 set fish_function_path $fish_function_path ~/.config/fish/functions
