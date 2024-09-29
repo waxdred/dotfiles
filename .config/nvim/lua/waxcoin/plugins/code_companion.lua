@@ -28,13 +28,7 @@ return {
 						},
 						schema = {
 							model = {
-								default = "llama3.2",
-							},
-							num_ctx = {
-								default = 16384,
-							},
-							num_predict = {
-								default = -1,
+								default = "llama3.2:latest",
 							},
 						},
 					})
