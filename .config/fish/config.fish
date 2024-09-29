@@ -69,12 +69,14 @@ end
 export VISUAL=/usr/local/bin/nvim
 export EDITOR=/usr/local/bin/nvim
 export SHELL=/opt/local/bin/fish
-export SOPS_AGE_KEY_FILE="$HOME/.sops/key.txt"
 export NVM_DIR=~/.nvm
-export SOPS_API_FILE="~/.sops/api.json"
+
+# Env Variables from Secrets files
 set -x LLAMA_API_KEY (cat $HOME/.config/env/llama_key)
 set -x OPENAI_API_KEY (cat $HOME/.config/env/open_ai)
 set -x grafana_auth (cat $HOME/.config/env/grafana)
+set -x SOPS_AGE_KEY_FILE "$HOME/.sops/key.txt"
+set -x SOPS_API_FILE "$HOME/.sops/api.json"
 
 
 set PATH $PATH ~/code/Go/GoHotReload/
@@ -105,12 +107,3 @@ source ~/.config/fish/key.sh
 source ~/.config/fish/functions/k3s.fish
 zoxide init fish | source
 set fish_function_path $fish_function_path ~/.config/fish/functions
-
-
-# BEGIN opam configuration
-# This is useful if you're using opam as it adds:
-#   - the correct directories to the PATH
-#   - auto-completion for the opam binary
-# This section can be safely removed at any time if needed.
-test -r '/Users/wax/.opam/opam-init/init.fish' && source '/Users/wax/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
-# END opam configuration
