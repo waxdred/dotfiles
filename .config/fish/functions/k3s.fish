@@ -13,3 +13,13 @@ function k8s_namespace
     echo "Failed to set namespace to $namespace"
   end
 end
+
+function k8s_cluster 
+  set -l cluster $argv[1]
+  kubectl config use-context $cluster
+  if test $status -eq 0
+    echo "Switch to $cluster"
+  else
+    echo "Failed to set context to $cluster"
+  end
+end

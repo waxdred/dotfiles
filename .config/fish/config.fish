@@ -10,6 +10,7 @@ alias code "cd ~/code"
 alias sshOxirs "ssh oxiris"
 alias sshconf "cat ~/.ssh/config"
 alias config "vi ~/.ssh/config"
+alias fishconf "vi ~/.config/fish/config.fish"
 alias gc='~/.GitSpeak/bin/GitSpeak -answer=8 -max_length=70' 
 #alias gc='~/.GitSpeak/bin/GitSpeak -Ollama -model="mistral" -answer=8 -max_length=30 -stage' 
 alias cat="bat --theme=gruvbox-dark -p --paging=never"
@@ -71,7 +72,14 @@ export EDITOR=/usr/local/bin/nvim
 export SHELL=/opt/local/bin/fish
 export SOPS_AGE_KEY_FILE="$HOME/.sops/key.txt"
 export NVM_DIR=~/.nvm
+export SOPS_API_FILE="~/.sops/api.json"
+set -x LLAMA_API_KEY (cat $HOME/.config/env/llama_key)
+set -x OPENAI_API_KEY (cat $HOME/.config/env/open_ai)
+set -x grafana_auth (cat $HOME/.config/env/grafana)
+
+
 set PATH $PATH ~/code/Go/GoHotReload/
+set PATH $PATH ~/.SopsClient/bin/
 set PATH $PATH /Users/wax/.GitSpeak/bin
 set PATH $PATH /Users/wax/.cargo/bin
 
@@ -98,3 +106,12 @@ source ~/.config/fish/key.sh
 source ~/.config/fish/functions/k3s.fish
 zoxide init fish | source
 set fish_function_path $fish_function_path ~/.config/fish/functions
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+test -r '/Users/wax/.opam/opam-init/init.fish' && source '/Users/wax/.opam/opam-init/init.fish' > /dev/null 2> /dev/null; or true
+# END opam configuration

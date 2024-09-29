@@ -47,6 +47,8 @@ return {
 				"tsserver",
 				"lua_ls",
 				"solidity",
+				"terraformls",
+				"tflint",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed

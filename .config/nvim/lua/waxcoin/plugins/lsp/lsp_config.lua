@@ -72,6 +72,23 @@ return {
 			capabilities = capabilities,
 			filetypes = { "html", "templ" },
 		})
+
+		-- configure terraformls server
+		lspconfig["terraformls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			cmd = { "terraform-ls", "serve" },
+			filetypes = { "terraform", "terraform-vars" },
+			root_dir = lspconfig.util.root_pattern(".terraform", ".git"),
+		})
+		-- configure tflint terraform server
+		lspconfig["tflint"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			cmd = { "tflint", "--langserver" },
+			filetypes = { "terraform" },
+			root_dir = lspconfig.util.root_pattern(".terraform", ".git", ".tflint.hcl"),
+		})
 		-- configure html server
 		lspconfig["html"].setup({
 			capabilities = capabilities,
