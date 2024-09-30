@@ -37,6 +37,22 @@ Battle.net
 ./.config/todo
 ./.config/Autodesk
 ./.config/Battle.net/*
+./.congig/1Password
+./.congig/GNS3
+./.congig/bin
+./.congig/btop
+./.congig/com.corsair
+./.congig/diesel_cli
+./.congig/env
+./.congig/htop
+./.congig/libvirt
+./.congig/nix
+./.congig/omf
+./.congig/op
+./.congig/raycast
+./.congig/scripts
+./.congig/todo
+./.congig/zed
 
 configstore
 nvim_obsidian.lua
