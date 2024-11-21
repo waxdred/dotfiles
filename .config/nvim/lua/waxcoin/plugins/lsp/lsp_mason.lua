@@ -44,7 +44,7 @@ return {
 				"dockerls",
 				"rust-analyzer",
 				"gopls",
-				"tsserver",
+				"ts_ls",
 				"lua_ls",
 				"solidity",
 				"terraformls",

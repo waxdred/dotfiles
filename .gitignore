@@ -53,6 +53,7 @@ Battle.net
 ./.congig/scripts
 ./.congig/todo
 ./.congig/zed
+./.config/env
 
 configstore
 nvim_obsidian.lua

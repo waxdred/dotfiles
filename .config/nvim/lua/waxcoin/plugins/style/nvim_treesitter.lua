@@ -1,8 +1,10 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		event = { "BufReadPre", "BufNewFile" },
-		build = ":TSUpdate",
+		event = { "BufReadPost", "BufWritePost", "BufNewFile" },
+		build = function()
+			require("nvim-treesitter.install").compilers = { "zig" }
+		end,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"windwp/nvim-ts-autotag",
@@ -13,6 +15,8 @@ return {
 
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
+				sync_install = false,
+				auto_install = true,
 				highlight = {
 					enable = true,
 				},
