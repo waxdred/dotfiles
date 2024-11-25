@@ -1,6 +1,10 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- setup relative line numbers
+vim.opt.number = true
+vim.opt.relativenumber = true
+
 -- mapping Lex
 keymap.set("n", "<leader>rr", ":Ex<CR>", opts)
 

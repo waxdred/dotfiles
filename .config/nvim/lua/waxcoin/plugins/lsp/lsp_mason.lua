@@ -29,6 +29,7 @@ return {
 			ensure_installed = {
 				"bashls",
 				"clangd",
+				"zls",
 				"cmake",
 				"tailwindcss-language-server",
 				"typescript-language-server",

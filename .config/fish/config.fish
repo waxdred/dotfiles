@@ -103,11 +103,12 @@ bind \ch tmux-menu
 
 # set theme_color_scheme solarized
 set -U FZF_COMPLETE 2
-set theme_color_scheme solarized
+#set theme_color_scheme solarized
+set theme_color_scheme "Catppuccin Macchiato"
 
 tmux
 source ~/.config/fish/key.sh
 source ~/.config/fish/functions/k3s.fish
 source ~/.config/fish/functions/git.fish
-zoxide init fish | source
 set fish_function_path $fish_function_path ~/.config/fish/functions
+zoxide init fish | source

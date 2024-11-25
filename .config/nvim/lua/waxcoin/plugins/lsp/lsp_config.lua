@@ -171,6 +171,14 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
+		-- configure zig language server
+		lspconfig["zls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			cmd = { "/usr/local/bin/zls" },
+			root_dir = lspconfig.util.root_pattern("zls.json", "build.zig", ".git"),
+			filetypes = { "zig", "zir" },
+		})
 
 		-- configure graphql language server
 		lspconfig["graphql"].setup({
