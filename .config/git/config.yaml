@@ -1,0 +1,9 @@
+profiles:
+  perso:
+    user: waxcoin
+    email: waxcoin@hotmail.com
+  it-dev:
+    user: Jonathan Milhas
+    email: jonathan.milhas@gmail.com
+
+default: perso

@@ -8,10 +8,11 @@ get_git_branch() {
     if git rev-parse --git-dir > /dev/null 2>&1; then
         # Afficher la branche Git actuelle
         branch=$(git branch --show-current)
+        profile=$(git config --get user.name)
         if git status --porcelain | grep 'M'; then
-            echo "#[fg=red] #[bg=red, fg=black] ${branch}#[bg=#24273A, fg=red]"
+            echo "#[fg=red] #[bg=red, fg=black] ${profile}:${branch}#[bg=#24273A, fg=red]"
         else
-            echo "#[fg=#A96FF4] #[bg=#A96FF4, fg=black] ${branch}#[bg=#24273A, fg=#A96FF4] "
+            echo "#[fg=#A96FF4] #[bg=#A96FF4, fg=black] ${profile}:${branch}#[bg=#24273A, fg=#A96FF4] "
         fi
     else
         echo ""
