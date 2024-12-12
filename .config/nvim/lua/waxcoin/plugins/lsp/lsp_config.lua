@@ -67,6 +67,12 @@ return {
 			end,
 		})
 		-- configure htmx server
+		lspconfig["pylsp"].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			filetypes = { "python" },
+		})
+		-- configure htmx server
 		lspconfig["htmx"].setup({
 			on_attach = on_attach,
 			capabilities = capabilities,

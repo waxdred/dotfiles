@@ -31,6 +31,7 @@ return {
 				"clangd",
 				"zls",
 				"cmake",
+				"pylsp",
 				"tailwindcss-language-server",
 				"typescript-language-server",
 				"lua-language-server",
