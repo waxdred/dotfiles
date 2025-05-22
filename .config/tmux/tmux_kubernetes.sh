@@ -26,7 +26,5 @@ NAMESPACE=$(kubectl config view --minify -o 'jsonpath={..namespace}' 2>/dev/null
 # Afficher le résultat avec le path du kubeconfig
 if [ -n "$CLUSTER" ]; then
     KUBECONFIG_NAME=$(basename "${KUBECONFIG_PATH%.*}")
-    echo "${KUBECONFIG_NAME}: ${CLUSTER} ${NAMESPACE}"
-else
-    echo "No cluster"
+    echo "#[bg=#24273A, fg=#6193F7]#[bg=#6193F7, fg=black]󱃾 ${KUBECONFIG_NAME}: ${CLUSTER} ${NAMESPACE}#[bg=#24273A, fg=#6193F7] "
 fi
