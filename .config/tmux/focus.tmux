@@ -18,5 +18,6 @@ tmux set-window-option -g window-style "bg=$bg_inactive"
 tmux set-option -g pane-active-border-style "fg=$mauve,bold"
 tmux set-option -g pane-border-style "fg=$surface_1"
 
+
 # Ajout d'un indicateur visuel dans le coin utilisant les couleurs Catppuccino
 #tmux set-option -g pane-active-border-format "#[fg=$mauve,bold]▣#[default]"

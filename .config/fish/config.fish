@@ -1,13 +1,11 @@
 alias 42="cd ~/code/42/$1"
-alias sfish "source ~/.dotfiles/.config/fish/config.fish"
-alias stmux "source ~/.dotfiles/.tmux.conf"
+alias sfish "source ~/.config/fish/config.fish"
 alias vig "vi +G"
 alias g "lazygit"
 alias vi nvim
 alias touch2 "~/.dotfiles/.config/fish/touch2 $1"
 alias chat "~/code/Term_ChatGPT/bin/chatGPT"
 alias code "cd ~/code"
-alias sshOxirs "ssh oxiris"
 alias sshconf "cat ~/.ssh/config"
 alias config "vi ~/.ssh/config" alias fishconf "vi ~/.config/fish/config.fish"
 alias gc='~/.GitSpeak/bin/GitSpeak -answer=10 -max_length=50 -max_length=30' #alias gc='~/.GitSpeak/bin/GitSpeak -answer=10 -max_length=50 -Ollama -model="qwen2.5-coder" -max_length=30 -OllamaUrl="https://ollama.waxmaker.app" -OllamaApiKey=$LLAMA_API_KEY -stage'
@@ -65,8 +63,8 @@ function decrypt_file_hide
     sops --decrypt --age (cat $SOPS_AGE_KEY_FILE | grep -oE "public key: (.*)" | sed 's/public key: //') --encrypted-regex '^(data|stringData)$' --in-place $filename >> .decryp-$filename
 end
 
-export VISUAL=/usr/local/bin/nvim
-export EDITOR=/usr/local/bin/nvim
+export VISUAL=/usr/local/nvim/bin/nvim
+export EDITOR=/usr/local/nvim/bin/nvim
 export SHELL=/opt/local/bin/fish
 export NVM_DIR=~/.nvm
 
@@ -91,12 +89,13 @@ set PATH $PATH /Users/wax/.Clone/bin
 set PATH $PATH /usr/local/nvim/bin
 set PATH $PATH $HOME/go/bin/
 
-function tmux-sessionizer
-    sh ~/.dotfiles/.config/bin/tmux-sessionizer
+function KUBECONFIG 
+    set value $argv[1]
+    eval ($HOME/.config/bin/kubeconfig KUBECONFIG=$value)
 end
 
-function ssh-connect
-    sh ~/.dotfiles/.config/bin/ssh-connect
+function tmux-sessionizer
+    sh ~/.config/bin/tmux-sessionizer
 end
 
 bind \cf tmux-sessionizer
