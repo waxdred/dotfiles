@@ -102,6 +102,27 @@ return {
 			filetypes = { "html", "templ" },
 		})
 
+		-- configure tailwindcss server
+		lspconfig["tailwindcss"].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			filetypes = {
+				"templ",
+				"astro",
+				"javascript",
+				"javascriptreact",
+				"typescript",
+				"typescriptreact",
+				"html",
+				"svelte",
+			},
+			init_options = {
+				userLanguages = {
+					templ = "html",
+				},
+			},
+		})
+
 		-- configure typescript server with plugin
 		lspconfig["ts_ls"].setup({
 			capabilities = capabilities,
