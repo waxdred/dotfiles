@@ -1,6 +1,7 @@
 ./1Password
 ./GNS3
-./ai-code
+./ai-code/*
+./env/*
 ./bin
 ./btop
 ./com.corsair
