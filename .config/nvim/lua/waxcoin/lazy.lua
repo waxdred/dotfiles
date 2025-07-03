@@ -19,6 +19,7 @@ require("lazy").setup({
 	{ import = "waxcoin.plugins.lsp" },
 	{ import = "waxcoin.plugins.style" },
 	{ import = "waxcoin.plugins.tools" },
+	{ import = "waxcoin.plugins.ssh" },
 }, {
 	install = {
 		colorscheme = { "catppuccin-macchiato" },

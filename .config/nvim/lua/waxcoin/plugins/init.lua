@@ -56,17 +56,4 @@ return {
 			-- refer to the configuration section below
 		},
 	},
-	{
-		"focus_tmux",
-		dir = "~/.config/nvim/lua/waxcoin/plugins/custom",
-		opts = {
-			colors = {
-				active_bg = "#1e1e2e",
-				inactive_bg = "#181825",
-			},
-		},
-		config = function(_, opts)
-			require("waxcoin.plugins.custom.focus_tmux").setup(opts)
-		end,
-	},
 }

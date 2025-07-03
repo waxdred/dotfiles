@@ -9,42 +9,27 @@ return {
 		"rcarriga/nvim-notify",
 	},
 	-- TODO need make test
-	config = function()
-		require("codecompanion").setup({
-			adapters = {
-				ollama = function()
-					local api_key = os.getenv("LLAMA_API_KEY")
-					return require("codecompanion.adapters").extend("ollama", {
-						env = {
-							url = "https://ollama.waxmaker.app",
-							api_key = api_key,
-						},
-						headers = {
-							["Content-Type"] = "application/json",
-							["Authorization"] = "Bearer ${api_key}",
-						},
-						parameters = {
-							sync = true,
-						},
-						schema = {
-							model = {
-								default = "llama3.2:latest",
-							},
-						},
-					})
-				end,
+	opts = {
+		strategies = {
+			chat = {
+				adapter = "anthropic",
 			},
-			strategies = {
-				chat = {
-					adapter = "ollama",
-				},
-				inline = {
-					adapter = "ollama",
-				},
-				agent = {
-					adapter = "ollama",
-				},
+			inline = {
+				adapter = "anthropic",
 			},
-		})
+		},
+		adapters = {},
+	},
+	config = function(_, opts)
+		opts.adapters.anthropic = function()
+			local api_key = os.getenv("ANTHROPIC_API_KEY")
+			return require("codecompanion.adapters").extend("anthropic", {
+				env = {
+					api_key = api_key,
+				},
+			})
+		end
+
+		require("codecompanion").setup(opts)
 	end,
 }

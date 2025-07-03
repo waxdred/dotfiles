@@ -2,6 +2,7 @@ local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
 -- setup relative line numbers
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -58,3 +59,28 @@ keymap.set("n", "<C-w>h", ":sp<CR>", opts)
 
 -- Aller à la fenêtre de droite
 keymap.set("n", "<C-L>", "<C-w>l", opts)
+
+-- Aller à la fenêtre du haut
+keymap.set("n", "<C-K>", "<C-w>k", opts)
+
+-- Aller à la fenêtre du bas
+keymap.set("n", "<C-J>", "<C-w>j", opts)
+
+-- Split vertical
+keymap.set("n", "<C-w>v", ":vsp<CR>", opts)
+
+-- Close current window
+keymap.set("n", "<leader>x", ":close<CR>", opts)
+
+-- Resize windows
+keymap.set("n", "<C-Up>", ":resize +2<CR>", opts)
+keymap.set("n", "<C-Down>", ":resize -2<CR>", opts)
+keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+-- Code Compagnion
+keymap.set("n", "<leader>cc", ":CodeCompanionChat<CR>", opts)
+keymap.set("v", "<leader>cc", ":CodeCompanionChat<CR>", opts)
+keymap.set("n", "<leader>ca", ":CodeCompanionActions<CR>", opts)
+keymap.set("v", "<leader>ca", ":CodeCompanionActions<CR>", opts)
+keymap.set("n", "<leader>ci", ":CodeCompanionInline<CR>", opts)
