@@ -2,30 +2,94 @@
 
 ## Overview
 
-This section covers the tmux configuration used in my setup, focusing on plugins and keybindings to enhance the terminal multiplexing experience.
+This is a comprehensive tmux configuration designed for developers, featuring a modern UI, powerful integrations, and productivity-enhancing features. The setup includes custom scripts for Git branch display, Kubernetes context awareness, and session management.
 
-## Plugins
+## Features
 
-The tmux setup includes several plugins for session management, shortcuts, and utilities:
+- **Modern UI**: Catppuccin-inspired theme with custom status bar
+- **Git Integration**: Branch and status display in status bar
+- **Kubernetes Integration**: Current context and namespace display
+- **Session Management**: Automatic session saving and restoration
+- **Enhanced Navigation**: Vim-style keybindings and intuitive shortcuts
+- **Clipboard Integration**: Seamless system clipboard support
+- **Custom Scripts**: Path display, SSH status, and more
 
-- `tmux-resurrect`: For saving and restoring tmux sessions.
-- `tmux-cheat-fzf`: Provides an interactive cheat sheet using fzf.
-- `tmux-menu`: Adds a menu interface in tmux.
-- `tmux-note-popup`: For note-taking within tmux pop-up windows.
+## Key Components
 
-## Keybindings
+### Core Configuration
 
-Custom keybindings in this tmux setup are designed for ease of navigation, window management, and session control:
+- **Prefix**: Set to Ctrl+A for easy access
+- **Indexing**: Windows start at 1 instead of 0
+- **History**: Increased limit to 1,000,000 lines
+- **Escape Time**: Zero delay for responsive usage
+- **Clipboard**: System clipboard integration
+- **Status Bar**: Positioned at the top (macOS style)
+- **Keybindings**: Vim-style navigation in copy mode
 
-- Prefix set to `Ctrl-a`.
-- Use `Alt` + arrow keys to switch panes.
-- `Shift` + arrow keys to switch windows.
-- Vim-style keybindings for copy mode.
-- Easy pane splitting with `v` and `h`.
-- Mouse support enabled for scrolling and pane selection.
+### Plugins
 
-## Additional Customizations
+- **tpm**: Tmux Plugin Manager
+- **tmux-sensible**: Sensible default settings
+- **tmux-yank**: Enhanced clipboard functionality
+- **tmux-continuum**: Automatic session saving
 
-Additional customizations include clipboard management, window and pane controls, session management, and more, all aimed at making the tmux experience more efficient and tailored to specific workflow needs.
+### Custom Scripts
 
-(Note: Expand each section with more specific details about your configuration and usage instructions.)
+- **tmux_gitbranch.sh**: Displays current Git branch with status indicator
+- **tmux_kubernetes.sh**: Shows current K8s context and namespace
+- **tmux_path.sh**: Displays current working directory
+- **tmux_prefix.sh**: Custom window prefix indicators
+- **get_ip.sh**: Shows current IP address
+- **fzf_window_name.sh**: FZF integration for window selection
+
+### Status Bar
+
+- **Left Section**: Session name with prefix indicator
+- **Window List**: Custom formatted window tabs with icons
+- **Right Section**: Path, Kubernetes context, Git branch, and IP address
+- **Colors**: Catppuccin Macchiato theme with custom accent colors
+
+## Installation
+
+1. Ensure tmux is installed
+2. Clone this repository to your tmux config directory:
+   ```
+   git clone https://github.com/waxdred/dotfiles.git ~/.config/tmux
+   ```
+3. Install TPM (Tmux Plugin Manager):
+   ```
+   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+   ```
+4. Install required dependencies:
+   - jq (for JSON parsing in scripts)
+   - reattach-to-user-namespace (for macOS clipboard)
+   - git (for branch display)
+   - kubectl (for Kubernetes integration)
+
+5. Start tmux and press `prefix + I` to install plugins
+
+## Key Bindings
+
+- **Prefix**: Ctrl+A
+- **Window Navigation**: Shift + Arrow keys
+- **Pane Navigation**: Alt + Arrow keys
+- **Copy Mode**: Prefix + [ (Vim keybindings)
+- **Paste**: Prefix + ]
+- **Split Panes**: Prefix + v (vertical), Prefix + h (horizontal)
+- **Resize Panes**: Prefix + Alt + Arrow keys
+
+## Integration with Fish Shell
+
+This tmux configuration works seamlessly with the Fish shell configuration:
+- The `tmux-sessionizer` function in Fish allows quick session creation
+- The `c` function navigates to the last tmux session directory
+- Custom key bindings in Fish trigger tmux commands
+
+## Customization
+
+The configuration is organized in a modular way:
+- `.tmux.conf`: Main configuration file
+- `buffer.conf`: Status bar theme and format
+- `tmux.reset.conf`: Reset default settings
+- Custom scripts in the main directory
+- Additional utilities in the `scripts/` directory
