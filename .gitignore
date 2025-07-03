@@ -1,4 +1,13 @@
 .DS_Store
+
+.config/env
+.config/ai-code
+.config/btop
+.config/op
+.config/session
+.config/raycast
+.config/com.corsair
+
 Autodesk
 coc
 filezilla
