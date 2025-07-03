@@ -18,8 +18,6 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-
-
 if type -q exa
     alias ls "exa -g --icons"
     alias ll "exa -l -g --icons"
@@ -72,14 +70,17 @@ export NVM_DIR=~/.nvm
 set -x LLAMA_API_KEY (cat $HOME/.config/env/llama_key)
 set -x OPENAI_API_KEY (cat $HOME/.config/env/open_ai)
 set -x grafana_auth (cat $HOME/.config/env/grafana)
+set -x ANTHROPIC_API_KEY (cat $HOME/.config/env/anthropic)
 set -x SOPS_AGE_KEY_FILE "$HOME/.sops/key.txt"
 set -x SOPS_API_FILE "$HOME/.sops/api.json"
 set -x GITHUB_TOKEN (cat $HOME/.config/env/github)
 set -x GITHUB_USER "waxdred"
 set -x GITPROFILE_CONFIG $HOME/.config/git/config.yaml
-set -x GOROOT $HOME/go
-set -x GOPATH $HOME/go/bin/
+set -x GOPATH $HOME/go
+set -Ux fish_user_paths $GOPATH/bin $fish_user_paths
 
+# Unset env GOROOT if it exists
+set -e GOROOT
 
 set PATH $PATH ~/code/Go/GoHotReload/
 set PATH $PATH ~/.SopsClient/bin/
@@ -113,5 +114,6 @@ tmux
 #source ~/.config/fish/key.sh
 source ~/.config/fish/functions/k3s.fish
 source ~/.config/fish/functions/git.fish
+source ~/.config/fish/functions/c.fish
 set fish_function_path $fish_function_path ~/.config/fish/functions
 zoxide init fish | source
