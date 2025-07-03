@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+SAVE="$HOME/.config/.session"
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
@@ -15,7 +17,7 @@ tmux_running=$(pgrep tmux)
 
 # Save the selected path to the session file
 mkdir -p "$HOME/.config"
-echo "$selected" > "$HOME/.config/session"
+echo "$selected" > "$SAVE"
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux new-session -s $selected_name -c $selected
