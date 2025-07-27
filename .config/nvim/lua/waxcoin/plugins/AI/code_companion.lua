@@ -11,6 +11,17 @@ return {
 	-- TODO need make test
 	opts = {
 		strategies = {
+			chat = {
+				adapter = "anthropic",
+			},
+			inline = {
+				adapter = "anthropic",
+			},
+		},
+		adapters = {},
+	},
+	config = function(_, opts)
+		require("codecompanion").setup({
 			extensions = {
 				mcphub = {
 					callback = "mcphub.extensions.codecompanion",
@@ -28,16 +39,7 @@ return {
 					},
 				},
 			},
-			chat = {
-				adapter = "anthropic",
-			},
-			inline = {
-				adapter = "anthropic",
-			},
-		},
-		adapters = {},
-	},
-	config = function(_, opts)
+		})
 		opts.adapters.anthropic = function()
 			local api_key = os.getenv("ANTHROPIC_API_KEY")
 			return require("codecompanion.adapters").extend("anthropic", {
