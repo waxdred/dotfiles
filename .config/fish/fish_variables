@@ -12,7 +12,7 @@ SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/Users/wax/\x2elocal/share/z/data
 SETUVAR Z_DATA_DIR:/Users/wax/\x2elocal/share/z
 SETUVAR Z_EXCLUDE:\x5e/Users/wax\x24
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3800
 SETUVAR _fisher_franciscolourenco_2F_done_files:/Users/jmilhas/\x2econfig/fish/conf\x2ed/done\x2efish
 SETUVAR _fisher_jethrokuan_2F_fzf_files:/Users/jmilhas/\x2econfig/fish/functions/__fzf_cd\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/__fzf_complete\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/__fzf_complete_preview\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/__fzf_find_file\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/__fzf_get_dir\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/__fzf_open\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/__fzf_parse_commandline\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/__fzf_reverse_isearch\x2efish\x1e/Users/jmilhas/\x2econfig/fish/functions/__fzfcmd\x2efish\x1e/Users/jmilhas/\x2econfig/fish/conf\x2ed/fzf\x2efish
 SETUVAR _fisher_jethrokuan_2F_z_files:\x7e/\x2econfig/fish/functions/__z\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_add\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_clean\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_complete\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/z\x2efish
@@ -61,4 +61,4 @@ SETUVAR fish_pager_color_selected_background:\x1d
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR --export fish_user_paths:/Users/wax/go/bin
+SETUVAR --export fish_user_paths:/home/jonathan/go/bin\x1e/Users/wax/go/bin
