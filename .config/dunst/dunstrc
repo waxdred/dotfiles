@@ -1,0 +1,31 @@
+[global]
+frame_color = "#8aadf4"
+separator_color= frame
+highlight = "#8aadf4"
+
+font = JetBrainsMono Nerd Font 14
+markup = yes
+
+# Padding et confort
+line_height = 0
+horizontal_padding = 20
+
+# Transparence : utilise une couleur RGBA (le dernier "cc" = alpha)
+# 00 = totalement transparent, ff = opaque
+transparency = 0          # garde 0 (on utilise RGBA à la place)
+corner_radius = 12
+
+[urgency_low]
+background = "#24273a"
+foreground = "#cad3f5"
+
+
+[urgency_normal]
+background = "#24273a"
+foreground = "#cad3f5"
+
+[urgency_critical]
+background = "#24273a"
+foreground = "#cad3f5"
+frame_color = "#f5a97f"
+
