@@ -14,7 +14,7 @@
   "modules-right": [
     "network",
     "battery",
-    "bluetooth",
+    "custom/sncf-trains",
     "pulseaudio",
     "backlight",
     "custom/temperature",
@@ -140,14 +140,15 @@
       "<span color='#FFD700'> 󰃠 </span>"   // 最亮 - 金色
     ]
   },
-  "bluetooth": {
-    "format": "<span color='#00BFFF'>  </span>{status} ",
-    "format-connected": "<span color='#00BFFF'>  </span>{device_alias} ",
-    "format-connected-battery": "<span color='#00BFFF'>  </span>{device_alias}{device_battery_percentage}% ",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+  "custom/sncf-trains": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/sncf_trains.sh",
+        "interval": 60,
+        "on-click": "~/.config/waybar/scripts/sncf_trains.sh toggle && pkill -SIGUSR1 waybar",
+        "on-click-right": "~/.config/waybar/scripts/sncf_trains.sh clear-cache",
+        "tooltip": true,
+        "signal": 1
   }
 }
 

@@ -77,6 +77,8 @@ set -x GITHUB_USER "waxdred"
 set -x GITPROFILE_CONFIG $HOME/.config/git/config.yaml
 set -x GOPATH $HOME/go
 set -Ux fish_user_paths $GOPATH/bin $fish_user_paths
+set -x LS_COLORS "di=38;5;81:ln=38;5;213:so=38;5;223:pi=38;5;179:ex=38;5;166:bd=38;5;215;1:cd=38;5;216;1:su=38;5;160;1:sg=38;5;202;1:tw=38;5;183:ow=38;5;223"
+
 
 # Unset env GOROOT if it exists
 set -e GOROOT
@@ -114,3 +116,6 @@ source ~/.config/fish/functions/git.fish
 source ~/.config/fish/functions/c.fish
 set fish_function_path $fish_function_path ~/.config/fish/functions
 zoxide init fish | source
+
+# opencode
+fish_add_path /home/jonathan/.opencode/bin

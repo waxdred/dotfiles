@@ -1,6 +1,8 @@
 /* 全局设置 */
 * {
-  font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
+  font-family:
+    "CaskaydiaCove Nerd Font", "Font Awesome 6 Free",
+    "Font Awesome 6 Free Solid";
   font-weight: bold;
   font-size: 16px;
   color: #dcdfe1;
@@ -16,9 +18,9 @@
 /* 所有模块统一风格 */
 #workspaces,
 #window,
-#tray{
+#tray {
   /*background-color: rgba(29,31,46, 0.95);*/
-  background-color: rgba(15,27,53,0.9);
+  background-color: rgba(15, 27, 53, 0.9);
   padding: 4px 6px; /* 保持内部间距 */
   margin-top: 6px; /* 外部间距增加 */
   margin-left: 6px; /* 外部间距增加 */
@@ -27,9 +29,97 @@
   border-width: 0px;
 }
 
+/* Styles pour le module trains SNCF dans Waybar */
+/* S'intègre avec le thème existant */
+
+#custom-sncf-trains {
+  background-color: rgba(15, 27, 53, 0.9);
+  margin-top: 6px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  border-width: 0px;
+  font-family:
+    "CaskaydiaCove Nerd Font", "Font Awesome 6 Free",
+    "Font Awesome 6 Free Solid";
+  font-weight: bold;
+  font-size: 16px;
+  color: #dcdfe1;
+  min-width: 120px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+/* Train à l'heure */
+#custom-sncf-trains.on-time {
+  color: #98c379; /* Vert harmonieux */
+  border-left: 3px solid #98c379;
+}
+
+/* Train en retard léger (1-15 min) */
+#custom-sncf-trains.delayed {
+  color: #e5c07b; /* Orange/jaune harmonieux */
+  border-left: 3px solid #e5c07b;
+  animation: pulse-orange 2s infinite;
+}
+
+/* Train très en retard (>15 min) */
+#custom-sncf-trains.very-delayed {
+  color: #e06c75; /* Rouge harmonieux */
+  border-left: 3px solid #e06c75;
+  animation: pulse-red 1s infinite;
+}
+
+/* Erreur */
+#custom-sncf-trains.error {
+  color: #888888;
+  border-left: 3px solid #888888;
+}
+
+/* Aucun train */
+#custom-sncf-trains.no-trains {
+  color: #5c6370;
+  border-left: 3px solid #5c6370;
+}
+
+/* Animations de pulsation pour les retards */
+@keyframes pulse-orange {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-red {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Hover effect - s'harmonise avec votre thème */
+#custom-sncf-trains:hover {
+  background-color: rgba(70, 75, 90, 0.9);
+  transition: background-color 0.2s ease;
+}
+
+/* Effet de clic */
+#custom-sncf-trains:active {
+  transition: all 0.1s ease;
+}
+
 #clock,
-#custom-power{
-  background-color: rgba(15,27,53,0.9);
+#custom-power {
+  background-color: rgba(15, 27, 53, 0.9);
   margin-top: 6px; /* 与屏幕顶部留出距离 */
   margin-right: 6px;
   /*margin-bottom: 4px;*/
@@ -39,8 +129,8 @@
 }
 
 #network,
-#custom-lock{
-  background-color: rgba(15,27,53,0.9);
+#custom-lock {
+  background-color: rgba(15, 27, 53, 0.9);
   margin-top: 6px; /* 与屏幕顶部留出距离 */
   margin-left: 6px;
   /*margin-bottom: 4px;*/
@@ -56,8 +146,8 @@
 #backlight,
 #custom-temperature,
 #memory,
-#cpu{
-  background-color: rgba(15,27,53,0.9);
+#cpu {
+  background-color: rgba(15, 27, 53, 0.9);
   margin-top: 6px; /* 与屏幕顶部留出距离 */
   /*margin-bottom: 4px;*/
   padding: 4px 2px; /* 保持内部间距 */
@@ -66,7 +156,7 @@
 
 #custpm-temperature.critical,
 #pulseaudio.muted {
-  color: #FF0000;
+  color: #ff0000;
   padding-top: 0;
 }
 
@@ -90,7 +180,7 @@
 }
 
 /* 工作区激活状态高亮 */
-#workspaces button:hover{
+#workspaces button:hover {
   background-color: rgba(97, 175, 239, 0.2);
   padding: 2px 8px;
   margin: 0 2px;
@@ -119,4 +209,3 @@
   font-weight: 500;
   font-style: italic;
 }
-
