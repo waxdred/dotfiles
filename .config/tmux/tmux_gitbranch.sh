@@ -10,7 +10,7 @@ get_git_branch() {
         branch=$(git branch --show-current)
         profile=$(git config --get user.name)
         if git status --porcelain | grep 'M'; then
-            echo "#[fg=red] #[bg=red, fg=black] ${profile}:${branch}#[bg=#24273A, fg=red]"
+            echo "#[fg=red] #[bg=red, fg=black] ${profile}:${branch}#[bg=default, fg=red]"
         else
             echo "#[fg=#A96FF4] #[bg=#A96FF4, fg=black] ${profile}:${branch}#[bg=#24273A, fg=#A96FF4]"
         fi
