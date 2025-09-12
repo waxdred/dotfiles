@@ -1,0 +1,18 @@
+background-opacity = 0.80
+shell-integration = fish
+command = /opt/homebrew/bin/fish
+
+theme = "catppuccin-macchiato"
+background-blur = true
+
+cursor-style = underline
+cursor-style-blink = true
+
+font-family = "Hack Nerd Font"
+font-size = 16
+
+macos-titlebar-style = hidden
+
+window-padding-balance = true
+window-padding-x = 4
+window-padding-y = 4

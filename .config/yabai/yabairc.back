@@ -1,0 +1,48 @@
+# Auto-configuration des displays
+~/.config/yabai/display-setup.sh
+
+# bsp, stack, float
+yabai -m config layout bsp
+
+yabai -m config window_placement second_child
+
+
+#Padding
+
+yabai -m config top_padding 8
+yabai -m config bottom_padding 8
+yabai -m config left_padding 8
+yabai -m config right_padding 8
+yabai -m config window_gap 8
+
+# set mouse interaction modifier key (default: fn)
+yabai -m config mouse_modifier fn
+
+# set modifier + left-click drag to move window (default: move)
+yabai -m config mouse_action1 move
+
+# set modifier + right-click drag to resize window (default: resize)
+yabai -m config mouse_action2 resize
+
+yabai -m config mouse_drop_action swap
+
+# set focus follows mouse mode (default: off, options: off, autoraise, autofocus)
+yabai -m config focus_follows_mouse autoraise
+
+yabai -m config mouse_follows_focus on
+
+# Disable specific apps
+yabai -m rule --add app="^Réglages Système$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add title="^(Opening|About|Preferences)" manage=off
+yabai -m rule --add app="^Finder$" sticky=on layer=above manage=off
+
+# Labels pour tes espaces (optionnel mais pratique)
+yabai -m space 1 --label code
+
+# Règles pour ouvrir certaines apps dans des espaces spécifiques
+yabai -m rule --add app="^Ghostty$" space=dev
+yabai -m rule --add app="^Brave Browser$" space=web
+yabai -m rule --add app="^Slack$" space=chat
+yabai -m rule --add app="^Spotify$" space=music
+

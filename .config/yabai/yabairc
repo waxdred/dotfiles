@@ -1,0 +1,78 @@
+#!/usr/bin/env sh
+
+
+# setup spaces
+#
+for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 6)'); do
+  yabai -m space --destroy 7
+done
+
+yabai -m config top_padding 8
+
+
+yabai -m signal --add event=display_added action="~/.config/yabai/script/generate-workspace.sh"
+yabai -m signal --add event=display_removed action="~/.config/yabai/script/generate-workspace.sh"
+
+
+# Charger les scripts
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+###################
+### LAYOUT ###
+###################
+
+# Layout par défaut (équivalent au dwindle de Hyprland)
+yabai -m config layout bsp
+
+yabai -m config window_placement second_child
+
+###################
+### GAPS ###
+###################
+
+# Gaps équivalents à votre config Hyprland (gaps_in = 5, gaps_out = 20)
+yabai -m config bottom_padding 8
+yabai -m config left_padding 8
+yabai -m config right_padding 8
+yabai -m config window_gap 8
+
+# set modifier + left-click drag to move window (default: move)
+yabai -m config mouse_action1 move
+
+# set modifier + right-click drag to resize window (default: resize)
+yabai -m config mouse_action2 resize
+
+yabai -m config mouse_drop_action swap
+
+# set focus follows mouse mode (default: off, options: off, autoraise, autofocus)
+yabai -m config focus_follows_mouse autoraise
+
+yabai -m config mouse_follows_focus on
+
+###################
+### RÈGLES DE FENÊTRES ###
+###################
+
+# Applications flottantes (équivalent à vos windowrules)
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Réglages Système$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Disk Utility$" manage=off
+yabai -m rule --add app="^Archive Utility$" manage=off
+
+# Équivalent de votre règle Thunar
+yabai -m rule --add app="^Finder$" manage=off
+
+# Espaces spécifiques pour certaines apps (équivalent workspace rules)
+yabai -m rule --add app="^Brave Browser$" space=web
+
+###################
+### SIGNAUX ###
+###################
+
+# Signaux pour maintenir la configuration
+yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"

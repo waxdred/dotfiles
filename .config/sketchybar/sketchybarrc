@@ -1,0 +1,212 @@
+#!/bin/bash
+# ~/.config/sketchybar/sketchybarrc
+
+# Catppuccin Macchiato Colors
+export BASE=0xff24273a      # Background
+export SURFACE0=0xff363a4f   # Surface
+export SURFACE1=0xff494d64   # Surface lighter
+export SURFACE2=0xff5b6078   # Surface even lighter
+export TEXT=0xffcad3f5       # Main text
+export SUBTEXT0=0xffa5adcb   # Secondary text
+export SUBTEXT1=0xffb8c0e0   # Tertiary text
+
+# Accent colors
+export ROSEWATER=0xfff4dbd6
+export FLAMINGO=0xfff0c6c6
+export PINK=0xfff5bde6
+export MAUVE=0xffc6a0f6      # Primary accent
+export RED=0xffed8796
+export MAROON=0xffee99a0
+export PEACH=0xfff5a97f
+export YELLOW=0xffeed49f
+export GREEN=0xffa6da95
+export TEAL=0xff8bd5ca
+export SKY=0xff91d7e3
+export SAPPHIRE=0xff7dc4e4
+export BLUE=0xff8aadf4
+export LAVENDER=0xffb7bdf8
+
+# Bar configuration
+sketchybar --bar position=top \
+                 height=32 \
+                 color=$BASE \
+                 shadow=off \
+                 sticky=on \
+                 padding_left=8 \
+                 padding_right=8 \
+                 corner_radius=0 \
+                 y_offset=0 \
+                 margin=0 \
+                 blur_radius=0 \
+                 notch_width=0
+
+# Default item style
+sketchybar --default updates=when_shown \
+                     icon.font="SF Pro:Semibold:14.0" \
+                     icon.color=$TEXT \
+                     icon.padding_left=8 \
+                     icon.padding_right=4 \
+                     label.font="SF Pro:Medium:12.0" \
+                     label.color=$SUBTEXT0 \
+                     label.padding_left=4 \
+                     label.padding_right=8 \
+                     background.color=$SURFACE0 \
+                     background.corner_radius=6 \
+                     background.height=24 \
+                     background.padding_left=4 \
+                     background.padding_right=4
+
+# Left side - Apple logo
+sketchybar --add item apple left \
+           --set apple icon="" \
+                       icon.font="Hack Nerd Font:Bold:16.0" \
+                       icon.color=$MAUVE \
+                       icon.padding_left=12 \
+                       icon.padding_right=12 \
+                       background.color=$SURFACE1 \
+                       background.corner_radius=8 \
+                       click_script="osascript -e 'tell application \"System Events\" to click menu bar item 1 of menu bar 1 of application process \"Finder\"'"
+
+# Workspaces avec icônes - Version corrigée
+WORKSPACE_ICONS=(
+    "󰇧"    # Web - globe
+    "󰭻"    # Chat - message
+    "󰩃"    # Obsidian - brain/note
+    "󰚩"    # AI - robot/sparkles
+    ""    # Code - terminal
+    "󰝚"    # Media - play button
+    "󰉋"    # Other - folder
+    "󰆼"    # Misc - grid/apps
+)
+
+# Créer les espaces dynamiquement selon le nombre d'écrans
+DISPLAY_COUNT=$(yabai -m query --displays | jq length 2>/dev/null || echo "1")
+
+if [ "$DISPLAY_COUNT" -eq 1 ]; then
+    MAX_SPACES=7
+else
+    MAX_SPACES=8
+fi
+
+# Ajouter les items space
+for i in $(seq 1 $MAX_SPACES); do
+    icon_index=$((i - 1))
+    icon="${WORKSPACE_ICONS[$icon_index]}"
+    
+    sketchybar --add space space.$i left \
+               --set space.$i associated_space=$i \
+                             icon="$icon" \
+                             icon.font="Hack Nerd Font:Bold:16.0" \
+                             icon.color=$SUBTEXT0 \
+                             icon.highlight_color=$MAUVE \
+                             icon.padding_left=8 \
+                             icon.padding_right=8 \
+                             background.color=$SURFACE0 \
+                             background.border_color=$SURFACE2 \
+                             background.border_width=1 \
+                             background.corner_radius=8 \
+                             background.height=26 \
+                             label.drawing=off \
+                             script="$HOME/.config/sketchybar/plugins/space.sh $i" \
+                             click_script="yabai -m space --focus $i"
+done
+
+# Separator
+sketchybar --add item space_separator left \
+           --set space_separator icon="│" \
+                                icon.color=$SURFACE2 \
+                                icon.padding_left=8 \
+                                icon.padding_right=8 \
+                                background.drawing=off
+
+# Window title
+sketchybar --add item window_title left \
+           --set window_title script="$HOME/.config/sketchybar/plugins/window_title.sh" \
+                              update_freq=1 \
+                              icon.drawing=off \
+                              label.color=$TEXT \
+                              label.font="SF Pro:Medium:12.0" \
+                              background.drawing=off
+
+# Center - Date & Time
+sketchybar --add item clock center \
+           --set clock update_freq=30 \
+                       script="$HOME/.config/sketchybar/plugins/clock.sh" \
+                       icon=󰃰 \
+                       icon.color=$MAUVE \
+                       icon.font="SF Pro:Bold:14.0" \
+                       label.color=$TEXT
+
+# Right side items
+
+# Volume
+sketchybar --add item volume right \
+           --set volume script="$HOME/.config/sketchybar/plugins/volume.sh" \
+                        update_freq=1 \
+                        icon=󰕾 \
+                        icon.color=$BLUE \
+                        background.color=$SURFACE1 \
+                        click_script="open /System/Library/PreferencePanes/Sound.prefPane"
+
+# Battery
+sketchybar --add item battery right \
+           --set battery script="$HOME/.config/sketchybar/plugins/battery.sh" \
+                        update_freq=30 \
+                        icon=󰁹 \
+                        icon.color=$GREEN \
+                        background.color=$SURFACE1
+
+# CPU
+sketchybar --add item cpu right \
+           --set cpu script="$HOME/.config/sketchybar/plugins/cpu.sh" \
+                     update_freq=2 \
+                     icon=󰻠 \
+                     icon.color=$PEACH \
+                     background.color=$SURFACE1
+
+# Memory
+sketchybar --add item memory right \
+           --set memory script="$HOME/.config/sketchybar/plugins/memory.sh" \
+                        update_freq=3 \
+                        icon=󰍛 \
+                        icon.color=$YELLOW \
+                        background.color=$SURFACE1
+
+# Divider entre les sections
+sketchybar --add item divider1 right \
+           --set divider1 icon="│" \
+                          icon.color=$SURFACE2 \
+                          background.drawing=off
+
+sketchybar --add item trains right \
+           --set trains icon="󰔬" \
+                        icon.font="Hack Nerd Font:Bold:14.0" \
+                        icon.color=$TEAL \
+                        icon.padding_left=8 \
+                        icon.padding_right=4 \
+                        label="--:--" \
+                        label.font="SF Pro:Medium:12.0" \
+                        label.color=$SUBTEXT0 \
+                        label.padding_left=4 \
+                        label.padding_right=8 \
+                        background.color=$SURFACE2 \
+                        background.corner_radius=6 \
+                        background.height=24 \
+                        background.padding_left=4 \
+                        background.padding_right=4 \
+                        script="$HOME/.config/sketchybar/plugins/train_api.sh" \
+                        update_freq=60 \
+           --subscribe trains mouse.clicked
+
+# Control Center shortcut
+sketchybar --add item control_center right \
+           --set control_center icon=󰒓 \
+                                icon.color=$LAVENDER \
+                                icon.font="Hack Nerd Font:Bold:16.0" \
+                                background.color=$SURFACE1 \
+                                background.corner_radius=8 \
+                                click_script="open -b com.apple.systempreferences"
+# Update the bar
+sketchybar --update
+
+echo "SketchyBar configuration loaded"

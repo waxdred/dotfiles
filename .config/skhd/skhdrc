@@ -1,0 +1,134 @@
+# Modificateur principal (équivalent $mainMod = SUPER dans Hyprland)
+# Sur Mac, cmd correspond à SUPER/Windows key
+
+###################
+### APPLICATIONS ###
+###################
+
+
+alt - return : yabai -m space --focus 1 && open -na Ghostty
+
+
+# Navigateur (équivalent bind = $mainMod, B, exec, brave)
+cmd - b : open -a "Brave Browser"
+
+# Gestionnaire de fichiers (équivalent bind = $mainMod, E, exec, thunar)
+cmd - e : open -a Finder
+
+# Lanceur d'applications (équivalent bind = $mainMod, R, exec, rofi)
+cmd - r : open -a "Raycast" || open -a "Alfred 5" || open -a "Spotlight"
+
+# Recherche (équivalent bind = $mainMod, S, exec, search.sh)
+cmd - s : open -a "Raycast" || open -a "Alfred 5"
+
+###################
+### GESTION FENÊTRES ###
+###################
+
+# Fermer fenêtre active (équivalent bind = $mainMod, C, killactive)
+alt - c : yabai -m window --close
+
+# Quitter yabai (équivalent bind = $mainMod, M, exit)
+alt + alt - m : yabai --stop-service
+
+# Mode plein écran (équivalent bind = $mainMod, F, fullscreenstate, 3)
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# Toggle flottant (équivalent bind = $mainMod, V, togglefloating)
+alt - v : yabai -m window --toggle float
+
+# Toggle split (équivalent bind = $mainMod, J, togglesplit)
+alt - j : yabai -m window --toggle split
+
+# Pseudo tile (équivalent bind = $mainMod, P, pseudo)
+alt - p : yabai -m window --toggle sticky
+
+###################
+### NAVIGATION ###
+###################
+
+# Déplacer le focus (équivalent aux flèches directionnelles)
+cmd - left  : yabai -m window --focus west
+cmd - down  : yabai -m window --focus south
+cmd - up    : yabai -m window --focus north
+cmd - right : yabai -m window --focus east
+
+# Alternative avec hjkl
+cmd - h : yabai -m window --focus west
+cmd - j : yabai -m window --focus south
+cmd - k : yabai -m window --focus north
+cmd - l : yabai -m window --focus east
+
+###################
+### ESPACES DE TRAVAIL ###
+###################
+
+# Changer d'espace de travail (équivalent bind = $mainMod, [0-9], workspace)
+cmd - 1 : yabai -m space --focus 1
+cmd - 2 : yabai -m space --focus 2
+cmd - 3 : yabai -m space --focus 3
+cmd - 4 : yabai -m space --focus 4
+cmd - 5 : yabai -m space --focus 5
+cmd - 6 : yabai -m space --focus 6
+cmd - 7 : yabai -m space --focus 7
+cmd - 8 : yabai -m space --focus 8
+cmd - 9 : yabai -m space --focus 9
+cmd - 0 : yabai -m space --focus 10
+
+# Déplacer fenêtre vers un espace (équivalent bind = $mainMod SHIFT, [0-9], movetoworkspace)
+cmd + shift - 1 : yabai -m window --space 1; yabai -m space --focus 1
+cmd + shift - 2 : yabai -m window --space 2; yabai -m space --focus 2
+cmd + shift - 3 : yabai -m window --space 3; yabai -m space --focus 3
+cmd + shift - 4 : yabai -m window --space 4; yabai -m space --focus 4
+cmd + shift - 5 : yabai -m window --space 5; yabai -m space --focus 5
+cmd + shift - 6 : yabai -m window --space 6; yabai -m space --focus 6
+cmd + shift - 7 : yabai -m window --space 7; yabai -m space --focus 7
+cmd + shift - 8 : yabai -m window --space 8; yabai -m space --focus 8
+cmd + shift - 9 : yabai -m window --space 9; yabai -m space --focus 9
+cmd + shift - 0 : yabai -m window --space 10; yabai -m space --focus 10
+
+# Navigation entre espaces (équivalent mouse scroll)
+cmd + alt - left  : yabai -m space --focus prev
+cmd + alt - right : yabai -m space --focus next
+
+###################
+### REDIMENSIONNEMENT ###
+###################
+
+# Redimensionner fenêtres
+cmd + alt - h : yabai -m window --resize left:-50:0; yabai -m window --resize right:-50:0
+cmd + alt - j : yabai -m window --resize bottom:0:50; yabai -m window --resize top:0:50
+cmd + alt - k : yabai -m window --resize top:0:-50; yabai -m window --resize bottom:0:-50
+cmd + alt - l : yabai -m window --resize right:50:0; yabai -m window --resize left:50:0
+
+# Égaliser les fenêtres
+cmd + alt - e : yabai -m space --balance
+
+###################
+### DÉPLACEMENT ###
+###################
+
+# Déplacer fenêtres
+cmd + shift - h : yabai -m window --warp west
+cmd + shift - j : yabai -m window --warp south
+cmd + shift - k : yabai -m window --warp north
+cmd + shift - l : yabai -m window --warp east
+
+###################
+### MODE ###
+###################
+
+# Changer de layout
+cmd + alt - a : yabai -m space --layout bsp
+cmd + alt - s : yabai -m space --layout stack
+cmd + alt - d : yabai -m space --layout float
+
+###################
+### SYSTÈME ###
+###################
+
+# Redémarrer yabai
+cmd + alt - r : yabai --restart-service
+
+# Redémarrer skhd
+cmd + alt + shift - r : skhd --restart-service
