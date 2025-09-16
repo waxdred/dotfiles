@@ -6,7 +6,7 @@ alias code "cd ~/code"
 alias connect_perso="open smb://IHUCFS001/jonathan.milhas"
 alias connect_signal="open smb://IHUCFS001/Signal"
 alias connect_commun="open smb://IHUCFS001/Commun"
-alias gc=' ~/.GitSpeak/bin/GitSpeak -answer=10 -max_length=50 -Ollama -model="qwen3" -max_length=30 -OllamaUrl="http://localhost"  -stage'
+alias gc=' ~/.GitSpeak/bin/GitSpeak -answer=5 -max_length=50 -Ollama -model="qwen3" -max_length=30 -OllamaUrl="http://localhost"'
 
 alias ku="kubectl"
 alias ll="eza -l --icons=always --color=always"
