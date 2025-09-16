@@ -39,8 +39,6 @@ return {
 				"tailserver",
 				"tailwindcss",
 				"cssls",
-				"html",
-				"htmx",
 				"templ",
 				"yamlls",
 				"dockerls",

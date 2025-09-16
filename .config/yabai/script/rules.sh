@@ -8,38 +8,38 @@ setup_app_rules() {
     
     # Règles pour les applications
     # Terminal/Code workspace
-    yabai -m rule --add app="^Ghostty$" space=code
+    yabai -m rule --add app="^Ghostty$" space=5
     
     # Web workspace
-    yabai -m rule --add app="^brave Browser$" space=web
+    yabai -m rule --add app="^brave Browser$" space=1
     
     # Chat workspace
-    yabai -m rule --add app="^Slack$" space=chat
-    yabai -m rule --add app="^Discord$" space=chat
-    yabai -m rule --add app="^Telegram$" space=chat
-    yabai -m rule --add app="^WhatsApp$" space=chat
-    yabai -m rule --add app="^Messages$" space=chat
+    yabai -m rule --add app="^Slack$" space=2
+    yabai -m rule --add app="^Discord$" space=2
+    yabai -m rule --add app="^Telegram$" space=2
+    yabai -m rule --add app="^WhatsApp$" space=2
+    yabai -m rule --add app="^Messages$" space=2
     
     # Obsidian workspace
-    yabai -m rule --add app="^Obsidian$" space=obsidian
+    yabai -m rule --add app="^Obsidian$" space=3
     
     # AI workspace
-    yabai -m rule --add app="^Claude$" space=ai
+    yabai -m rule --add app="^Claude$" space=4
     
     # Media workspace
-    yabai -m rule --add app="^Spotify$" space=media
-    yabai -m rule --add app="^Music$" space=media
-    yabai -m rule --add app="^VLC$" space=media
-    yabai -m rule --add app="^IINA$" space=media
-    yabai -m rule --add app="^Photos$" space=media
-    yabai -m rule --add app="^Adobe Photoshop$" space=media
-    yabai -m rule --add app="^Figma$" space=media
+    yabai -m rule --add app="^Spotify$" space=6
+    yabai -m rule --add app="^Music$" space=6
+    yabai -m rule --add app="^VLC$" space=6
+    yabai -m rule --add app="^IINA$" space=6
+    yabai -m rule --add app="^Photos$" space=6
+    yabai -m rule --add app="^Adobe Photoshop$" space=6
+    yabai -m rule --add app="^Figma$" space=6
     
     # Other workspace
-    yabai -m rule --add app="^Finder$" space=other
-    yabai -m rule --add app="^System Preferences$" space=other
-    yabai -m rule --add app="^System Settings$" space=other
-    yabai -m rule --add app="^Activity Monitor$" space=other
+    yabai -m rule --add app="^Finder$" space=7
+    yabai -m rule --add app="^System Preferences$" space=7
+    yabai -m rule --add app="^System Settings$" space=7
+    yabai -m rule --add app="^Activity Monitor$" space=7
     
     echo "$(date): App rules configured" >> /tmp/display_changes.log
 }

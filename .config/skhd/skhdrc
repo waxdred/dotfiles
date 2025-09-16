@@ -6,7 +6,7 @@
 ###################
 
 
-alt - return : yabai -m space --focus 1 && open -na Ghostty
+alt - return : yabai -m space --focus 6 && open -n Ghostty
 
 
 # Navigateur (équivalent bind = $mainMod, B, exec, brave)
@@ -14,12 +14,6 @@ cmd - b : open -a "Brave Browser"
 
 # Gestionnaire de fichiers (équivalent bind = $mainMod, E, exec, thunar)
 cmd - e : open -a Finder
-
-# Lanceur d'applications (équivalent bind = $mainMod, R, exec, rofi)
-cmd - r : open -a "Raycast" || open -a "Alfred 5" || open -a "Spotlight"
-
-# Recherche (équivalent bind = $mainMod, S, exec, search.sh)
-cmd - s : open -a "Raycast" || open -a "Alfred 5"
 
 ###################
 ### GESTION FENÊTRES ###
@@ -52,6 +46,17 @@ cmd - left  : yabai -m window --focus west
 cmd - down  : yabai -m window --focus south
 cmd - up    : yabai -m window --focus north
 cmd - right : yabai -m window --focus east
+#
+# # Alt + hjkl et arrows pour navigation - DÉSACTIVÉ sur workspace 5 (tmux/ghostty)
+# alt - h [* ~"^5$"] : yabai -m window --focus west
+# alt - j [* ~"^5$"] : yabai -m window --focus south
+# alt - k [* ~"^5$"] : yabai -m window --focus north
+# alt - l [* ~"^5$"] : yabai -m window --focus east
+#
+# alt - left  [* ~"^5$"] : yabai -m window --focus west
+# alt - down  [* ~"^5$"] : yabai -m window --focus south
+# alt - up    [* ~"^5$"] : yabai -m window --focus north
+# alt - right [* ~"^5$"] : yabai -m window --focus east
 
 # Alternative avec hjkl
 cmd - h : yabai -m window --focus west
@@ -76,17 +81,16 @@ cmd - 9 : yabai -m space --focus 9
 cmd - 0 : yabai -m space --focus 10
 
 # Déplacer fenêtre vers un espace (équivalent bind = $mainMod SHIFT, [0-9], movetoworkspace)
-cmd + shift - 1 : yabai -m window --space 1; yabai -m space --focus 1
-cmd + shift - 2 : yabai -m window --space 2; yabai -m space --focus 2
-cmd + shift - 3 : yabai -m window --space 3; yabai -m space --focus 3
-cmd + shift - 4 : yabai -m window --space 4; yabai -m space --focus 4
-cmd + shift - 5 : yabai -m window --space 5; yabai -m space --focus 5
-cmd + shift - 6 : yabai -m window --space 6; yabai -m space --focus 6
-cmd + shift - 7 : yabai -m window --space 7; yabai -m space --focus 7
-cmd + shift - 8 : yabai -m window --space 8; yabai -m space --focus 8
-cmd + shift - 9 : yabai -m window --space 9; yabai -m space --focus 9
-cmd + shift - 0 : yabai -m window --space 10; yabai -m space --focus 10
-
+cmd + shift - 0x12 : yabai -m window --space 1; yabai -m space --focus 1  # keycode pour 1
+cmd + shift - 0x13 : yabai -m window --space 2; yabai -m space --focus 2  # keycode pour 2
+cmd + shift - 0x14 : yabai -m window --space 3; yabai -m space --focus 3  # keycode pour 3
+cmd + shift - 0x15 : yabai -m window --space 4; yabai -m space --focus 4  # keycode pour 4
+cmd + shift - 0x17 : yabai -m window --space 5; yabai -m space --focus 5  # keycode pour 5
+cmd + shift - 0x16 : yabai -m window --space 6; yabai -m space --focus 6  # keycode pour 6
+cmd + shift - 0x1A : yabai -m window --space 7; yabai -m space --focus 7  # keycode pour 7
+cmd + shift - 0x1C : yabai -m window --space 8; yabai -m space --focus 8  # keycode pour 8
+cmd + shift - 0x19 : yabai -m window --space 9; yabai -m space --focus 9  # keycode pour 9
+cmd + shift - 0x1D : yabai -m window --space 10; yabai -m space --focus 10 # keycode pour 0
 # Navigation entre espaces (équivalent mouse scroll)
 cmd + alt - left  : yabai -m space --focus prev
 cmd + alt - right : yabai -m space --focus next

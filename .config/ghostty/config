@@ -1,9 +1,9 @@
-background-opacity = 0.80
+background-opacity = 0.70
 shell-integration = fish
 command = /opt/homebrew/bin/fish
 
 theme = "catppuccin-macchiato"
-background-blur = true
+background-blur = false
 
 cursor-style = underline
 cursor-style-blink = true
@@ -16,3 +16,4 @@ macos-titlebar-style = hidden
 window-padding-balance = true
 window-padding-x = 4
 window-padding-y = 4
+keybind = shift+enter=text:\x1b\r

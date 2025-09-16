@@ -32,7 +32,9 @@ return {
 			opts.buffer = bufnr
 
 			opts.desc = "Go to definition"
-			keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- go to declaration
+			keymap.set("n", "gd", function()
+				require("telescope.builtin").lsp_definitions()
+			end, opts)
 
 			opts.desc = "Go to declaration"
 			keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
@@ -44,10 +46,10 @@ return {
 			keymap.set("n", "<leader>xx", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
 
 			opts.desc = "Go to previous diagnostic"
-			keymap.set("n", "<leader>[", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+			keymap.set("n", "<C-k>", vim.diagnostic.goto_prev) -- jump to previous diagnostic in buffer
 
 			opts.desc = "Go to next diagnostic"
-			keymap.set("n", "<leader>]", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+			keymap.set("n", "<C-j>", vim.diagnostic.goto_next) -- jump to next diagnostic in buffer
 
 			opts.desc = "Show documentation for what is under cursor"
 			keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor

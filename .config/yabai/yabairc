@@ -76,3 +76,6 @@ yabai -m rule --add app="^Brave Browser$" space=web
 # Signaux pour maintenir la configuration
 yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
 yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+
+#### Run auto start
+bash $HOME/.config/yabai/script/auto_start.sh &
