@@ -1,4 +1,5 @@
-alias sfish "source /Users/jonathan.milhas/.config/fish/config.fish"
+alias sfish "source $HOME/.config/fish/config.fish"
+alias vfish "nvim $HOME/.config/fish/config.fish"
 alias vig "vi +G"
 alias g "lazygit"
 alias vi nvim
@@ -47,6 +48,7 @@ set PATH $PATH /Users/wax/.cargo/bin
 set PATH $PATH /usr/local/nvim/bin
 set PATH $PATH $HOME/go/bin/
 set PATH $PATH $HOME/.local/bin
+set PATH $PATH $HOME/Library/Python/3.9/bin
 
 
 function tmux-sessionizer
