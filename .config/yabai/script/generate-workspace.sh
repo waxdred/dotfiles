@@ -67,13 +67,13 @@ setup_yabai_spaces() {
             yabai -m space 3 --display 1 2>/dev/null
             yabai -m space 4 --display 1 2>/dev/null
             yabai -m space 5 --display 2 2>/dev/null
-            yabai -m config --space 5 top_padding 30
+            yabai -m config --space 5 top_padding 36
             yabai -m space 6 --display 2 2>/dev/null
-            yabai -m config --space 6 top_padding 30
+            yabai -m config --space 6 top_padding 36
             yabai -m space 7 --display 2 2>/dev/null
-            yabai -m config --space 7 top_padding 30
+            yabai -m config --space 7 top_padding 36
             yabai -m space 8 --display 2 2>/dev/null
-            yabai -m config --space 8 top_padding 30
+            yabai -m config --space 8 top_padding 36
             
             # Vérifier si ça a marché, sinon retry
             if [ "$(yabai -m query --spaces --space 8 | jq '.display')" = "2" ]; then
