@@ -12,11 +12,8 @@ TOKEN_EXPIRY_FILE="/tmp/zimbra_token_expiry"
 LOG_FILE="/tmp/zimbra_email.log"
 ZIMBRA_EMAIL_SERVER=$(cat ~/.config/env/ihu-mail-server 2>/dev/null)
 ZIMBRA_EMAIL_EMAIL=$(cat ~/.config/env/ihu-mail-email 2>/dev/null)
-ZIMBRA_EMAIL_PASSWORD=$(cat ~/.config/env/ihu-mail-password 2>/dev/null)
+ZIMBRA_EMAIL_PASSWORD=$(cat ~/.config/env/ihu-mail 2>/dev/null)
 ZIMBRA_EMAIL_NAME=$(cat ~/.config/env/ihu-mail-username 2>/dev/null)
-
-env >> $LOG_FILE
-
 # Initialiser le log
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] === DÉMARRAGE SCRIPT ZIMBRA ===" >> $LOG_FILE
 
@@ -25,7 +22,6 @@ get_auth_token() {
     local response
     
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] Tentative d'authentification sur $ZIMBRA_EMAIL_SERVER avec utilisateur: $USERNAME" >> $LOG_FILE
-    echo $ZIMBRA_EMAIL_EMAIL
     
     response=$(curl -s -k -X POST "$ZIMBRA_EMAIL_SERVER/service/soap/" \
         -H "Content-Type: text/xml; charset=utf-8" \
@@ -34,7 +30,7 @@ get_auth_token() {
               <soap:Body>
                 <AuthRequest xmlns=\"urn:zimbraAccount\">
                   <account by=\"name\">$ZIMBRA_EMAIL_EMAIL</account>
-                  <password>$PASSWORD</password>
+                  <password>$ZIMBRA_EMAIL_PASSWORD</password>
                 </AuthRequest>
               </soap:Body>
             </soap:Envelope>")
@@ -93,7 +89,7 @@ get_valid_token() {
         return 0
     else
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] ERREUR: Impossible d'obtenir un token" >> $LOG_FILE
-        return 1
+        return 1 
     fi
 }
 
