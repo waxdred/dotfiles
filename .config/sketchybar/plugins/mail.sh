@@ -10,6 +10,12 @@ export SUBTEXT0=0xffa5adcb
 TOKEN_FILE="/tmp/zimbra_token"
 TOKEN_EXPIRY_FILE="/tmp/zimbra_token_expiry"
 LOG_FILE="/tmp/zimbra_email.log"
+ZIMBRA_EMAIL_SERVER=$(cat ~/.config/env/ihu-mail-server 2>/dev/null)
+ZIMBRA_EMAIL_EMAIL=$(cat ~/.config/env/ihu-mail-email 2>/dev/null)
+ZIMBRA_EMAIL_PASSWORD=$(cat ~/.config/env/ihu-mail-password 2>/dev/null)
+ZIMBRA_EMAIL_NAME=$(cat ~/.config/env/ihu-mail-username 2>/dev/null)
+
+env >> $LOG_FILE
 
 # Initialiser le log
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] === DÉMARRAGE SCRIPT ZIMBRA ===" >> $LOG_FILE
