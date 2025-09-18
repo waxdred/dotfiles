@@ -5,13 +5,13 @@
 sleep 1
 
 # Log pour debug (optionnel)
-echo "$(date): Display change detected" >> ~/.config/yabai/display_changes.log
+echo "$(date): Display change detected" >> /tmp/display_changes.log
 
 # Ta fonction de setup des espaces
 setup_yabai_spaces() {
     display_count=$(yabai -m query --displays | jq length)
     
-    echo "$(date): Configuring for $display_count display(s)" >> ~/.config/yabai/display_changes.log
+    echo "$(date): Configuring for $display_count display(s)" >> /tmp/display_changes.log
     
     if [ "$display_count" -eq 1 ]; then
         # 1 écran = 7 espaces
@@ -83,7 +83,7 @@ setup_yabai_spaces() {
         done
     fi
     
-    echo "$(date): Setup completed" >> ~/.config/yabai/display_changes.log
+    echo "$(date): Setup completed" >> /tmp/display_changes.log
     bash $HOME/.config/yabai/script/rules.sh
 }
 
