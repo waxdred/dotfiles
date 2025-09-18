@@ -1,8 +1,8 @@
-background-opacity = 0.70
+background-opacity = 0.80
 shell-integration = fish
 command = /opt/homebrew/bin/fish
 
-theme = "catppuccin-macchiato"
+theme = "catppuccin-macchiato.conf"
 background-blur = false
 
 cursor-style = underline

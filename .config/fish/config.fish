@@ -1,5 +1,6 @@
 alias sfish "source $HOME/.config/fish/config.fish"
 alias vfish "nvim $HOME/.config/fish/config.fish"
+alias lg "lazygit"
 alias vig "vi +G"
 alias g "lazygit"
 alias vi nvim
@@ -27,6 +28,10 @@ export NVM_DIR=~/.nvm
 
 # Env Variables from Secrets files
 set -x AVANTE_ANTHROPIC_API_KEY (cat $HOME/.config/env/avante_anthropic)
+set -x ZIMBRA_EMAIL_PASSWORD (cat $HOME/.config/env/ihu-mail)
+set -x ZIMBRA_EMAIL_SERVER (cat $HOME/.config/env/ihu-mail-server)
+set -x ZIMBRA_EMAIL_USERNAME (cat $HOME/.config/env/ihu-mail-username)
+set -x ZIMBRA_EMAIL_EMAIL (cat $HOME/.config/env/ihu-mail-email)
 # set -x LLAMA_API_KEY (cat $HOME/.config/env/llama_key)
 # set -x OPENAI_API_KEY (cat $HOME/.config/env/open_ai)
 # set -x grafana_auth (cat $HOME/.config/env/grafana)
