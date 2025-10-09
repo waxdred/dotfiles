@@ -8,6 +8,8 @@ background-blur = false
 cursor-style = underline
 cursor-style-blink = true
 
+custom-shader = shaders/cursor_frozen.glsl
+
 font-family = "Hack Nerd Font"
 font-size = 16
 
@@ -17,3 +19,7 @@ window-padding-balance = true
 window-padding-x = 4
 window-padding-y = 4
 keybind = shift+enter=text:\x1b\r
+keybind = cmd+s>r=reload_config
+# Désactiver la navigation par onglets avec Alt+flèches
+keybind = alt+left=unbind
+keybind = alt+right=unbind
