@@ -5,10 +5,18 @@ alias vig "vi +G"
 alias g "lazygit"
 alias vi nvim
 alias code "cd ~/code"
+alias gc=' ~/.GitSpeak/bin/GitSpeak -answer=5 -max_length=50 -Ollama -model="qwen3-coder" -max_length=30 -OllamaUrl="http://localhost"'
+alias obsidian="vi ~/Obsidian/LIRYC-IHU-Vault/ ."
+
+# Aliases to connect to SMB shares
 alias connect_perso="open smb://IHUCFS001/jonathan.milhas"
 alias connect_signal="open smb://IHUCFS001/Signal"
 alias connect_commun="open smb://IHUCFS001/Commun"
-alias gc=' ~/.GitSpeak/bin/GitSpeak -answer=5 -max_length=50 -Ollama -model="qwen3-coder" -max_length=30 -OllamaUrl="http://localhost"'
+
+# Aliases to go to mounted SMB shares
+alias perso="cd /Volumes/jonathan.milhas"
+alias signal="cd /Volumes/Signal"
+alias commun="cd /Volumes/Commun"
 
 alias ku="kubectl"
 alias ll="eza -l --icons=always --color=always"
@@ -28,6 +36,7 @@ export NVM_DIR=~/.nvm
 
 # Env Variables from Secrets files
 set -x AVANTE_ANTHROPIC_API_KEY (cat $HOME/.config/env/avante_anthropic)
+set -x NIKE_RUN (cat $HOME/.config/env/running)
 # set -x LLAMA_API_KEY (cat $HOME/.config/env/llama_key)
 # set -x OPENAI_API_KEY (cat $HOME/.config/env/open_ai)
 # set -x grafana_auth (cat $HOME/.config/env/grafana)
@@ -62,5 +71,7 @@ set -U FZF_COMPLETE 2
 #set theme_color_scheme solarized
 set theme_color_scheme "Catppuccin Macchiato"
 
+
 set fish_function_path $fish_function_path ~/.config/fish/functions
 zoxide init fish | source
+starship init fish | source

@@ -30,48 +30,48 @@ return {
 		})
 
 		require("dapui").setup()
+		dap.adapters.delve = function(callback, config)
+			if config.mode == "remote" and config.request == "attach" then
+				callback({
+					type = "server",
+					host = config.host or "127.0.0.1",
+					port = config.port or "38697",
+				})
+			else
+				callback({
+					type = "server",
+					port = "${port}",
+					executable = {
+						command = "dlv",
+						args = { "dap", "-l", "127.0.0.1:${port}", "--log", "--log-output=dap" },
+						detached = vim.fn.has("win32") == 0,
+					},
+				})
+			end
+		end
 
-		dap.adapters.gdb = {
-			type = "executable",
-			command = "gdb",
-			args = { "-i", "dap" },
-		}
-		dap.adapters.go = {
-			type = "executable",
-			command = "node",
-			args = { os.getenv("HOME") .. "/Users/wax/code/dap-extension/vscode-go/extension/dist/debugAdapter.js" },
-		}
-		dap.adapters.codelldb = {
-			type = "server",
-			host = "127.0.0.1",
-			port = "${port}",
-			executable = {
-				command = "/Users/wax/code/dap-extension/extension/adapter/codelldb",
-				args = { "--port", "${port}" },
-			},
-		}
+		-- https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md
 		dap.configurations.go = {
 			{
-				type = "go",
+				type = "delve",
 				name = "Debug",
 				request = "launch",
-				showLog = false,
 				program = "${file}",
-				dlvToolPath = vim.fn.exepath("dlv"), -- Adjust to where delve is installed
 			},
-		}
-		dap.configurations.zig = {
 			{
-				name = "Launch",
-				type = "codelldb",
+				type = "delve",
+				name = "Debug test", -- configuration for debugging test files
 				request = "launch",
-				program = function()
-					return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/zig-out/bin/", "file")
-				end,
-				cwd = "${workspaceFolder}",
-				stopOnEntry = false,
-				args = {},
-				runInTerminal = false,
+				mode = "test",
+				program = "${file}",
+			},
+			-- works with go.mod packages and sub packages
+			{
+				type = "delve",
+				name = "Runner ECG-exporter",
+				request = "launch",
+				program = "${workspaceFolder}/cmd/main.go",
+				args = { "-machine", "Dicom", "-f", "../../learning/dicom/testdata/1.dcm", "--display", "-d" },
 			},
 		}
 

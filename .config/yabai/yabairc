@@ -13,6 +13,8 @@ yabai -m config top_padding 8
 yabai -m signal --add event=display_added action="~/.config/yabai/script/generate-workspace.sh"
 yabai -m signal --add event=display_removed action="~/.config/yabai/script/generate-workspace.sh"
 
+borders active_color=0xffcad3f5 inactive_color=0xff5b6078 width=5.0 &
+
 
 # Charger les scripts
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"

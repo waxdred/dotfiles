@@ -9,7 +9,6 @@ return {
 		vim.api.nvim_create_autocmd({ "BufWritePre" }, { pattern = { "*.templ" }, callback = vim.lsp.buf.format })
 		vim.filetype.add({ extension = { templ = "templ" } })
 		-- import lspconfig plugin
-		local lspconfig = require("lspconfig")
 
 		-- import cmp-nvim-lsp plugin
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -58,194 +57,43 @@ return {
 		------------------------------------------------------------------------------------------------------------------------------
 		------------------------------------------------config lsp--------------------------------------------------------------------
 		------------------------------------------------------------------------------------------------------------------------------
-		lspconfig["templ"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			cmd = { "templ", "lsp" },
-			filetypes = { "templ" },
-			-- root_pattern('go.work', 'go.mod', '.git'),
-			root_dir = function(fname)
-				return lspconfig.util.root_pattern("go.work", "go.mod", ".git")(fname) or vim.fn.getcwd()
-			end,
-		})
-		-- configure htmx server
-		lspconfig["pylsp"].setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-			filetypes = { "python" },
-		})
-		-- configure htmx server
-		lspconfig["htmx"].setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-			filetypes = { "html", "templ" },
-		})
-
 		-- configure terraformls server
-		lspconfig["terraformls"].setup({
+		vim.lsp.config("terraformls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			cmd = { "terraform-ls", "serve" },
 			filetypes = { "terraform", "terraform-vars" },
-			root_dir = lspconfig.util.root_pattern(".terraform", ".git"),
-		})
-		-- configure tflint terraform server
-		lspconfig["tflint"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			cmd = { "tflint", "--langserver" },
-			filetypes = { "terraform" },
-			root_dir = lspconfig.util.root_pattern(".terraform", ".git", ".tflint.hcl"),
-		})
-		-- configure html server
-		lspconfig["html"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			filetypes = { "html", "templ" },
-		})
-
-		-- configure tailwindcss server
-		lspconfig["tailwindcss"].setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-			filetypes = {
-				"templ",
-				"astro",
-				"javascript",
-				"javascriptreact",
-				"typescript",
-				"typescriptreact",
-				"html",
-				"svelte",
-			},
-			init_options = {
-				userLanguages = {
-					templ = "html",
-				},
-			},
-		})
-
-		-- configure typescript server with plugin
-		lspconfig["ts_ls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
+			root_dir = require("lspconfig.util").root_pattern(".terraform", ".git"),
 		})
 
 		-- configure golang server with plugin
-		lspconfig["gopls"].setup({
+		vim.lsp.config("gopls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "templ", "go" },
 		})
 
 		-- configure bash server with plugin
-		lspconfig["bashls"].setup({
+		vim.lsp.config("bashls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "sh" },
 		})
 
 		-- configure docker server with plugin
-		lspconfig["dockerls"].setup({
+		vim.lsp.config("dockerls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
 
 		-- configure docker-compose server with plugin
-		lspconfig["docker_compose_language_service"].setup({
+		vim.lsp.config("docker_compose_language_service", {
 			capabilities = capabilities,
 			on_attach = on_attach,
-		})
-
-		-- configure css server
-		lspconfig["cssls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		-- configure C language server
-		lspconfig["clangd"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
-		})
-
-		-- configure tailwindcss server
-		lspconfig["tailwindcss"].setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-			filetypes = { "templ", "astro", "javascript", "typescript", "react" },
-			init_options = { userLanguages = { templ = "html" } },
-		})
-
-		-- configure svelte server
-		lspconfig["svelte"].setup({
-			capabilities = capabilities,
-			on_attach = function(client, bufnr)
-				on_attach(client, bufnr)
-
-				vim.api.nvim_create_autocmd("BufWritePost", {
-					pattern = { "*.js", "*.ts" },
-					callback = function(ctx)
-						if client.name == "svelte" then
-							client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.file })
-						end
-					end,
-				})
-			end,
-		})
-
-		-- configure prisma orm server
-		lspconfig["prismals"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-		-- configure zig language server
-		lspconfig["zls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			cmd = { "/usr/local/bin/zls" },
-			root_dir = lspconfig.util.root_pattern("zls.json", "build.zig", ".git"),
-			filetypes = { "zig", "zir" },
-		})
-
-		-- configure graphql language server
-		lspconfig["graphql"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-		})
-
-		-- configure emmet language server
-		lspconfig["emmet_ls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-		})
-
-		-- configure python server
-		lspconfig["pyright"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		-- configure python server
-		lspconfig["jsonls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
-
-		-- configure rust server
-		lspconfig["rust_analyzer"].setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
-			cmd = { "rust-analyzer" },
-			filetypes = { "rust", "rs" },
-			root_dir = lspconfig.util.root_pattern("Cargo.toml", "rust-project.json"),
 		})
 
 		-- configure lua server (with special settings)
-		lspconfig["lua_ls"].setup({
+		vim.lsp.config("lua_ls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			settings = { -- custom settings for lua

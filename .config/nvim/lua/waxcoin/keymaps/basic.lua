@@ -35,8 +35,7 @@ keymap.set("n", "<Leader>se", ":s/<<C-r><C-w>>//g | update <Left><Left><Left><Le
 keymap.set("n", "<leader><leader>c", ":Commentary <CR>", opts)
 --jump word
 keymap.set("n", "<C-n>", ":JumpToNextOccurenteWord<CR>", opts)
--- running macro
-keymap.set("n", "<leader>q", "@q", opts)
+
 -- Save
 keymap.set("n", "<leader>w", ":w<CR> :wa<CR>", opts)
 
