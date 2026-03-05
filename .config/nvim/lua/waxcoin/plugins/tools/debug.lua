@@ -54,9 +54,9 @@ return {
 		dap.configurations.go = {
 			{
 				type = "delve",
-				name = "Debug",
+				name = "go run .",
 				request = "launch",
-				program = "${file}",
+				program = "${workspaceFolder}/main.go",
 			},
 			{
 				type = "delve",
@@ -72,6 +72,19 @@ return {
 				request = "launch",
 				program = "${workspaceFolder}/cmd/main.go",
 				args = { "-machine", "Dicom", "-f", "../../learning/dicom/testdata/1.dcm", "--display", "-d" },
+			},
+			-- exporter xml args:  go run cmd/main.go -machine MindrayFn3a04Ecg -f /Volumes/Signal/ECG/Mindray/MIN00001/PAT/2025092310360090/12lead_data_v1
+			{
+				type = "delve",
+				name = "Runner ECG-exporter xml",
+				request = "launch",
+				program = "${workspaceFolder}/cmd/main.go",
+				args = {
+					"-machine",
+					"MindrayFn3a04EcgFoo",
+					"-f",
+					"/Volumes/Signal/ECG/Mindray/MIN00002/PAT/12lead_data_v1",
+				},
 			},
 		}
 
