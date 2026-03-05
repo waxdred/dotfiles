@@ -1,8 +1,6 @@
 #!/bin/bash
 sleep 3  # Laisser le temps à yabai de démarrer
 
-echo "Starting applications in their respective spaces..."
-echo "------------------------------------------"
 yabai -m space --focus 1
 open -a "Brave Browser" &
 sleep 1

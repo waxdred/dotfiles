@@ -40,6 +40,10 @@ setup_app_rules() {
     yabai -m rule --add app="^System Preferences$" space=7
     yabai -m rule --add app="^System Settings$" space=7
     yabai -m rule --add app="^Activity Monitor$" space=7
+
+    # Mv applications
+    yabai -m rule --add app="^VirtualBox$" space=9
+    yabai -m rule --add app="^Utm$" space=9
     
     echo "$(date): App rules configured" >> /tmp/display_changes.log
 }
