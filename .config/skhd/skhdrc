@@ -26,7 +26,7 @@ alt - c : yabai -m window --close
 alt + alt - m : yabai --stop-service
 
 # Mode plein écran (équivalent bind = $mainMod, F, fullscreenstate, 3)
-alt - f : yabai -m window --toggle zoom-fullscreen
+# alt - f : yabai -m window --toggle zoom-fullscreen
 
 # Toggle flottant (équivalent bind = $mainMod, V, togglefloating)
 alt - v : yabai -m window --toggle float
@@ -41,12 +41,6 @@ alt - p : yabai -m window --toggle sticky
 ### NAVIGATION ###
 ###################
 
-# Déplacer le focus (équivalent aux flèches directionnelles)
-cmd - left  : yabai -m window --focus west
-cmd - down  : yabai -m window --focus south
-cmd - up    : yabai -m window --focus north
-cmd - right : yabai -m window --focus east
-#
 # # Alt + hjkl et arrows pour navigation - DÉSACTIVÉ sur workspace 5 (tmux/ghostty)
 # alt - h [* ~"^5$"] : yabai -m window --focus west
 # alt - j [* ~"^5$"] : yabai -m window --focus south
@@ -69,16 +63,16 @@ cmd - l : yabai -m window --focus east
 ###################
 
 # Changer d'espace de travail (équivalent bind = $mainMod, [0-9], workspace)
-cmd - 1 : yabai -m space --focus 1
-cmd - 2 : yabai -m space --focus 2
-cmd - 3 : yabai -m space --focus 3
-cmd - 4 : yabai -m space --focus 4
-cmd - 5 : yabai -m space --focus 5
-cmd - 6 : yabai -m space --focus 6
-cmd - 7 : yabai -m space --focus 7
-cmd - 8 : yabai -m space --focus 8
-cmd - 9 : yabai -m space --focus 9
-cmd - 0 : yabai -m space --focus 10
+cmd - 0x12 : yabai -m space --focus 1
+cmd - 0x13 : yabai -m space --focus 2
+cmd - 0x14 : yabai -m space --focus 3
+cmd - 0x15 : yabai -m space --focus 4
+cmd - 0x17 : yabai -m space --focus 5
+cmd - 0x16 : yabai -m space --focus 6
+cmd - 0x1A : yabai -m space --focus 7
+cmd - 0x1C : yabai -m space --focus 8
+cmd - 0x19 : yabai -m space --focus 9
+cmd - 0x1D : yabai -m space --focus 10
 
 # Déplacer fenêtre vers un espace (équivalent bind = $mainMod SHIFT, [0-9], movetoworkspace)
 cmd + shift - 0x12 : yabai -m window --space 1; yabai -m space --focus 1  # keycode pour 1
@@ -91,9 +85,13 @@ cmd + shift - 0x1A : yabai -m window --space 7; yabai -m space --focus 7  # keyc
 cmd + shift - 0x1C : yabai -m window --space 8; yabai -m space --focus 8  # keycode pour 8
 cmd + shift - 0x19 : yabai -m window --space 9; yabai -m space --focus 9  # keycode pour 9
 cmd + shift - 0x1D : yabai -m window --space 10; yabai -m space --focus 10 # keycode pour 0
+
+
+
+
 # Navigation entre espaces (équivalent mouse scroll)
-cmd + alt - left  : yabai -m space --focus prev
-cmd + alt - right : yabai -m space --focus next
+cmd - left  : yabai -m space --focus prev
+cmd - right : yabai -m space --focus next
 
 ###################
 ### REDIMENSIONNEMENT ###
