@@ -67,16 +67,20 @@ sketchybar --add item apple left \
                        background.corner_radius=8 \
                        click_script="osascript -e 'tell application \"System Events\" to click menu bar item 1 of menu bar 1 of application process \"Finder\"'"
 
-# Workspaces avec icônes - Version corrigée
+
 WORKSPACE_ICONS=(
-    "󰇧"    # Web - globe
-    "󰭻"    # Chat - message
-    "󰩃"    # Obsidian - brain/note
-    "󰚩"    # AI - robot/sparkles
-    ""    # Code - terminal
-    "󰝚"    # Media - play button
-    "󰉋"    # Other - folder
-    "󰆼"    # Misc - grid/apps
+    "󰇧"    # 1 - Web
+    "󰭻"    # 2 - Chat
+    "󰩃"    # 3 - Obsidian
+    "󰚩"    # 4 - AI
+    ""    # 5 - Code
+    "󰝚"    # 6 - Media
+    "󰉋"    # 7 - Data
+    "󰆼"    # 8 - VM
+    ""    # 9 - Research
+    "󰘙"    # 10 - Debug
+    "󰀵"    # 11 - Tools
+    "󰆺"    # 12 - Archive
 )
 
 # Créer les espaces dynamiquement selon le nombre d'écrans
@@ -84,8 +88,10 @@ DISPLAY_COUNT=$(yabai -m query --displays | jq length 2>/dev/null || echo "1")
 
 if [ "$DISPLAY_COUNT" -eq 1 ]; then
     MAX_SPACES=7
-else
+elif [ "$DISPLAY_COUNT" -eq 2 ]; then
     MAX_SPACES=8
+else
+    MAX_SPACES=12
 fi
 
 # Ajouter les items space
