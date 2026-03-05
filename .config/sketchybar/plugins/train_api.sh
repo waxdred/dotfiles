@@ -61,11 +61,6 @@ get_train_data() {
     local to_id="$2"
     local direction_name="$3"
     
-    if cached_data=$(get_cached_data); then
-        echo "$cached_data"
-        return 0
-    fi
-    
     log_debug "Récupération des données pour $direction_name"
     
     local datetime=$(date '+%Y%m%dT%H%M%S')
@@ -151,6 +146,7 @@ update_sketchybar() {
     local delay=$(echo "$data" | jq -r '.delay // 0')
     local from=$(echo "$data" | jq -r '.from // "?"')
     local to=$(echo "$data" | jq -r '.to // "?"')
+    local status=$(echo "$data" | jq -r '.status // "normal"')
     
     if [[ -z "$departure_time" ]]; then
         sketchybar --set $ITEM_NAME \
@@ -169,6 +165,7 @@ update_sketchybar() {
     local icon="$ICON_TRAIN"
     local color="$COLOR_ON_TIME"
     local delay_text=""
+    local status_text=""
     
     if [[ "$delay" -gt 0 ]]; then
         icon="$ICON_DELAY"
@@ -180,7 +177,11 @@ update_sketchybar() {
             color="$COLOR_DELAYED"
         fi
     fi
-    
+    if [[ "$status" != "normal" ]]; then
+      status_text=" (${status})"
+    else
+      status_text=""
+    fi
     # Détermination de la direction pour l'affichage
     local direction=$(get_direction)
     local direction_text
