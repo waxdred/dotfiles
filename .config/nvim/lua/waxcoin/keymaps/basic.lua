@@ -83,3 +83,9 @@ keymap.set("v", "<leader>cc", ":CodeCompanionChat<CR>", opts)
 keymap.set("n", "<leader>ca", ":CodeCompanionActions<CR>", opts)
 keymap.set("v", "<leader>ca", ":CodeCompanionActions<CR>", opts)
 keymap.set("n", "<leader>ci", ":CodeCompanionInline<CR>", opts)
+
+-- Jump word
+keymap.set("n", "<C-Right>", "w", { noremap = true })
+keymap.set("n", "<C-Left>", "b", { noremap = true })
+keymap.set("i", "<C-Right>", "<C-o>w", { noremap = true })
+keymap.set("i", "<C-Left>", "<C-o>b", { noremap = true })
