@@ -70,7 +70,13 @@ return {
 		vim.lsp.config("gopls", {
 			capabilities = capabilities,
 			on_attach = on_attach,
-			filetypes = { "templ", "go" },
+			-- filetypes = { "templ", "go" },
+			filetypes = { "go" },
+		})
+		-- configure rust-analyzer server with plugin
+		vim.lsp.config("rust_analyzer", {
+			capabilities = capabilities,
+			on_attach = on_attach,
 		})
 
 		-- configure bash server with plugin
@@ -78,6 +84,39 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "sh" },
+		})
+		--- configure arduino language server
+		vim.lsp.config("arduino_language_server", {
+			capabilities = capabilities,
+			on_attach = on_attach,
+			cmd = {
+				"arduino-language-server",
+				"-cli",
+				"/usr/local/bin/arduino-cli",
+				"-fqbn",
+				"arduino:avr:uno",
+				"-port",
+				"/dev/ttyACM0",
+				"-log",
+				"info",
+			},
+			filetypes = { "arduino" },
+			root_dir = require("lspconfig.util").root_pattern(".git", "."),
+		})
+
+		-- configure 	typescript-language-server
+		vim.lsp.config("ts_ls", {
+			capabilities = capabilities,
+			on_attach = on_attach,
+			filetypes = {
+				"typescript",
+				"typescriptreact",
+				"typescript.tsx",
+				"javascript",
+				"javascriptreact",
+				"javascript.jsx",
+			},
+			cmd = { "typescript-language-server", "--stdio" },
 		})
 
 		-- configure docker server with plugin
