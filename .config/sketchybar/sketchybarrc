@@ -224,6 +224,18 @@ sketchybar --add item zimbra_email right \
                               background.padding_right=4 \
                               click_script="open -a 'Brave Browser' 'https://webmel.ihu-liryc.fr/mail'"
 
+# Keyboard language switcher
+sketchybar --add item keyboard_lang right \
+           --set keyboard_lang script="$HOME/.config/sketchybar/plugins/keyboard_lang.sh" \
+                               update_freq=2 \
+                               icon="󰌌" \
+                               icon.font="Hack Nerd Font:Bold:14.0" \
+                               icon.color=$SKY \
+                               background.color=$SURFACE1 \
+                               background.corner_radius=6 \
+                               click_script="$HOME/.config/sketchybar/plugins/keyboard_switch.sh" \
+           --subscribe keyboard_lang mouse.clicked
+
 # Control Center shortcut
 sketchybar --add item control_center right \
            --set control_center icon=󰒓 \
