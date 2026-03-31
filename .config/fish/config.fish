@@ -3,6 +3,7 @@ alias vfish "nvim $HOME/.config/fish/config.fish"
 alias lg "lazygit"
 alias vig "vi +G"
 alias g "lazygit" 
+alias gb "git branch"
 alias vi nvim
 alias claudez "claude --settings $HOME/.claude/settings-zai.json"
 alias code "cd ~/code"
@@ -14,7 +15,7 @@ alias save "~/tools/dump/backup_code.sh"
 
 
 # Clear .DS_Store 
-alias clean "find $HOME -type f -name ".DS_Store" | xargs -I {} rm {} || echo "All .DS_Store files have been removed.""
+alias clean 'find $HOME -type f -name ".DS_Store" | xargs -I {} rm {} || echo "All .DS_Store files have been removed."'
 
 # Load yabai
 alias ys "sudo yabai --load-sa"
