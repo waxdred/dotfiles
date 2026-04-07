@@ -12,6 +12,7 @@ alias gcp ' ~/.GitSpeak/bin/GitSpeak -answer=5 -max_length=50 -Ollama -model="qw
 alias gp 'git push'
 alias obsidian "vi ~/Obsidian/LIRYC-IHU-Vault/ ."
 alias save "~/tools/dump/backup_code.sh"
+alias claudeInit "~/tools/dotfiles/.config/claudeInit/init.sh"
 
 
 # Clear .DS_Store 
