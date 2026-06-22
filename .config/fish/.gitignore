@@ -1,0 +1,8 @@
+# Universal variables = état runtime local à la machine, ne jamais committer.
+# (Évite l'accumulation de fichiers temp fish_variablesXXXX et la pollution inter-machines.)
+fish_variables
+fish_variables*
+
+# Fichiers de session/temp fish
+sessions
+fishd.*
