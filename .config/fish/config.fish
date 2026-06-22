@@ -56,7 +56,6 @@ export SHELL=/opt/homebrew/bin/fish
 export NVM_DIR=~/.nvm
 
 # Env Variables from Secrets files
-set -x AVANTE_ANTHROPIC_API_KEY (cat $HOME/.config/env/avante_anthropic)
 set -x NIKE_RUN (cat $HOME/.config/env/running)
 set -x GITHUB_TOKEN (cat $HOME/.config/env/github)
 set -x GITHUB_USER "waxdred"
@@ -71,19 +70,20 @@ set -x ANTHROPIC_API_KEY (cat $HOME/.config/env/kimi_api)
 # set -x GITHUB_USER "waxdred"
 # set -x GITPROFILE_CONFIG $HOME/.config/git/config.yaml
 set -x GOPATH $HOME/go
-set -Ux fish_user_paths $GOPATH/bin $fish_user_paths
+# fish_add_path -g : idempotent (pas de doublon) et global/session-scoped
+# (pas de persistance universelle => plus d'accumulation ni de pollution inter-machines)
+fish_add_path -g $GOPATH/bin
 set -x LS_COLORS "di=38;5;81:ln=38;5;213:so=38;5;223:pi=38;5;179:ex=38;5;166:bd=38;5;215;1:cd=38;5;216;1:su=38;5;160;1:sg=38;5;202;1:tw=38;5;183:ow=38;5;223"
+set -x KUBECONFIG "$HOME/.kube/config"
+
 
 
 # Unset env GOROOT if it exists
 set -e GOROOT
 
-set PATH $PATH /Users/wax/.cargo/bin
-set PATH $PATH /usr/local/nvim/bin
-set PATH $PATH $HOME/go/bin/
-set PATH $PATH $HOME/.local/bin
-set PATH $PATH $HOME/Library/Python/3.9/bin
-set PATH $PATH $HOME/.cargo/bin
+# fish_add_path -g : idempotent (pas de doublon ni d'accumulation à chaque démarrage)
+# go/bin est déjà géré plus haut ; /Users/wax/.cargo/bin (vieille machine) retiré.
+fish_add_path -g /usr/local/nvim/bin $HOME/.local/bin $HOME/Library/Python/3.9/bin $HOME/.cargo/bin
 
 
 function tmux-sessionizer
