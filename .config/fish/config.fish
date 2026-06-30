@@ -50,8 +50,8 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-export VISUAL=/usr/local/nvim/bin/nvim
-export EDITOR=/usr/local/nvim/bin/nvim
+export VISUAL=$HOME/.local/nvim/bin/nvim
+export EDITOR=$HOME/.local/nvim/bin/nvim
 export SHELL=/opt/homebrew/bin/fish
 export NVM_DIR=~/.nvm
 
@@ -83,7 +83,7 @@ set -e GOROOT
 
 # fish_add_path -g : idempotent (pas de doublon ni d'accumulation à chaque démarrage)
 # go/bin est déjà géré plus haut ; /Users/wax/.cargo/bin (vieille machine) retiré.
-fish_add_path -g /usr/local/nvim/bin $HOME/.local/bin $HOME/Library/Python/3.9/bin $HOME/.cargo/bin
+fish_add_path -g $HOME/.local/nvim/bin $HOME/.local/bin $HOME/Library/Python/3.9/bin $HOME/.cargo/bin
 
 
 function tmux-sessionizer

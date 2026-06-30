@@ -1,7 +1,8 @@
 return {
 	{
 		"windwp/nvim-ts-autotag",
-		require("nvim-ts-autotag").setup({
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {
 			opts = {
 				-- Defaults
 				enable_close = true, -- Auto close tags
@@ -16,6 +17,6 @@ return {
 					enable_close = false,
 				},
 			},
-		}),
+		},
 	},
 }
